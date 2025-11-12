@@ -1,10 +1,10 @@
 import type { User } from "@/features/profile/types/user";
 
 export const USER: User = {
-  firstName: "Chánh Đại",
-  lastName: "Nguyễn",
-  displayName: "Chánh Đại",
-  username: "ncdai",
+  firstName: "Hasal",
+  lastName: "Dharmagunawardana",
+  displayName: "Hasal Dharmagunawardana",
+  username: "hesxo",
   gender: "male",
   pronouns: "he/him",
   bio: "Creating with code. Small details matter.",
@@ -13,7 +13,7 @@ export const USER: User = {
     "Design Engineer",
     "Open Source Contributor",
   ],
-  address: "Ho Chi Minh City, Viet Nam",
+  address: "Colombo, Sri Lanka",
   phoneNumber: "Kzg0Nzc3ODg4MTQ4", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "ZGFpQGNoYW5oZGFpLmNvbQ==", // base64 encoded
   website: "https://chanhdai.com",

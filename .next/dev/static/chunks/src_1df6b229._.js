@@ -439,10 +439,10 @@ __turbopack_context__.s([
     ()=>USER
 ]);
 const USER = {
-    firstName: "Chánh Đại",
-    lastName: "Nguyễn",
-    displayName: "Chánh Đại",
-    username: "ncdai",
+    firstName: "Hasal",
+    lastName: "Dharmagunawardana",
+    displayName: "Hasal Dharmagunawardana",
+    username: "hesxo",
     gender: "male",
     pronouns: "he/him",
     bio: "Creating with code. Small details matter.",
@@ -451,7 +451,7 @@ const USER = {
         "Design Engineer",
         "Open Source Contributor"
     ],
-    address: "Ho Chi Minh City, Viet Nam",
+    address: "Colombo, Sri Lanka",
     phoneNumber: "Kzg0Nzc3ODg4MTQ4",
     email: "ZGFpQGNoYW5oZGFpLmNvbQ==",
     website: "https://chanhdai.com",

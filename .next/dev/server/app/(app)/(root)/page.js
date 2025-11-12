@@ -1,6 +1,6 @@
 var R=require("../../../chunks/ssr/[turbopack]_runtime.js")("server/app/(app)/(root)/page.js")
 R.c("server/chunks/ssr/src_components_brand-context-menu_tsx_7dce95a8._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__d1eb74d4._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__1f380567._.js")
 R.c("server/chunks/ssr/node_modules_next_d8abbfb2._.js")
 R.c("server/chunks/ssr/node_modules_999d7fd5._.js")
 R.c("server/chunks/ssr/node_modules_micromark-core-commonmark_dev_lib_a2328ab8._.js")
