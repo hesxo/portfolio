@@ -3128,6 +3128,10 @@
     color: var(--color-zinc-950);
   }
 
+  .lowercase {
+    text-transform: lowercase;
+  }
+
   .underline-offset-2 {
     text-underline-offset: 2px;
   }

@@ -1843,7 +1843,31 @@ const components = {
             columnNumber: 5
         }, ("TURBOPACK compile-time value", void 0)),
     YouTubeEmbed: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$embed$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["YouTubeEmbed"],
-    FramedImage: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$embed$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FramedImage"]
+    FramedImage: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$embed$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FramedImage"],
+    iframe: (props)=>{
+        // Normalize common HTML attributes that MDX authors (or embeds) may write
+        // in lowercase (e.g. `frameborder`) which React expects in camelCase.
+        const { frameborder, allowfullscreen, allowFullScreen, ...rest } = props || {};
+        const normalized = {
+            ...rest
+        };
+        if (frameborder !== undefined && normalized.frameBorder === undefined) {
+            normalized.frameBorder = frameborder;
+        }
+        // Support both `allowfullscreen` and `allowFullScreen` forms.
+        if (allowfullscreen !== undefined && allowFullScreen === undefined) {
+            // Some embeds use an empty string attribute (allowfullscreen=""),
+            // treat that as true so React receives a boolean.
+            normalized.allowFullScreen = allowfullscreen === "" || allowfullscreen === "true" || !!allowfullscreen;
+        }
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
+            ...normalized
+        }, void 0, false, {
+            fileName: "[project]/src/components/mdx.tsx",
+            lineNumber: 175,
+            columnNumber: 12
+        }, ("TURBOPACK compile-time value", void 0));
+    }
 };
 const options = {
     mdxOptions: {
@@ -1860,6 +1884,27 @@ const options = {
                 }
             ],
             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$rehype$2d$slug$2f$lib$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"],
+            // Normalize iframe attributes (some embed HTML uses lowercase attributes
+            // like `allowfullscreen` or `frameborder` which React treats as invalid
+            // DOM props). Convert them to the camelCase properties expected by React
+            // so the server-rendered markup matches the client.
+            ()=>(tree)=>{
+                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$unist$2d$util$2d$visit$2f$lib$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$locals$3e$__["visit"])(tree, (node)=>{
+                        if (node?.type === "element" && node?.tagName === "iframe") {
+                            const props = node.properties || {};
+                            if (props.allowfullscreen !== undefined) {
+                                // Convert empty-string or string "true" to boolean true
+                                props.allowFullScreen = props.allowfullscreen === "" || props.allowfullscreen === "true" || !!props.allowfullscreen;
+                                delete props.allowfullscreen;
+                            }
+                            if (props.frameborder !== undefined) {
+                                props.frameBorder = props.frameborder;
+                                delete props.frameborder;
+                            }
+                            node.properties = props;
+                        }
+                    });
+                },
             __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$rehype$2d$component$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["rehypeComponent"],
             ()=>(tree)=>{
                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$unist$2d$util$2d$visit$2f$lib$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$locals$3e$__["visit"])(tree, (node)=>{
@@ -1924,7 +1969,7 @@ function MDX({ code }) {
         options: options
     }, void 0, false, {
         fileName: "[project]/src/components/mdx.tsx",
-        lineNumber: 217,
+        lineNumber: 268,
         columnNumber: 10
     }, this);
 }

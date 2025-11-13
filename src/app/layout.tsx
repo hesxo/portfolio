@@ -32,7 +32,19 @@ const darkModeScript = String.raw`
       document.documentElement.classList.add('os-macos')
     }
   } catch (_) {}
+
+  // Remove known extension-injected attributes that cause hydration mismatches
+  try {
+    // 'bis_skin_checked' is injected by some browser extensions and causes
+    // extra attributes on client DOM nodes that don't exist on the server.
+    // Remove them early (before React hydrates) so the client DOM matches SSR.
+    const injected = document.querySelectorAll('[bis_skin_checked]');
+    for (let i = 0; i < injected.length; i++) {
+      injected[i].removeAttribute('bis_skin_checked');
+    }
+  } catch (_) {}
 `;
+
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_INFO.url),

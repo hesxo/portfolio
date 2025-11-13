@@ -148,6 +148,32 @@ const components: MDXRemoteProps["components"] = {
   ),
   YouTubeEmbed,
   FramedImage,
+  iframe: (props: any) => {
+    // Normalize common HTML attributes that MDX authors (or embeds) may write
+    // in lowercase (e.g. `frameborder`) which React expects in camelCase.
+    const {
+      frameborder,
+      allowfullscreen,
+      allowFullScreen,
+      ...rest
+    } = props || {};
+
+    const normalized: any = { ...rest };
+
+    if (frameborder !== undefined && normalized.frameBorder === undefined) {
+      normalized.frameBorder = frameborder;
+    }
+
+    // Support both `allowfullscreen` and `allowFullScreen` forms.
+    if (allowfullscreen !== undefined && allowFullScreen === undefined) {
+      // Some embeds use an empty string attribute (allowfullscreen=""),
+      // treat that as true so React receives a boolean.
+      normalized.allowFullScreen =
+        allowfullscreen === "" || allowfullscreen === "true" || !!allowfullscreen;
+    }
+
+    return <iframe {...(normalized as React.ComponentProps<"iframe">)} />;
+  },
 };
 
 const options: MDXRemoteProps["options"] = {
@@ -159,6 +185,31 @@ const options: MDXRemoteProps["options"] = {
         { target: "_blank", rel: "nofollow noopener noreferrer" },
       ],
       rehypeSlug,
+      // Normalize iframe attributes (some embed HTML uses lowercase attributes
+      // like `allowfullscreen` or `frameborder` which React treats as invalid
+      // DOM props). Convert them to the camelCase properties expected by React
+      // so the server-rendered markup matches the client.
+      () => (tree) => {
+        visit(tree, (node: any) => {
+          if (node?.type === "element" && node?.tagName === "iframe") {
+            const props = node.properties || {};
+
+            if (props.allowfullscreen !== undefined) {
+              // Convert empty-string or string "true" to boolean true
+              props.allowFullScreen =
+                props.allowfullscreen === "" || props.allowfullscreen === "true" || !!props.allowfullscreen;
+              delete props.allowfullscreen;
+            }
+
+            if (props.frameborder !== undefined) {
+              props.frameBorder = props.frameborder;
+              delete props.frameborder;
+            }
+
+            node.properties = props;
+          }
+        });
+      },
       rehypeComponent,
       () => (tree) => {
         visit(tree, (node) => {
