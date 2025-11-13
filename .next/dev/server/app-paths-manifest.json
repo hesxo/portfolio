@@ -1,4 +1,5 @@
 {
+  "/(app)/(docs)/blog/page": "app/(app)/(docs)/blog/page.js",
   "/(app)/(root)/page": "app/(app)/(root)/page.js",
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js"
 }
