@@ -5956,3 +5956,789 @@ It can also happen if the client has a browser extension installed which messes 
 [01:45:10.548] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:1408/blog/Tedx color: rgb(120, 120, 120) color: inherit {"dp":"/blog/[slug]","o":"http://localhost:1408/blog/Tedx","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763066481679}
 [01:45:10.548] Browser LOG     %c[Vercel Speed Insights]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
 [01:45:28.535] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"href":"http://localhost:1408/blog/Tedx","id":"v3-1763066481680-1648534087971","route":"/blog/[slug]","type":"FCP","value":3240},{"href":"http://localhost:1408/blog/Tedx","id":"v3-1763066481680-9882272726695","route":"/blog/[slug]","type":"TTFB","value":2574},{"attribution":{"eventTarget":"div>p>img"},"href":"http://localhost:1408/blog/Tedx","id":"v3-1763066481680-3926815923500","route":"/blog/[slug]","type":"LCP","value":3240},{"attribution":{},"href":"http://localhost:1408/blog/Tedx","id":"v3-1763066481680-1628636007125","route":"/blog/[slug]","type":"CLS","value":0}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}
+[01:48:57.375] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:48:58.141] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/blog/Tedx" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="ibm_plex_s..." suppressHydrationWarning={true}>
+                          <head>
+                            <script>
+                            <Script>
+                            <Script id="strip-bis-..." strategy="beforeInte..." ...>
+                              <script
+                                nonce={undefined}
+                                dangerouslySetInnerHTML={{
++                                 __html: "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"\\n            tr..."
+-                                 __html: ""
+                                }}
+-                               type="text/javascript"
+-                               charset="utf-8"
+-                               data-bis-config={"[\"facebook.com/\",\"twitter.com/\",\"youtube-nocookie.com/embed/\"..."}
+-                               src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/traffic.js"
+                              >
+                            ...
+                          ...
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <AppLayout>
+                              <SiteHeaderWrapper>
+                              ...
+                                <SegmentViewNode type="page" pagePath="(app)/(doc...">
+                                  <SegmentTrieNode>
+                                  <Page>
+                                    <script>
+                                    <PostKeyboardShortcuts>
+                                    <div>
+                                    <div>
+                                    <div>
+                                    <Page>
+                                      <div
+                                        className="screen-line-before h-4 w-full"
+-                                       bis_skin_checked="1"
+                                      >
+                                ...
+                              <AppLayout>
+                                <SiteFooter>
+                                  <footer className="max-w-scre...">
+                                    <div
+                                      className="screen-line-before mx-auto border-x border-edge pt-4 md:max-w-3xl"
+-                                     bis_skin_checked="1"
+                                    >
+                              ...
+                  ...
+
+[01:48:59.070] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:48:59.070] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/blog/Tedx","route":"/blog/[slug]"}
+[01:48:59.071] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:1408/blog/Tedx color: rgb(120, 120, 120) color: inherit {"dp":"/blog/[slug]","o":"http://localhost:1408/blog/Tedx","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763066710819}
+[01:48:59.071] Browser LOG     %c[Vercel Speed Insights]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:49:07.523] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"href":"http://localhost:1408/blog/Tedx","id":"v3-1763066710820-1677171138564","route":"/blog/[slug]","type":"FCP","value":9104},{"href":"http://localhost:1408/blog/Tedx","id":"v3-1763066710820-4000407102822","route":"/blog/[slug]","type":"TTFB","value":8171},{"attribution":{},"href":"http://localhost:1408/blog/Tedx","id":"v3-1763066710823-9249639234239","route":"/blog/[slug]","type":"CLS","value":0}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}
+[01:49:41.459] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:49:42.058] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/blog/Tedx" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="ibm_plex_s..." suppressHydrationWarning={true}>
+                          <head>
+                            <script>
+                            <Script>
+                            <Script id="strip-bis-..." strategy="beforeInte..." ...>
+                              <script
+                                nonce={undefined}
+                                dangerouslySetInnerHTML={{
++                                 __html: "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"\\n            tr..."
+-                                 __html: ""
+                                }}
+-                               type="text/javascript"
+-                               charset="utf-8"
+-                               data-bis-config={"[\"facebook.com/\",\"twitter.com/\",\"youtube-nocookie.com/embed/\"..."}
+-                               src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/traffic.js"
+                              >
+                            ...
+                          ...
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <AppLayout>
+                              <AppLayout>
+                                <SiteHeader>
+                                  <SiteHeaderWrapper className="sticky top...">
+                                    <header suppressHydrationWarning={true} data-affix={false} className="sticky top...">
+                                      <div className="screen-lin..." data-header-container={true} ...>
+                                        <LinkComponent>
+                                        <div
+                                          className="flex-1"
+-                                         bis_skin_checked="1"
+                                        >
+                                        <DesktopNav>
+                                        <div
+                                          className="flex items-center *:first:mr-2"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <PreloadChunks>
+                                          <CommandMenu>
+                                          <Tooltip>
+                                          <span>
+                                          <ToggleTheme>
+                                            <Button variant="ghost" size="icon" ...>
+                                              <button data-slot="button" className={"inline-f..."} ...>
+                                                <MoonIcon className={"relative..."}>
+                                                  <div
+                                                    className={"relative hidden after:absolute after:-inset-2 [html.d..."}
+                                                    onMouseEnter={function MoonIcon.useCallback[handleMouseEnter]}
+                                                    onMouseLeave={function MoonIcon.useCallback[handleMouseLeave]}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                <SunMediumIcon className={"relative..."}>
+                                                  <div
+                                                    className={"relative hidden after:absolute after:-inset-2 [html.l..."}
+                                                    onMouseEnter={function SunMediumIcon.useCallback[handleMouseEnter]}
+                                                    onMouseLeave={function SunMediumIcon.useCallback[handleMouseLeave]}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                ...
+                                          ...
+                                            <Primitive.button.Slot type="button" id="radix-_R_2..." aria-haspopup="menu" ...>
+                                              <Primitive.button.SlotClone type="button" id="radix-_R_2..." ...>
+                                                <Button variant="ghost" className="group/togg..." size="icon" ...>
+                                                  <button
+                                                    data-slot="dropdown-menu-trigger"
+                                                    className={"items-center justify-center rounded-full text-sm font..."}
+                                                    type="button"
++                                                   id="radix-_R_2mabn8qlb_"
+-                                                   id="radix-_R_lgqbn8qlb_"
+                                                    aria-haspopup="menu"
+                                                    aria-expanded={false}
+                                                    aria-controls={undefined}
+                                                    data-state="closed"
+                                                    data-disabled={undefined}
+                                                    disabled={false}
+                                                    onPointerDown={function handleEvent}
+                                                    onKeyDown={function handleEvent}
+                                                    ref={function}
+                                                  >
+                              ...
+                                <SegmentViewNode type="layout" pagePath="(app)/(doc...">
+                                  <SegmentTrieNode>
+                                  <DocsLayout>
+                                    <div
+                                      className="mx-auto border-x border-edge md:max-w-3xl"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="h-8 px-2 screen-line-after before:absolute before:-left-[100vw] bef..."
+-                                       bis_skin_checked="1"
+                                      >
+                                      ...
+                                        <SegmentViewNode type="page" pagePath="(app)/(doc...">
+                                          <SegmentTrieNode>
+                                          <Page>
+                                            <script>
+                                            <PostKeyboardShortcuts>
+                                            <Page>
+                                              <div
+                                                className="flex items-center justify-between p-2 pl-4"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <LinkComponent>
+                                                <div
+                                                  className="flex items-center gap-2"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <LLMCopyButtonWithViewOptions markdownUrl="/blog/Tedx..." ...>
+                                                    <div
+                                                      className={"inline-flex items-center justify-center rounded-ful..."}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                  ...
+                                            <Page>
+                                              <div suppressHydrationWarning={true} className="screen-lin...">
+                                                <div
+                                                  className="h-8 before:absolute before:-left-[100vw] before:-z-1 befo..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                            <Page>
+                                              <Prose>
+                                                <Prose>
+                                                  <div
+                                                    data-slot="prose"
+                                                    className={"prose prose-sm max-w-none font-mono text-foreground p..."}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <h1>
+                                                    <p>
+                                                    ...
+                                                      <CollapsibleProvider scope={undefined} disabled={undefined} ...>
+                                                        <Primitive.div data-state="closed" data-disabled={undefined} ...>
+                                                          <div
+                                                            data-state="closed"
+                                                            data-disabled={undefined}
+                                                            className="not-prose rounded-lg bg-code font-sans"
+                                                            ref={null}
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                            <CollapsibleTrigger className={"group/to..."}>
+                                                              <Primitive.button type="button" ...>
+                                                                <button type="button" aria-controls="radix-_R_3..." ...>
+                                                                  <svg>
+                                                                  <div
+                                                                    className="ml-auto shrink-0 text-muted-foreground"
+                                                                    aria-hidden={true}
+-                                                                   bis_skin_checked="1"
+                                                                  >
+                                                            <CollapsibleContent className="overflow-h...">
+                                                              <Presence present={false}>
+                                                                <Primitive.div data-state="closed" ...>
+                                                                  <div
+                                                                    data-state="closed"
+                                                                    data-disabled={undefined}
+                                                                    id="radix-_R_3matpesnekndabn8qlb_"
+                                                                    hidden={true}
+                                                                    className="overflow-hidden duration-300 data-[stat..."
+                                                                    style={{--radix-collapsible-content-height:undefined, ...}}
+                                                                    ref={function}
+-                                                                   bis_skin_checked="1"
+                                                                  >
+                                                    <div
+-                                                     bis_skin_checked="1"
+                                                    >
+                                            <Page>
+                                              <div
+                                                className="screen-line-before h-4 w-full"
+-                                               bis_skin_checked="1"
+                                              >
+                                        ...
+                              <AppLayout>
+                                <SiteFooter>
+                                  <footer className="max-w-scre...">
+                                    <div
+                                      className="screen-line-before mx-auto border-x border-edge pt-4 md:max-w-3xl"
+-                                     bis_skin_checked="1"
+                                    >
+                              ...
+                  ...
+
+[01:49:42.174] Browser LOG     %c[Vercel Speed Insights]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:49:42.174] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:49:42.174] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/blog/Tedx","route":"/blog/[slug]"}
+[01:49:42.174] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:1408/blog/Tedx color: rgb(120, 120, 120) color: inherit {"dp":"/blog/[slug]","o":"http://localhost:1408/blog/Tedx","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763066753923}
+[01:49:44.541] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"href":"http://localhost:1408/blog/Tedx","id":"v3-1763066753922-1993747549201","route":"/blog/[slug]","type":"FCP","value":2032},{"attribution":{"eventTarget":"a.peer.not-prose"},"href":"http://localhost:1408/blog/Tedx","id":"v3-1763066753922-3013305553301","route":"/blog/[slug]","type":"LCP","value":2032},{"attribution":{},"href":"http://localhost:1408/blog/Tedx","id":"v3-1763066753923-4023582709874","route":"/blog/[slug]","type":"CLS","value":0}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}
+[01:50:10.078] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"href":"http://localhost:1408/blog/Tedx","id":"v3-1763066753922-4711338357755","route":"/blog/[slug]","type":"TTFB","value":1590}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}
+[01:50:14.909] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:50:17.659] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/blog/Tedx" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="ibm_plex_s..." suppressHydrationWarning={true}>
+                          <head>
+                            <script>
+                            <Script>
+                            <Script id="strip-bis-..." strategy="beforeInte..." ...>
+                              <script
+                                nonce={undefined}
+                                dangerouslySetInnerHTML={{
++                                 __html: "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"\\n            tr..."
+-                                 __html: ""
+                                }}
+-                               type="text/javascript"
+-                               charset="utf-8"
+-                               data-bis-config={"[\"facebook.com/\",\"twitter.com/\",\"youtube-nocookie.com/embed/\"..."}
+-                               src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/traffic.js"
+                              >
+                            ...
+                          ...
+                  ...
+
+[01:50:18.902] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:50:18.903] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/blog/Tedx","route":"/blog/[slug]"}
+[01:50:18.903] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:1408/blog/Tedx color: rgb(120, 120, 120) color: inherit {"dp":"/blog/[slug]","o":"http://localhost:1408/blog/Tedx","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763066788849}
+[01:50:18.903] Browser LOG     %c[Vercel Speed Insights]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:50:20.729] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"href":"http://localhost:1408/blog/Tedx","id":"v3-1763066788850-4522295356184","route":"/blog/[slug]","type":"FCP","value":2652},{"attribution":{"eventTarget":"a.peer.not-prose"},"href":"http://localhost:1408/blog/Tedx","id":"v3-1763066788850-5727484224174","route":"/blog/[slug]","type":"LCP","value":2652}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}
+[01:50:21.642] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"attribution":{"eventTarget":"a.peer.not-prose>strong","eventType":"pointerdown"},"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066788850-8688713392675","route":"/blog/[slug]","type":"FID","value":11.29},{"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066788850-1787609874627","route":"/blog/[slug]","type":"TTFB","value":1615}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}
+[01:50:33.515] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"attribution":{"eventTarget":"button.group/toc.inline-flex.w-full.items-center.gap-2.py-2.5.pr-2.pl-4.text-sm.font-medium.[&_svg]:size-4","eventType":"click"},"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066788850-9370663694513","route":"/blog/[slug]","type":"INP","value":80},{"attribution":{},"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066788851-2576197800241","route":"/blog/[slug]","type":"CLS","value":0}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}
+[01:52:22.407] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:52:24.047] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/blog/Tedx" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="ibm_plex_s..." suppressHydrationWarning={true}>
+                          <head>
+                            <script>
+                            <Script>
+                            <Script id="strip-bis-..." strategy="beforeInte..." ...>
+                              <script
+                                nonce={undefined}
+                                dangerouslySetInnerHTML={{
++                                 __html: "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"\\n            tr..."
+-                                 __html: ""
+                                }}
+-                               type="text/javascript"
+-                               charset="utf-8"
+-                               data-bis-config={"[\"facebook.com/\",\"twitter.com/\",\"youtube-nocookie.com/embed/\"..."}
+-                               src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/traffic.js"
+                              >
+                            ...
+                          ...
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <AppLayout>
+                              <AppLayout>
+                                <SiteHeader>
+                                  <SiteHeaderWrapper className="sticky top...">
+                                    <header suppressHydrationWarning={true} data-affix={false} className="sticky top...">
+                                      <div className="screen-lin..." data-header-container={true} ...>
+                                        <LinkComponent>
+                                        <div
+                                          className="flex-1"
+-                                         bis_skin_checked="1"
+                                        >
+                                        <DesktopNav>
+                                        <div
+                                          className="flex items-center *:first:mr-2"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <PreloadChunks>
+                                          <CommandMenu>
+                                          <Tooltip>
+                                          <span>
+                                          <ToggleTheme>
+                                            <Button variant="ghost" size="icon" ...>
+                                              <button data-slot="button" className={"inline-f..."} ...>
+                                                <MoonIcon className={"relative..."}>
+                                                  <div
+                                                    className={"relative hidden after:absolute after:-inset-2 [html.d..."}
+                                                    onMouseEnter={function MoonIcon.useCallback[handleMouseEnter]}
+                                                    onMouseLeave={function MoonIcon.useCallback[handleMouseLeave]}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                <SunMediumIcon className={"relative..."}>
+                                                  <div
+                                                    className={"relative hidden after:absolute after:-inset-2 [html.l..."}
+                                                    onMouseEnter={function SunMediumIcon.useCallback[handleMouseEnter]}
+                                                    onMouseLeave={function SunMediumIcon.useCallback[handleMouseLeave]}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                ...
+                                          ...
+                              ...
+                                <SegmentViewNode type="layout" pagePath="(app)/(doc...">
+                                  <SegmentTrieNode>
+                                  <DocsLayout>
+                                    <div
+                                      className="mx-auto border-x border-edge md:max-w-3xl"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="h-8 px-2 screen-line-after before:absolute before:-left-[100vw] bef..."
+-                                       bis_skin_checked="1"
+                                      >
+                                      ...
+                                        <SegmentViewNode type="page" pagePath="(app)/(doc...">
+                                          <SegmentTrieNode>
+                                          <Page>
+                                            <script>
+                                            <PostKeyboardShortcuts>
+                                            <Page>
+                                              <div
+                                                className="flex items-center justify-between p-2 pl-4"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <LinkComponent>
+                                                <div
+                                                  className="flex items-center gap-2"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <LLMCopyButtonWithViewOptions markdownUrl="/blog/Tedx..." ...>
+                                                    <div
+                                                      className={"inline-flex items-center justify-center rounded-ful..."}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                  ...
+                                            <Page>
+                                              <div suppressHydrationWarning={true} className="screen-lin...">
+                                                <div
+                                                  className="h-8 before:absolute before:-left-[100vw] before:-z-1 befo..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                            <Page>
+                                              <Prose>
+                                                <Prose>
+                                                  <div
+                                                    data-slot="prose"
+                                                    className={"prose prose-sm max-w-none font-mono text-foreground p..."}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <h1>
+                                                    <p>
+                                                    ...
+                                                      <CollapsibleProvider scope={undefined} disabled={undefined} ...>
+                                                        <Primitive.div data-state="closed" data-disabled={undefined} ...>
+                                                          <div
+                                                            data-state="closed"
+                                                            data-disabled={undefined}
+                                                            className="not-prose rounded-lg bg-code font-sans"
+                                                            ref={null}
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                            <CollapsibleTrigger className={"group/to..."}>
+                                                              <Primitive.button type="button" ...>
+                                                                <button type="button" aria-controls="radix-_R_3..." ...>
+                                                                  <svg>
+                                                                  <div
+                                                                    className="ml-auto shrink-0 text-muted-foreground"
+                                                                    aria-hidden={true}
+-                                                                   bis_skin_checked="1"
+                                                                  >
+                                                            <CollapsibleContent className="overflow-h...">
+                                                              <Presence present={false}>
+                                                                <Primitive.div data-state="closed" ...>
+                                                                  <div
+                                                                    data-state="closed"
+                                                                    data-disabled={undefined}
+                                                                    id="radix-_R_3matpesnekndabn8qlb_"
+                                                                    hidden={true}
+                                                                    className="overflow-hidden duration-300 data-[stat..."
+                                                                    style={{--radix-collapsible-content-height:undefined, ...}}
+                                                                    ref={function}
+-                                                                   bis_skin_checked="1"
+                                                                  >
+                                                    <div
+-                                                     bis_skin_checked="1"
+                                                    >
+                                            <Page>
+                                              <div
+                                                className="screen-line-before h-4 w-full"
+-                                               bis_skin_checked="1"
+                                              >
+                                        ...
+                              <AppLayout>
+                                <SiteFooter>
+                                  <footer className="max-w-scre...">
+                                    <div
+                                      className="screen-line-before mx-auto border-x border-edge pt-4 md:max-w-3xl"
+-                                     bis_skin_checked="1"
+                                    >
+                              ...
+                  ...
+
+[01:52:24.208] Browser LOG     %c[Vercel Speed Insights]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:52:24.208] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:52:24.208] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/blog/Tedx","route":"/blog/[slug]"}
+[01:52:24.208] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere color: rgb(120, 120, 120) color: inherit {"dp":"/blog/[slug]","o":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763066915935}
+[01:52:27.556] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066915935-1762864331564","route":"/blog/[slug]","type":"FCP","value":2512},{"attribution":{"eventTarget":"div>p>img"},"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066915935-6121666826700","route":"/blog/[slug]","type":"LCP","value":2512},{"attribution":{},"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066915935-2044494486129","route":"/blog/[slug]","type":"CLS","value":0}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}
+[01:53:04.785] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066915935-3717364611650","route":"/blog/[slug]","type":"TTFB","value":1555}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}
+[01:53:10.085] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:53:10.405] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/blog/Tedx" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="ibm_plex_s..." suppressHydrationWarning={true}>
+                          <head>
+                            <script>
+                            <Script>
+                            <Script id="strip-bis-..." strategy="beforeInte..." ...>
+                              <script
+                                nonce={undefined}
+                                dangerouslySetInnerHTML={{
++                                 __html: "(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"\\n            tr..."
+-                                 __html: ""
+                                }}
+-                               type="text/javascript"
+-                               charset="utf-8"
+-                               data-bis-config={"[\"facebook.com/\",\"twitter.com/\",\"youtube-nocookie.com/embed/\"..."}
+-                               src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/traffic.js"
+                              >
+                            ...
+                          ...
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <script>
+                            <AppLayout>
+                              <AppLayout>
+                                <SiteHeader>
+                                  <SiteHeaderWrapper className="sticky top...">
+                                    <header suppressHydrationWarning={true} data-affix={false} className="sticky top...">
+                                      <div className="screen-lin..." data-header-container={true} ...>
+                                        <LinkComponent>
+                                        <div>
+                                        <DesktopNav>
+                                        <div
+                                          className="flex items-center *:first:mr-2"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <PreloadChunks>
+                                          <CommandMenu>
+                                          <Tooltip>
+                                          <span>
+                                          <ToggleTheme>
+                                            <Button variant="ghost" size="icon" ...>
+                                              <button data-slot="button" className={"inline-f..."} ...>
+                                                <MoonIcon className={"relative..."}>
+                                                  <div
+                                                    className={"relative hidden after:absolute after:-inset-2 [html.d..."}
+                                                    onMouseEnter={function MoonIcon.useCallback[handleMouseEnter]}
+                                                    onMouseLeave={function MoonIcon.useCallback[handleMouseLeave]}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                <SunMediumIcon className={"relative..."}>
+                                                  <div
+                                                    className={"relative hidden after:absolute after:-inset-2 [html.l..."}
+                                                    onMouseEnter={function SunMediumIcon.useCallback[handleMouseEnter]}
+                                                    onMouseLeave={function SunMediumIcon.useCallback[handleMouseLeave]}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                ...
+                                          ...
+                              ...
+                                <SegmentViewNode type="layout" pagePath="(app)/(doc...">
+                                  <SegmentTrieNode>
+                                  <DocsLayout>
+                                    <div
+                                      className="mx-auto border-x border-edge md:max-w-3xl"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="h-8 px-2 screen-line-after before:absolute before:-left-[100vw] bef..."
+-                                       bis_skin_checked="1"
+                                      >
+                                      ...
+                                        <SegmentViewNode type="page" pagePath="(app)/(doc...">
+                                          <SegmentTrieNode>
+                                          <Page>
+                                            <script>
+                                            <PostKeyboardShortcuts>
+                                            <Page>
+                                              <div
+                                                className="flex items-center justify-between p-2 pl-4"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <LinkComponent>
+                                                <div
+                                                  className="flex items-center gap-2"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <LLMCopyButtonWithViewOptions markdownUrl="/blog/Tedx..." ...>
+                                                    <div
+                                                      className={"inline-flex items-center justify-center rounded-ful..."}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                  ...
+                                            <Page>
+                                              <div suppressHydrationWarning={true} className="screen-lin...">
+                                                <div
+                                                  className="h-8 before:absolute before:-left-[100vw] before:-z-1 befo..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                            <Page>
+                                              <Prose>
+                                                <Prose>
+                                                  <div
+                                                    data-slot="prose"
+                                                    className={"prose prose-sm max-w-none font-mono text-foreground p..."}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <h1>
+                                                    <p>
+                                                    ...
+                                                      <CollapsibleProvider scope={undefined} disabled={undefined} ...>
+                                                        <Primitive.div data-state="closed" data-disabled={undefined} ...>
+                                                          <div
+                                                            data-state="closed"
+                                                            data-disabled={undefined}
+                                                            className="not-prose rounded-lg bg-code font-sans"
+                                                            ref={null}
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                            <CollapsibleTrigger className={"group/to..."}>
+                                                              <Primitive.button type="button" ...>
+                                                                <button type="button" aria-controls="radix-_R_3..." ...>
+                                                                  <svg>
+                                                                  <div
+                                                                    className="ml-auto shrink-0 text-muted-foreground"
+                                                                    aria-hidden={true}
+-                                                                   bis_skin_checked="1"
+                                                                  >
+                                                            <CollapsibleContent className="overflow-h...">
+                                                              <Presence present={false}>
+                                                                <Primitive.div data-state="closed" ...>
+                                                                  <div
+                                                                    data-state="closed"
+                                                                    data-disabled={undefined}
+                                                                    id="radix-_R_3matpesnekndabn8qlb_"
+                                                                    hidden={true}
+                                                                    className="overflow-hidden duration-300 data-[stat..."
+                                                                    style={{--radix-collapsible-content-height:undefined, ...}}
+                                                                    ref={function}
+-                                                                   bis_skin_checked="1"
+                                                                  >
+                                                    <div
+-                                                     bis_skin_checked="1"
+                                                    >
+                                            <Page>
+                                              <div
+                                                className="screen-line-before h-4 w-full"
+-                                               bis_skin_checked="1"
+                                              >
+                                        ...
+                              <AppLayout>
+                                <SiteFooter>
+                                  <footer className="max-w-scre...">
+                                    <div
+                                      className="screen-line-before mx-auto border-x border-edge pt-4 md:max-w-3xl"
+-                                     bis_skin_checked="1"
+                                    >
+                              ...
+                  ...
+
+[01:53:11.030] Browser LOG     %c[Vercel Speed Insights]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:53:11.030] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:53:11.030] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/blog/Tedx","route":"/blog/[slug]"}
+[01:53:11.030] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere color: rgb(120, 120, 120) color: inherit {"dp":"/blog/[slug]","o":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763066962780}
+[01:53:17.528] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066962777-8400066149883","route":"/blog/[slug]","type":"FCP","value":2140},{"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066962777-8830874169348","route":"/blog/[slug]","type":"TTFB","value":1692},{"attribution":{"eventTarget":"div>p>img"},"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066962777-9382672057773","route":"/blog/[slug]","type":"LCP","value":2140},{"attribution":{},"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066962779-6416120252027","route":"/blog/[slug]","type":"CLS","value":0}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}
