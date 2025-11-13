@@ -1,5 +1,5 @@
 {
-  "name": "ncdai",
+  "name": "hasal",
   "version": "0.0.3",
   "description": "A simple CLI wrapper for adding components from chanhdai.com component registry using shadcn.",
   "publishConfig": {
@@ -24,23 +24,23 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "ncdai",
+    "hasal",
     "cli",
     "shadcn",
     "components",
     "registry"
   ],
-  "author": "Hasal Dharmagunawardana <dai@chanhdai.com>",
+  "author": "Hasal Dharmagunawardana ",
   "license": "UNLICENSED",
-  "homepage": "https://chanhdai.com",
+  "homepage": "h",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ncdai/chanhdai.com.git",
+    "url": "git+https://github.com/hesxo/portfolio.git",
     "directory": "packages/ncdai"
   },
-  "funding": "https://github.com/sponsors/ncdai",
+  "funding": "https://github.com/sponsors/hasal",
   "bugs": {
-    "url": "https://github.com/ncdai/chanhdai.com/issues"
+    "url": "https://github.com/hesxo/portfolio/issues"
   },
   "devDependencies": {
     "tsup": "^8.5.0"

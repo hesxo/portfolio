@@ -137,7 +137,7 @@ const MAIN_NAV = [
 ];
 const GITHUB_USERNAME = "ncdai";
 const SOURCE_CODE_GITHUB_REPO = "ncdai/chanhdai.com";
-const SOURCE_CODE_GITHUB_URL = "https://github.com/ncdai/chanhdai.com";
+const SOURCE_CODE_GITHUB_URL = "https://github.com/hesxo";
 const UTM_PARAMS = {
     utm_source: "chanhdai.com",
     utm_medium: "portfolio_website",

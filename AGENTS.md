@@ -1,15 +1,15 @@
-# AI Agent Guidelines for chanhdai.com
+# AI Agent Guidelines for hasal.de
 
-This guide provides essential information for AI agents working with the chanhdai.com codebase - a Next.js dev portfolio, blog, and component registry website.
+This guide provides essential information for AI agents working with the chanhdai.com codebase—a Next.js development portfolio, blog, and component registry website.
 
 ## Project Overview
 
-**chanhdai.com** is a minimal, pixel-perfect dev portfolio, component registry, and blog built with modern web technologies. It serves as:
+**chanhdai.com** is a minimal, pixel-perfect development portfolio, component registry, and blog built with modern web technologies. It serves as:
 
-- Personal portfolio for Nguyen Chanh Dai (@ncdai)
-- Component registry using shadcn/ui system
-- Blog with MDX content
-- Showcase for custom React components
+- A personal portfolio for Hasal Dharmagunawardana 
+- A component registry using the shadcn/ui system
+- A blog with MDX content
+- A showcase for custom React components
 
 ### Key Features
 
@@ -17,11 +17,11 @@ This guide provides essential information for AI agents working with the chanhda
 - **Light/Dark themes** - Seamless theme switching with system preference support
 - **vCard integration** - Downloadable contact card
 - **SEO optimized** - JSON-LD schema, sitemap, robots.txt
-- **AI-ready** - Supports /llms.txt for AI agent accessibility
+- **AI-ready** - Supports `/llms.txt` for AI agent accessibility
 - **Spam-protected email** - Encoded contact information
-- **PWA support** - Installable as Progressive Web App
-- **Blog system** - MDX/Markdown support with syntax highlighting, dynamic OG images, RSS feed
-- **Component registry** - Reusable components distributed via shadcn CLI
+- **PWA support** - Installable as a Progressive Web App
+- **Blog system** - MDX/Markdown support with syntax highlighting, dynamic OG images, and RSS feed
+- **Component registry** - Reusable components distributed via the shadcn CLI
 
 ### Tech Stack
 
