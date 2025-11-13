@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 export function ProfileCover() {
   return (
     <div
+      suppressHydrationWarning={true}
       className={cn(
         "aspect-2/1 border-x border-edge select-none sm:aspect-3/1",
         "flex items-center justify-center text-black dark:text-white",

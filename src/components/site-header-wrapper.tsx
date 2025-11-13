@@ -12,5 +12,5 @@ export function SiteHeaderWrapper(props: React.ComponentProps<"header">) {
     setAffix(latestValue >= 8);
   });
 
-  return <header data-affix={affix} {...props} />;
+  return <header suppressHydrationWarning={true} data-affix={affix} {...props} />;
 }

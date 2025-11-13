@@ -163,7 +163,7 @@ export default async function Page({
         </div>
       </div>
 
-      <div className="screen-line-before screen-line-after">
+      <div suppressHydrationWarning={true} className="screen-line-before screen-line-after">
         <div
           className={cn(
             "h-8",

@@ -1,5 +1,7 @@
 {
   "/(app)/(docs)/blog/[slug]/page": "app/(app)/(docs)/blog/[slug]/page.js",
+  "/(app)/(docs)/blog/page": "app/(app)/(docs)/blog/page.js",
   "/(app)/(root)/page": "app/(app)/(root)/page.js",
+  "/(llms)/blog.mdx/[slug]/route": "app/(llms)/blog.mdx/[slug]/route.js",
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js"
 }

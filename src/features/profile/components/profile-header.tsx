@@ -6,7 +6,7 @@ import { VerifiedIcon } from "./verified-icon";
 
 export function ProfileHeader() {
   return (
-    <div className="screen-line-after flex border-x border-edge">
+    <div suppressHydrationWarning={true} className="screen-line-after flex border-x border-edge">
       <div className="shrink-0 border-r border-edge">
         <div className="mx-0.5 my-[3px]">
           <img
