@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "7386361c75b922270b35b457b179ab15",
-    "previewModeSigningKey": "8b8bba91012df224b720a679aab9746b7e20fa194bb9e6465fe159ef0eb497d0",
-    "previewModeEncryptionKey": "8ddcbbe1840ae37da9b7e1357803240c8e2d615d16f77314618134c3a489c607"
-  }
-}
+{"version":4,"routes":{"/blog/react-wheel-picker-joins-vercel-open-source-program":{},"/blog/followed-by-shadcn-on-x":{},"/blog/shimmering-text":{},"/blog/testimonials-marquee":{},"/blog/slide-to-unlock":{},"/blog/tips-for-creating-beautiful-image-borders":{},"/blog/two-of-my-projects-featured-on-orcdev-s-youtube-channel":{},"/blog/manu-arora-reviewed-my-portfolio-website":{},"/blog/grateful-for-the-feedback-on-my-portfolio-website":{},"/blog/work-experience-component":{},"/blog/react-wheel-picker":{},"/blog/chanhdai-brand":{},"/blog/theme-switcher-component":{},"/blog/writing-effect-inspired-by-apple":{},"/blog/awesome-terminal":{},"/blog/uptime-kuma":{},"/blog/welcome":{}},"dynamicRoutes":{"/blog/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/blog/[slug]","routeRegex":"^\\/blog\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"7386361c75b922270b35b457b179ab15","previewModeSigningKey":"8b8bba91012df224b720a679aab9746b7e20fa194bb9e6465fe159ef0eb497d0","previewModeEncryptionKey":"8ddcbbe1840ae37da9b7e1357803240c8e2d615d16f77314618134c3a489c607"}}
