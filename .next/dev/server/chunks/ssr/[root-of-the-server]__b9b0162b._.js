@@ -1867,6 +1867,32 @@ const components = {
             lineNumber: 175,
             columnNumber: 12
         }, ("TURBOPACK compile-time value", void 0));
+    },
+    img: (props)=>{
+        // Some MDX content uses a string `style` attribute (HTML form).
+        // React expects a style object. Parse the string into an object as a
+        // fallback so runtime doesn't error.
+        const { style, ...rest } = props || {};
+        const parseStyleString = (s)=>{
+            const out = {};
+            s.split(";").forEach((part)=>{
+                const [k, ...v] = part.split(":");
+                if (!k) return;
+                const key = k.trim().replace(/-([a-z])/g, (_, c)=>c.toUpperCase());
+                const value = v.join(":").trim();
+                if (key) out[key] = value;
+            });
+            return out;
+        };
+        const parsedStyle = typeof style === "string" ? parseStyleString(style) : style;
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+            ...rest,
+            style: parsedStyle
+        }, void 0, false, {
+            fileName: "[project]/src/components/mdx.tsx",
+            lineNumber: 199,
+            columnNumber: 12
+        }, ("TURBOPACK compile-time value", void 0));
     }
 };
 const options = {
@@ -1884,6 +1910,27 @@ const options = {
                 }
             ],
             __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$rehype$2d$slug$2f$lib$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"],
+            // Convert inline HTML `style` attribute strings into JS style objects
+            // so React receives the proper `style` prop shape during hydration.
+            ()=>(tree)=>{
+                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$unist$2d$util$2d$visit$2f$lib$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$locals$3e$__["visit"])(tree, (node)=>{
+                        if (node?.type === "element") {
+                            const props = node.properties || {};
+                            if (typeof props.style === "string") {
+                                const str = props.style;
+                                const out = {};
+                                str.split(";").forEach((part)=>{
+                                    const [k, ...v] = part.split(":");
+                                    if (!k) return;
+                                    const key = k.trim().replace(/-([a-z])/g, (_, c)=>c.toUpperCase());
+                                    const value = v.join(":").trim();
+                                    if (key) out[key] = value;
+                                });
+                                node.properties.style = out;
+                            }
+                        }
+                    });
+                },
             // Normalize iframe attributes (some embed HTML uses lowercase attributes
             // like `allowfullscreen` or `frameborder` which React treats as invalid
             // DOM props). Convert them to the camelCase properties expected by React
@@ -1969,7 +2016,7 @@ function MDX({ code }) {
         options: options
     }, void 0, false, {
         fileName: "[project]/src/components/mdx.tsx",
-        lineNumber: 268,
+        lineNumber: 316,
         columnNumber: 10
     }, this);
 }

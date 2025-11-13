@@ -133,6 +133,31 @@ export default function RootLayout({
           since we found the regular `<script>` tag to not execute when rendering a not-found page.
          */}
         <Script src={`data:text/javascript;base64,${btoa(darkModeScript)}`} />
+        {/* Ensure extension-injected attributes like `bis_skin_checked` are removed
+            before React hydrates. Using beforeInteractive guarantees this script
+            runs early (prior to hydration) so we avoid hydration mismatch logs. */}
+        <Script
+          id="strip-bis-attributes"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: String.raw`
+            try {
+              // Remove any attributes starting with "bis_" which some browser
+              // extensions inject and cause hydration mismatches.
+              const all = document.getElementsByTagName('*');
+              for (let i = 0; i < all.length; i++) {
+                const el = all[i];
+                // Copy attributes because NamedNodeMap is live
+                const attrs = Array.from(el.attributes || []);
+                for (let j = 0; j < attrs.length; j++) {
+                  const name = attrs[j] && attrs[j].name;
+                  if (name && name.startsWith('bis_')) {
+                    el.removeAttribute(name);
+                  }
+                }
+              }
+            } catch (_) {}
+          ` }}
+        />
         <script
           type="application/ld+json"
           suppressHydrationWarning

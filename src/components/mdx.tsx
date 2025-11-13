@@ -174,6 +174,30 @@ const components: MDXRemoteProps["components"] = {
 
     return <iframe {...(normalized as React.ComponentProps<"iframe">)} />;
   },
+  img: (props: any) => {
+    // Some MDX content uses a string `style` attribute (HTML form).
+    // React expects a style object. Parse the string into an object as a
+    // fallback so runtime doesn't error.
+    const { style, ...rest } = props || {};
+
+    const parseStyleString = (s: string) => {
+      const out: Record<string, string> = {};
+      s.split(";").forEach((part) => {
+        const [k, ...v] = part.split(":");
+        if (!k) return;
+        const key = k
+          .trim()
+          .replace(/-([a-z])/g, (_, c) => c.toUpperCase());
+        const value = v.join(":").trim();
+        if (key) out[key] = value;
+      });
+      return out;
+    };
+
+    const parsedStyle = typeof style === "string" ? parseStyleString(style) : style;
+
+    return <img {...(rest as React.ComponentProps<"img">)} style={parsedStyle} />;
+  },
 };
 
 const options: MDXRemoteProps["options"] = {
@@ -185,6 +209,30 @@ const options: MDXRemoteProps["options"] = {
         { target: "_blank", rel: "nofollow noopener noreferrer" },
       ],
       rehypeSlug,
+      // Convert inline HTML `style` attribute strings into JS style objects
+      // so React receives the proper `style` prop shape during hydration.
+      () => (tree) => {
+        visit(tree, (node: any) => {
+          if (node?.type === "element") {
+            const props = node.properties || {};
+            if (typeof props.style === "string") {
+              const str: string = props.style;
+              const out: Record<string, string> = {};
+              str.split(";").forEach((part) => {
+                const [k, ...v] = part.split(":");
+                if (!k) return;
+                const key = k
+                  .trim()
+                  .replace(/-([a-z])/g, (_: string, c: string) => c.toUpperCase());
+                const value = v.join(":").trim();
+                if (key) out[key] = value;
+              });
+
+              node.properties.style = out;
+            }
+          }
+        });
+      },
       // Normalize iframe attributes (some embed HTML uses lowercase attributes
       // like `allowfullscreen` or `frameborder` which React treats as invalid
       // DOM props). Convert them to the camelCase properties expected by React

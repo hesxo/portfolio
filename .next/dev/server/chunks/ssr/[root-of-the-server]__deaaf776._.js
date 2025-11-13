@@ -382,6 +382,34 @@ function RootLayout({ children }) {
                         lineNumber: 135,
                         columnNumber: 9
                     }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$script$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                        id: "strip-bis-attributes",
+                        strategy: "beforeInteractive",
+                        dangerouslySetInnerHTML: {
+                            __html: String.raw`
+            try {
+              // Remove any attributes starting with "bis_" which some browser
+              // extensions inject and cause hydration mismatches.
+              const all = document.getElementsByTagName('*');
+              for (let i = 0; i < all.length; i++) {
+                const el = all[i];
+                // Copy attributes because NamedNodeMap is live
+                const attrs = Array.from(el.attributes || []);
+                for (let j = 0; j < attrs.length; j++) {
+                  const name = attrs[j] && attrs[j].name;
+                  if (name && name.startsWith('bis_')) {
+                    el.removeAttribute(name);
+                  }
+                }
+              }
+            } catch (_) {}
+          `
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/layout.tsx",
+                        lineNumber: 139,
+                        columnNumber: 9
+                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
                         type: "application/ld+json",
                         suppressHydrationWarning: true,
@@ -390,7 +418,7 @@ function RootLayout({ children }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/src/app/layout.tsx",
-                        lineNumber: 136,
+                        lineNumber: 161,
                         columnNumber: 9
                     }, this)
                 ]
@@ -405,12 +433,12 @@ function RootLayout({ children }) {
                     children: children
                 }, void 0, false, {
                     fileName: "[project]/src/app/layout.tsx",
-                    lineNumber: 146,
+                    lineNumber: 171,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/layout.tsx",
-                lineNumber: 145,
+                lineNumber: 170,
                 columnNumber: 7
             }, this)
         ]
