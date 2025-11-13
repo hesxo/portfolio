@@ -6742,3 +6742,1222 @@ It can also happen if the client has a browser extension installed which messes 
 [01:53:11.030] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/blog/Tedx","route":"/blog/[slug]"}
 [01:53:11.030] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere color: rgb(120, 120, 120) color: inherit {"dp":"/blog/[slug]","o":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763066962780}
 [01:53:17.528] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066962777-8400066149883","route":"/blog/[slug]","type":"FCP","value":2140},{"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066962777-8830874169348","route":"/blog/[slug]","type":"TTFB","value":1692},{"attribution":{"eventTarget":"div>p>img"},"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066962777-9382672057773","route":"/blog/[slug]","type":"LCP","value":2140},{"attribution":{},"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066962779-6416120252027","route":"/blog/[slug]","type":"CLS","value":0}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}
+[01:53:38.532] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"attribution":{"eventTarget":"body>script>nextjs-portal","eventType":"pointerdown"},"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066962777-7273499728400","route":"/blog/[slug]","type":"INP","value":96}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}
+[01:53:47.553] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"attribution":{"eventTarget":"body>script>nextjs-portal","eventType":"pointerdown"},"href":"http://localhost:1408/blog/Tedx#during-rehearsals-i-learned-how-crucial-the-technical-setup-is-to-the-overall-experiencei-learned-the-importance-of-leadershiphow-guiding-a-team-with-clarity-and-purpose-can-bring-a-shared-vision-to-lifeit-showed-me-that-even-the-smallest-adjustments-can-make-a-big-difference-in-creating-an-impactful-atmosphere","id":"v3-1763066962777-7273499728400","route":"/blog/[slug]","type":"INP","value":192}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}
+[01:54:12.784] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:1408/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:1408/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763067024424}
+[01:54:53.292] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:54:58.010] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                    ...
+                  ...
+                    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                      <SegmentViewNode type="layout" pagePath="(app)/layo...">
+                        <SegmentTrieNode>
+                        <script>
+                        <script>
+                        <script>
+                        <script>
+                        <script>
+                        <script>
+                        <script>
+                        <AppLayout>
+                          <AppLayout>
+                            <SiteHeader>
+                              <SiteHeaderWrapper className="sticky top...">
+                                <header suppressHydrationWarning={true} data-affix={false} className="sticky top...">
+                                  <div className="screen-lin..." data-header-container={true} ...>
+                                    <LinkComponent>
+                                    <div
+                                      className="flex-1"
+-                                     bis_skin_checked="1"
+                                    >
+                                    <DesktopNav>
+                                    <div
+                                      className="flex items-center *:first:mr-2"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <PreloadChunks>
+                                      <CommandMenu>
+                                      <Tooltip>
+                                      <span>
+                                      <ToggleTheme>
+                                        <Button variant="ghost" size="icon" ...>
+                                          <button data-slot="button" className={"inline-f..."} ...>
+                                            <MoonIcon className={"relative..."}>
+                                              <div
+                                                className={"relative hidden after:absolute after:-inset-2 [html.dark_..."}
+                                                onMouseEnter={function MoonIcon.useCallback[handleMouseEnter]}
+                                                onMouseLeave={function MoonIcon.useCallback[handleMouseLeave]}
+-                                               bis_skin_checked="1"
+                                              >
+                                            <SunMediumIcon className={"relative..."}>
+                                              <div
+                                                className={"relative hidden after:absolute after:-inset-2 [html.light..."}
+                                                onMouseEnter={function SunMediumIcon.useCallback[handleMouseEnter]}
+                                                onMouseLeave={function SunMediumIcon.useCallback[handleMouseLeave]}
+-                                               bis_skin_checked="1"
+                                              >
+                                            ...
+                                      ...
+                          ...
+                            <Page>
+                              <script>
+                              <Page>
+                                <div className="mx-auto md..." suppressHydrationWarning={true}>
+                                  <div>
+                                  <ProfileHeader>
+                                    <div suppressHydrationWarning={true} className="screen-lin...">
+                                      <div
+                                        className="shrink-0 border-r border-edge"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="mx-0.5 my-[3px]"
+-                                         bis_skin_checked="1"
+                                        >
+                                      <div
+                                        className="flex flex-1 flex-col"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="flex grow items-end pb-1 pl-4"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="line-clamp-1 font-mono text-xs text-zinc-300 select-none max-sm..."
+-                                           bis_skin_checked="1"
+                                          >
+                                        <div
+                                          className="border-t border-edge"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <h1>
+                                          <div
+                                            className="h-12 border-t border-edge py-1 pl-4 sm:h-auto"
+-                                           bis_skin_checked="1"
+                                          >
+                                  <div>
+                                  <Overview>
+                                    <Panel>
+                                      <section data-slot="panel" className="screen-lin...">
+                                        <h2>
+                                        <PanelContent>
+                                          <div
+                                            data-slot="panel-body"
+                                            className="p-4 space-y-2"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <JobItem>
+                                              <IntroItem>
+                                                <div
+                                                  className="flex items-center gap-4 font-mono text-sm"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="flex size-6 shrink-0 items-center justify-center rounde..."
+                                                    aria-hidden={true}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  ...
+                                            <IntroItem>
+                                              <div
+                                                className="flex items-center gap-4 font-mono text-sm"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="flex size-6 shrink-0 items-center justify-center rounded-..."
+                                                  aria-hidden={true}
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                            <PhoneItem phoneNumber="Kzk0IDc3ID...">
+                                              <IntroItem icon={{...}} content="[Phone pro..." href="#">
+                                                <div
+                                                  className="flex items-center gap-4 font-mono text-sm"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="flex size-6 shrink-0 items-center justify-center rounde..."
+                                                    aria-hidden={true}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  ...
+                                            <EmailItem email="aGFzYWxkaG...">
+                                              <IntroItem icon={{...}} content="[Email pro..." href="#">
+                                                <div
+                                                  className="flex items-center gap-4 font-mono text-sm"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="flex size-6 shrink-0 items-center justify-center rounde..."
+                                                    aria-hidden={true}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  ...
+                                            <IntroItem>
+                                              <div
+                                                className="flex items-center gap-4 font-mono text-sm"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="flex size-6 shrink-0 items-center justify-center rounded-..."
+                                                  aria-hidden={true}
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                            <IntroItem>
+                                              <div
+                                                className="flex items-center gap-4 font-mono text-sm"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="flex size-6 shrink-0 items-center justify-center rounded-..."
+                                                  aria-hidden={true}
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                        <div
+                                          className="pointer-events-none absolute -inset-x-px inset-y-0 rounded-2xl bo..."
+-                                         bis_skin_checked="1"
+                                        >
+                                  <div>
+                                  <SocialLinks>
+                                    <Panel>
+                                      <section data-slot="panel" className="screen-lin...">
+                                        <h2>
+                                        <div
+                                          className="relative"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="pointer-events-none absolute inset-0 -z-1 grid grid-cols-1 gap-..."
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="border-r border-edge"
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="border-l border-edge"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="grid grid-cols-1 gap-4 sm:grid-cols-2"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <SocialLinkItem>
+                                              <a className="group/link..." href="https://li..." target="_blank" ...>
+                                                <div
+                                                  className="relative size-12 shrink-0"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <img>
+                                                  <div
+                                                    className="pointer-events-none absolute inset-0 rounded-xl ring-1 ..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                <div
+                                                  className="flex-1"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                            <SocialLinkItem>
+                                              <a className="group/link..." href="https://gi..." target="_blank" ...>
+                                                <div
+                                                  className="relative size-12 shrink-0"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <img>
+                                                  <div
+                                                    className="pointer-events-none absolute inset-0 rounded-xl ring-1 ..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                <div
+                                                  className="flex-1"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                            <SocialLinkItem>
+                                              <a className="group/link..." href="https://x...." target="_blank" ...>
+                                                <div
+                                                  className="relative size-12 shrink-0"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <img>
+                                                  <div
+                                                    className="pointer-events-none absolute inset-0 rounded-xl ring-1 ..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                <div
+                                                  className="flex-1"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                            <SocialLinkItem>
+                                              <a className="group/link..." href="https://me..." target="_blank" ...>
+                                                <div
+                                                  className="relative size-12 shrink-0"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <img>
+                                                  <div
+                                                    className="pointer-events-none absolute inset-0 rounded-xl ring-1 ..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                <div
+                                                  className="flex-1"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                  <div>
+                                  <About>
+                                    <Panel>
+                                      <section data-slot="panel" className="screen-lin..." id="about">
+                                        <header>
+                                        <PanelContent>
+                                          <div
+                                            data-slot="panel-body"
+                                            className="p-4"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <Prose>
+                                              <div
+                                                data-slot="prose"
+                                                className={"prose prose-sm max-w-none font-mono text-foreground prose..."}
+-                                               bis_skin_checked="1"
+                                              >
+                                  <div>
+                                  <TeckStack>
+                                    <Panel>
+                                      <section data-slot="panel" className="screen-lin..." id="stack">
+                                        <header>
+                                        <PanelContent>
+                                          <div
+                                            data-slot="panel-body"
+                                            className="p-4 [--pattern-foreground:var(--color-zinc-950)]/5 dark:[--patt..."
+-                                           bis_skin_checked="1"
+                                          >
+                                  <div>
+                                  <Blog>
+                                    <Panel>
+                                      <section data-slot="panel" className="screen-lin..." id="blog">
+                                        <header>
+                                        <div
+                                          className="relative py-4"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="pointer-events-none absolute inset-0 -z-1 grid grid-cols-1 gap-..."
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="border-r border-edge"
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="border-l border-edge"
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="grid grid-cols-1 gap-4 sm:grid-cols-2"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <PostItem>
+                                              <LinkComponent>
+                                                <LinkComponent href="/blog/Tedx" className="group/post...">
+                                                  <a className="group/post..." ref={function} onClick={function onClick} ...>
+                                                    <div
+                                                      className={"relative select-none [&_img]:aspect-1200/630 [&_img..."}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <img>
+                                                      <div
+                                                        className="pointer-events-none absolute inset-0 rounded-xl rin..."
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                      ...
+                                                    <div
+                                                      className="flex flex-col gap-1 p-2"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                            <PostItem>
+                                              <LinkComponent>
+                                                <LinkComponent href="/blog/Resp..." className="group/post...">
+                                                  <a className="group/post..." ref={function} onClick={function onClick} ...>
+                                                    <div
+                                                      className={"relative select-none [&_img]:aspect-1200/630 [&_img..."}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <img>
+                                                      <div
+                                                        className="pointer-events-none absolute inset-0 rounded-xl rin..."
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                    <div
+                                                      className="flex flex-col gap-1 p-2"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                            <PostItem>
+                                              <LinkComponent>
+                                                <LinkComponent href="/blog/F1" className="group/post...">
+                                                  <a className="group/post..." ref={function} onClick={function onClick} ...>
+                                                    <div
+                                                      className={"relative select-none [&_img]:aspect-1200/630 [&_img..."}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <img>
+                                                      <div
+                                                        className="pointer-events-none absolute inset-0 rounded-xl rin..."
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                    <div
+                                                      className="flex flex-col gap-1 p-2"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                        <div
+                                          className="screen-line-before flex justify-center py-2"
+-                                         bis_skin_checked="1"
+                                        >
+                                  <div>
+                                  <Experiences>
+                                    <Panel>
+                                      <section data-slot="panel" className="screen-lin..." id="education">
+                                        <header>
+                                        <div
+                                          className="pr-2 pl-4"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <ExperienceItem>
+                                            <div
+                                              className="screen-line-after space-y-4 py-4"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="flex items-center gap-3"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="flex size-6 shrink-0 items-center justify-center select-none"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                              <div
+                                                className="relative space-y-4 before:absolute before:left-3 before:h-f..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                ...
+                                                  <Primitive.div data-state="open" data-disabled={undefined} ...>
+                                                    <Primitive.div.Slot data-state="open" data-disabled={undefined} ...>
+                                                      <Primitive.div.SlotClone data-state="open" ...>
+                                                        <div
+                                                          className="relative last:before:absolute last:before:h-full ..."
+                                                          data-state="open"
+                                                          data-disabled={undefined}
+                                                          ref={null}
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                          <CollapsibleTrigger className="block w-fu...">
+                                                            <Primitive.button type="button" aria-controls="radix-_R_p..." ...>
+                                                              <button type="button" aria-controls="radix-_R_p..." ...>
+                                                                <div
+                                                                  className="relative z-1 mb-1 flex items-center gap-3"
+-                                                                 bis_skin_checked="1"
+                                                                >
+                                                                  <div
+                                                                    className="flex size-6 shrink-0 items-center justi..."
+                                                                    aria-hidden={true}
+-                                                                   bis_skin_checked="1"
+                                                                  >
+                                                                  <h4>
+                                                                  <div
+                                                                    className={"shrink-0 text-muted-foreground [&_svg..."}
+                                                                    aria-hidden={true}
+-                                                                   bis_skin_checked="1"
+                                                                  >
+                                                                <div
+                                                                  className="flex items-center gap-2 pl-9 text-sm text..."
+-                                                                 bis_skin_checked="1"
+                                                                >
+                                                                  <dl>
+                                                                  <Separator className="data-[orie..." ...>
+                                                                    <Separator data-slot="separator" decorative={true} ...>
+                                                                      <Primitive.div data-orientation="vertical" ...>
+                                                                        <div
+                                                                          data-orientation="vertical"
+                                                                          role="none"
+                                                                          data-slot="separator"
+                                                                          className="shrink-0 bg-border data-[orientat..."
+                                                                          ref={null}
+-                                                                         bis_skin_checked="1"
+                                                                        >
+                                                                  ...
+                                                          <CollapsibleContent className="overflow-h...">
+                                                            <Presence present={true}>
+                                                              <Primitive.div data-state="open" data-disabled={undefined} ...>
+                                                                <div
+                                                                  data-state="open"
+                                                                  data-disabled={undefined}
+                                                                  id="radix-_R_pjl5esndabn8qlb_"
+                                                                  hidden={false}
+                                                                  className="overflow-hidden duration-300 data-[state=..."
+                                                                  style={{--radix-collapsible-content-height:undefined, ...}}
+                                                                  ref={function}
+-                                                                 bis_skin_checked="1"
+                                                                >
+                                                                  <Prose>
+                                                                    <div
+                                                                      data-slot="prose"
+                                                                      className={"prose prose-sm max-w-none font-mono..."}
+-                                                                     bis_skin_checked="1"
+                                                                    >
+                                          <ExperienceItem>
+                                            <div
+                                              className="screen-line-after space-y-4 py-4"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="flex items-center gap-3"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="flex size-6 shrink-0 items-center justify-center select-none"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                              <div
+                                                className="relative space-y-4 before:absolute before:left-3 before:h-f..."
+-                                               bis_skin_checked="1"
+                                              >
+                                                ...
+                                                  <Primitive.div data-state="open" data-disabled={undefined} ...>
+                                                    <Primitive.div.Slot data-state="open" data-disabled={undefined} ...>
+                                                      <Primitive.div.SlotClone data-state="open" ...>
+                                                        <div
+                                                          className="relative last:before:absolute last:before:h-full ..."
+                                                          data-state="open"
+                                                          data-disabled={undefined}
+                                                          ref={null}
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                          <CollapsibleTrigger className="block w-fu...">
+                                                            <Primitive.button type="button" aria-controls="radix-_R_q..." ...>
+                                                              <button type="button" aria-controls="radix-_R_q..." ...>
+                                                                <div
+                                                                  className="relative z-1 mb-1 flex items-center gap-3"
+-                                                                 bis_skin_checked="1"
+                                                                >
+                                                                  <div
+                                                                    className="flex size-6 shrink-0 items-center justi..."
+                                                                    aria-hidden={true}
+-                                                                   bis_skin_checked="1"
+                                                                  >
+                                                                  <h4>
+                                                                  <div
+                                                                    className={"shrink-0 text-muted-foreground [&_svg..."}
+                                                                    aria-hidden={true}
+-                                                                   bis_skin_checked="1"
+                                                                  >
+                                                                <div
+                                                                  className="flex items-center gap-2 pl-9 text-sm text..."
+-                                                                 bis_skin_checked="1"
+                                                                >
+                                                          <CollapsibleContent className="overflow-h...">
+                                                            <Presence present={true}>
+                                                              <Primitive.div data-state="open" data-disabled={undefined} ...>
+                                                                <div
+                                                                  data-state="open"
+                                                                  data-disabled={undefined}
+                                                                  id="radix-_R_qjl5esndabn8qlb_"
+                                                                  hidden={false}
+                                                                  className="overflow-hidden duration-300 data-[state=..."
+                                                                  style={{--radix-collapsible-content-height:undefined, ...}}
+                                                                  ref={function}
+-                                                                 bis_skin_checked="1"
+                                                                >
+                                                                  <Prose>
+                                                                    <div
+                                                                      data-slot="prose"
+                                                                      className={"prose prose-sm max-w-none font-mono..."}
+-                                                                     bis_skin_checked="1"
+                                                                    >
+                                  <div>
+                                  ...
+                                    <CollapsibleProvider scope={undefined} disabled={undefined} contentId="radix-_R_k..." ...>
+                                      <Primitive.div data-state="closed" data-disabled={undefined} ref={null}>
+                                        <div
+                                          data-state="closed"
+                                          data-disabled={undefined}
+                                          ref={null}
+-                                         bis_skin_checked="1"
+                                        >
+                                          ...
+                                            <Primitive.div data-state="open" data-disabled={undefined} asChild={true} ...>
+                                              <Primitive.div.Slot data-state="open" data-disabled={undefined} ref={null}>
+                                                <Primitive.div.SlotClone data-state="open" data-disabled={undefined} ...>
+                                                  <div
+                                                    className="border-b border-edge"
+                                                    data-state="open"
+                                                    data-disabled={undefined}
+                                                    ref={null}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="flex items-center hover:bg-accent2"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <img>
+                                                      <div
+                                                        className="flex-1 border-l border-dashed border-edge"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                        <CollapsibleTrigger className="flex w-ful...">
+                                                          <Primitive.button type="button" aria-controls="radix-_R_b..." ...>
+                                                            <button type="button" aria-controls="radix-_R_b..." ...>
+                                                              <div
+                                                                className="flex-1"
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                              <SimpleTooltip>
+                                                              <div
+                                                                className={"shrink-0 text-muted-foreground [&_svg]:si..."}
+                                                                aria-hidden={true}
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                    <CollapsibleContent className="group over...">
+                                                      <Presence present={true}>
+                                                        <Primitive.div data-state="open" data-disabled={undefined} ...>
+                                                          <div
+                                                            data-state="open"
+                                                            data-disabled={undefined}
+                                                            id="radix-_R_bk55esndabn8qlb_"
+                                                            hidden={false}
+                                                            className="group overflow-hidden duration-300 data-[state=..."
+                                                            style={{--radix-collapsible-content-height:undefined, ...}}
+                                                            ref={function}
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                            <div
+                                                              className="border-t border-edge shadow-inner"
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                              <div
+                                                                className="space-y-4 p-4 duration-300 group-data-[stat..."
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                                <Prose>
+                                                                  <div
+                                                                    data-slot="prose"
+                                                                    className={"prose prose-sm max-w-none font-mono t..."}
+-                                                                   bis_skin_checked="1"
+                                                                  >
+                                                                ...
+                                          ...
+                                            <Primitive.div data-state="closed" data-disabled={undefined} asChild={true} ...>
+                                              <Primitive.div.Slot data-state="closed" data-disabled={undefined} ...>
+                                                <Primitive.div.SlotClone data-state="closed" data-disabled={undefined} ...>
+                                                  <div
+                                                    className="border-b border-edge"
+                                                    data-state="closed"
+                                                    data-disabled={undefined}
+                                                    ref={null}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="flex items-center hover:bg-accent2"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <img>
+                                                      <div
+                                                        className="flex-1 border-l border-dashed border-edge"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                        <CollapsibleTrigger className="flex w-ful...">
+                                                          <Primitive.button type="button" aria-controls="radix-_R_j..." ...>
+                                                            <button type="button" aria-controls="radix-_R_j..." ...>
+                                                              <div
+                                                                className="flex-1"
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                              <SimpleTooltip>
+                                                              <div
+                                                                className={"shrink-0 text-muted-foreground [&_svg]:si..."}
+                                                                aria-hidden={true}
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                    <CollapsibleContent className="group over...">
+                                                      <Presence present={false}>
+                                                        <Primitive.div data-state="closed" data-disabled={undefined} ...>
+                                                          <div
+                                                            data-state="closed"
+                                                            data-disabled={undefined}
+                                                            id="radix-_R_jk55esndabn8qlb_"
+                                                            hidden={true}
+                                                            className="group overflow-hidden duration-300 data-[state=..."
+                                                            style={{--radix-collapsible-content-height:undefined, ...}}
+                                                            ref={function}
+-                                                           bis_skin_checked="1"
+                                                          >
+                                          ...
+                                            <Primitive.div data-state="open" data-disabled={undefined} asChild={true} ...>
+                                              <Primitive.div.Slot data-state="open" data-disabled={undefined} ref={null}>
+                                                <Primitive.div.SlotClone data-state="open" data-disabled={undefined} ...>
+                                                  <div
+                                                    className="border-b border-edge"
+                                                    data-state="open"
+                                                    data-disabled={undefined}
+                                                    ref={null}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="flex items-center hover:bg-accent2"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <img>
+                                                      <div
+                                                        className="flex-1 border-l border-dashed border-edge"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                        <CollapsibleTrigger className="flex w-ful...">
+                                                          <Primitive.button type="button" aria-controls="radix-_R_r..." ...>
+                                                            <button type="button" aria-controls="radix-_R_r..." ...>
+                                                              <div
+                                                                className="flex-1"
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                              <SimpleTooltip>
+                                                              <div
+                                                                className={"shrink-0 text-muted-foreground [&_svg]:si..."}
+                                                                aria-hidden={true}
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                    <CollapsibleContent className="group over...">
+                                                      <Presence present={true}>
+                                                        <Primitive.div data-state="open" data-disabled={undefined} ...>
+                                                          <div
+                                                            data-state="open"
+                                                            data-disabled={undefined}
+                                                            id="radix-_R_rk55esndabn8qlb_"
+                                                            hidden={false}
+                                                            className="group overflow-hidden duration-300 data-[state=..."
+                                                            style={{--radix-collapsible-content-height:undefined, ...}}
+                                                            ref={function}
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                            <div
+                                                              className="border-t border-edge shadow-inner"
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                              <div
+                                                                className="space-y-4 p-4 duration-300 group-data-[stat..."
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                                <Prose>
+                                                                  <div
+                                                                    data-slot="prose"
+                                                                    className={"prose prose-sm max-w-none font-mono t..."}
+-                                                                   bis_skin_checked="1"
+                                                                  >
+                                                                ...
+                                          ...
+                                            <Primitive.div data-state="open" data-disabled={undefined} asChild={true} ...>
+                                              <Primitive.div.Slot data-state="open" data-disabled={undefined} ref={null}>
+                                                <Primitive.div.SlotClone data-state="open" data-disabled={undefined} ...>
+                                                  <div
+                                                    className="border-b border-edge"
+                                                    data-state="open"
+                                                    data-disabled={undefined}
+                                                    ref={null}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="flex items-center hover:bg-accent2"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <img>
+                                                      <div
+                                                        className="flex-1 border-l border-dashed border-edge"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                        <CollapsibleTrigger className="flex w-ful...">
+                                                          <Primitive.button type="button" aria-controls="radix-_R_1..." ...>
+                                                            <button type="button" aria-controls="radix-_R_1..." ...>
+                                                              <div
+                                                                className="flex-1"
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                              <SimpleTooltip>
+                                                              <div
+                                                                className={"shrink-0 text-muted-foreground [&_svg]:si..."}
+                                                                aria-hidden={true}
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                    <CollapsibleContent className="group over...">
+                                                      <Presence present={true}>
+                                                        <Primitive.div data-state="open" data-disabled={undefined} ...>
+                                                          <div
+                                                            data-state="open"
+                                                            data-disabled={undefined}
+                                                            id="radix-_R_13k55esndabn8qlb_"
+                                                            hidden={false}
+                                                            className="group overflow-hidden duration-300 data-[state=..."
+                                                            style={{--radix-collapsible-content-height:undefined, ...}}
+                                                            ref={function}
+-                                                           bis_skin_checked="1"
+                                                          >
+                                                            <div
+                                                              className="border-t border-edge shadow-inner"
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                              <div
+                                                                className="space-y-4 p-4 duration-300 group-data-[stat..."
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                                <Prose>
+                                                                  <div
+                                                                    data-slot="prose"
+                                                                    className={"prose prose-sm max-w-none font-mono t..."}
+-                                                                   bis_skin_checked="1"
+                                                                  >
+                                                                ...
+                                          <CollapsibleContent>
+                                            <Presence present={false}>
+                                              <Primitive.div data-state="closed" data-disabled={undefined} ...>
+                                                <div
+                                                  data-state="closed"
+                                                  data-disabled={undefined}
+                                                  id="radix-_R_k55esndabn8qlb_"
+                                                  hidden={true}
+                                                  style={{--radix-collapsible-content-height:undefined, ...}}
+                                                  ref={function}
+-                                                 bis_skin_checked="1"
+                                                >
+                                          <div
+                                            className="flex h-12 items-center justify-center pb-px"
+-                                           bis_skin_checked="1"
+                                          >
+                                  <div>
+                                  ...
+                                    <CollapsibleProvider scope={undefined} disabled={undefined} contentId="radix-_R_k..." ...>
+                                      <Primitive.div data-state="closed" data-disabled={undefined} ref={null}>
+                                        <div
+                                          data-state="closed"
+                                          data-disabled={undefined}
+                                          ref={null}
+-                                         bis_skin_checked="1"
+                                        >
+                                          ...
+                                            <Primitive.div data-state="closed" data-disabled={undefined} asChild={true} ...>
+                                              <Primitive.div.Slot data-state="closed" data-disabled={undefined} ...>
+                                                <Primitive.div.SlotClone data-state="closed" data-disabled={undefined} ...>
+                                                  <div
+                                                    className="border-b border-edge"
+                                                    data-state="closed"
+                                                    data-disabled={undefined}
+                                                    ref={null}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="flex items-center hover:bg-accent2"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="mx-4 flex size-6 shrink-0 items-center justify-cent..."
+                                                        aria-hidden={true}
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                      <div
+                                                        className="flex-1 border-l border-dashed border-edge"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                        <CollapsibleTrigger className="flex w-ful...">
+                                                          <Primitive.button type="button" aria-controls="radix-_R_b..." ...>
+                                                            <button type="button" aria-controls="radix-_R_b..." ...>
+                                                              <div
+                                                                className="flex-1"
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                                <h3>
+                                                                <div
+                                                                  className="flex flex-wrap items-center gap-x-2 gap-y..."
+-                                                                 bis_skin_checked="1"
+                                                                >
+                                                                  <dl>
+                                                                  <Separator className="data-[orie..." ...>
+                                                                    <Separator data-slot="separator" decorative={true} ...>
+                                                                      <Primitive.div data-orientation="vertical" ...>
+                                                                        <div
+                                                                          data-orientation="vertical"
+                                                                          role="none"
+                                                                          data-slot="separator"
+                                                                          className="shrink-0 bg-border data-[orientat..."
+                                                                          ref={null}
+-                                                                         bis_skin_checked="1"
+                                                                        >
+                                                                  <dl>
+                                                                  <Separator className="data-[orie..." ...>
+                                                                    <Separator data-slot="separator" decorative={true} ...>
+                                                                      <Primitive.div data-orientation="vertical" ...>
+                                                                        <div
+                                                                          data-orientation="vertical"
+                                                                          role="none"
+                                                                          data-slot="separator"
+                                                                          className="shrink-0 bg-border data-[orientat..."
+                                                                          ref={null}
+-                                                                         bis_skin_checked="1"
+                                                                        >
+                                                                  ...
+                                                              <SimpleTooltip>
+                                                              <div
+                                                                className={"shrink-0 text-muted-foreground [&_svg]:si..."}
+                                                                aria-hidden={true}
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                    <CollapsibleContent className="group over...">
+                                                      <Presence present={false}>
+                                                        <Primitive.div data-state="closed" data-disabled={undefined} ...>
+                                                          <div
+                                                            data-state="closed"
+                                                            data-disabled={undefined}
+                                                            id="radix-_R_bkl5esndabn8qlb_"
+                                                            hidden={true}
+                                                            className="group overflow-hidden duration-300 data-[state=..."
+                                                            style={{--radix-collapsible-content-height:undefined, ...}}
+                                                            ref={function}
+-                                                           bis_skin_checked="1"
+                                                          >
+                                          <CollapsibleContent>
+                                            <Presence present={false}>
+                                              <Primitive.div data-state="closed" data-disabled={undefined} ...>
+                                                <div
+                                                  data-state="closed"
+                                                  data-disabled={undefined}
+                                                  id="radix-_R_kl5esndabn8qlb_"
+                                                  hidden={true}
+                                                  style={{--radix-collapsible-content-height:undefined, ...}}
+                                                  ref={function}
+-                                                 bis_skin_checked="1"
+                                                >
+                                  <div>
+                                  ...
+                                    <CollapsibleProvider scope={undefined} disabled={undefined} contentId="radix-_R_l..." ...>
+                                      <Primitive.div data-state="closed" data-disabled={undefined} ref={null}>
+                                        <div
+                                          data-state="closed"
+                                          data-disabled={undefined}
+                                          ref={null}
+-                                         bis_skin_checked="1"
+                                        >
+                                          <Slot.Slot>
+                                            <Slot.SlotClone>
+                                              <CertificationItem>
+                                                <a className="group/cert..." href="https://ww..." target="_blank" ...>
+                                                  <div
+                                                    className={"mx-4 flex size-6 shrink-0 items-center justify-center..."}
+                                                    aria-hidden={true}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="flex-1 space-y-1 border-l border-dashed border-edge p-4..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <h3>
+                                                    <div
+                                                      className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm t..."
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <dl>
+                                                      <Separator className="data-[orie..." orientation="vertical">
+                                                        <Separator data-slot="separator" decorative={true} ...>
+                                                          <Primitive.div data-orientation="vertical" role="none" ...>
+                                                            <div
+                                                              data-orientation="vertical"
+                                                              role="none"
+                                                              data-slot="separator"
+                                                              className="shrink-0 bg-border data-[orientation=horizont..."
+                                                              ref={null}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                      ...
+                                                  ...
+                                          <Slot.Slot>
+                                            <Slot.SlotClone>
+                                              <CertificationItem>
+                                                <a className="group/cert..." href="https://ww..." target="_blank" ...>
+                                                  <div
+                                                    className={"mx-4 flex size-6 shrink-0 items-center justify-center..."}
+                                                    aria-hidden={true}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="flex-1 space-y-1 border-l border-dashed border-edge p-4..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <h3>
+                                                    <div
+                                                      className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm t..."
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <dl>
+                                                      <Separator className="data-[orie..." orientation="vertical">
+                                                        <Separator data-slot="separator" decorative={true} ...>
+                                                          <Primitive.div data-orientation="vertical" role="none" ...>
+                                                            <div
+                                                              data-orientation="vertical"
+                                                              role="none"
+                                                              data-slot="separator"
+                                                              className="shrink-0 bg-border data-[orientation=horizont..."
+                                                              ref={null}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                      ...
+                                                  ...
+                                          <Slot.Slot>
+                                            <Slot.SlotClone>
+                                              <CertificationItem>
+                                                <a className="group/cert..." href="https://ww..." target="_blank" ...>
+                                                  <div
+                                                    className={"mx-4 flex size-6 shrink-0 items-center justify-center..."}
+                                                    aria-hidden={true}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="flex-1 space-y-1 border-l border-dashed border-edge p-4..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <h3>
+                                                    <div
+                                                      className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm t..."
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <dl>
+                                                      <Separator className="data-[orie..." orientation="vertical">
+                                                        <Separator data-slot="separator" decorative={true} ...>
+                                                          <Primitive.div data-orientation="vertical" role="none" ...>
+                                                            <div
+                                                              data-orientation="vertical"
+                                                              role="none"
+                                                              data-slot="separator"
+                                                              className="shrink-0 bg-border data-[orientation=horizont..."
+                                                              ref={null}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                      ...
+                                                  ...
+                                          <Slot.Slot>
+                                            <Slot.SlotClone>
+                                              <CertificationItem>
+                                                <a className="group/cert..." href="https://ww..." target="_blank" ...>
+                                                  <div
+                                                    className={"mx-4 flex size-6 shrink-0 items-center justify-center..."}
+                                                    aria-hidden={true}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="flex-1 space-y-1 border-l border-dashed border-edge p-4..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <h3>
+                                                    <div
+                                                      className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm t..."
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <dl>
+                                                      <Separator className="data-[orie..." orientation="vertical">
+                                                        <Separator data-slot="separator" decorative={true} ...>
+                                                          <Primitive.div data-orientation="vertical" role="none" ...>
+                                                            <div
+                                                              data-orientation="vertical"
+                                                              role="none"
+                                                              data-slot="separator"
+                                                              className="shrink-0 bg-border data-[orientation=horizont..."
+                                                              ref={null}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                      ...
+                                                  ...
+                                          <Slot.Slot>
+                                            <Slot.SlotClone>
+                                              <CertificationItem>
+                                                <a className="group/cert..." href="https://ww..." target="_blank" ...>
+                                                  <div
+                                                    className={"mx-4 flex size-6 shrink-0 items-center justify-center..."}
+                                                    aria-hidden={true}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="flex-1 space-y-1 border-l border-dashed border-edge p-4..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <h3>
+                                                    <div
+                                                      className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm t..."
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <dl>
+                                                      <Separator className="data-[orie..." orientation="vertical">
+                                                        <Separator data-slot="separator" decorative={true} ...>
+                                                          <Primitive.div data-orientation="vertical" role="none" ...>
+                                                            <div
+                                                              data-orientation="vertical"
+                                                              role="none"
+                                                              data-slot="separator"
+                                                              className="shrink-0 bg-border data-[orientation=horizont..."
+                                                              ref={null}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                      ...
+                                                  ...
+                                          <Slot.Slot>
+                                            <Slot.SlotClone>
+                                              <CertificationItem>
+                                                <a className="group/cert..." href="http://cre..." target="_blank" ...>
+                                                  <div
+                                                    className={"mx-4 flex size-6 shrink-0 items-center justify-center..."}
+                                                    aria-hidden={true}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="flex-1 space-y-1 border-l border-dashed border-edge p-4..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <h3>
+                                                    <div
+                                                      className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm t..."
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <dl>
+                                                      <Separator className="data-[orie..." orientation="vertical">
+                                                        <Separator data-slot="separator" decorative={true} ...>
+                                                          <Primitive.div data-orientation="vertical" role="none" ...>
+                                                            <div
+                                                              data-orientation="vertical"
+                                                              role="none"
+                                                              data-slot="separator"
+                                                              className="shrink-0 bg-border data-[orientation=horizont..."
+                                                              ref={null}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                      ...
+                                                  ...
+                                          <Slot.Slot>
+                                            <Slot.SlotClone>
+                                              <CertificationItem>
+                                                <a className="group/cert..." href="https://ww..." target="_blank" ...>
+                                                  <div
+                                                    className={"mx-4 flex size-6 shrink-0 items-center justify-center..."}
+                                                    aria-hidden={true}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="flex-1 space-y-1 border-l border-dashed border-edge p-4..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <h3>
+                                                    <div
+                                                      className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm t..."
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <dl>
+                                                      <Separator className="data-[orie..." orientation="vertical">
+                                                        <Separator data-slot="separator" decorative={true} ...>
+                                                          <Primitive.div data-orientation="vertical" role="none" ...>
+                                                            <div
+                                                              data-orientation="vertical"
+                                                              role="none"
+                                                              data-slot="separator"
+                                                              className="shrink-0 bg-border data-[orientation=horizont..."
+                                                              ref={null}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                      ...
+                                                  ...
+                                          <Slot.Slot>
+                                            <Slot.SlotClone>
+                                              <CertificationItem>
+                                                <a className="group/cert..." href="https://ww..." target="_blank" ...>
+                                                  <div
+                                                    className={"mx-4 flex size-6 shrink-0 items-center justify-center..."}
+                                                    aria-hidden={true}
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="flex-1 space-y-1 border-l border-dashed border-edge p-4..."
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <h3>
+                                                    <div
+                                                      className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm t..."
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <dl>
+                                                      <Separator className="data-[orie..." orientation="vertical">
+                                                        <Separator data-slot="separator" decorative={true} ...>
+                                                          <Primitive.div data-orientation="vertical" role="none" ...>
+                                                            <div
+                                                              data-orientation="vertical"
+                                                              role="none"
+                                                              data-slot="separator"
+                                                              className="shrink-0 bg-border data-[orientation=horizont..."
+                                                              ref={null}
+-                                                             bis_skin_checked="1"
+                                                            >
+                                                      ...
+                                                  ...
+                                          <CollapsibleContent>
+                                            <Presence present={false}>
+                                              <Primitive.div data-state="closed" data-disabled={undefined} ...>
+                                                <div
+                                                  data-state="closed"
+                                                  data-disabled={undefined}
+                                                  id="radix-_R_l55esndabn8qlb_"
+                                                  hidden={true}
+                                                  style={{--radix-collapsible-content-height:undefined, ...}}
+                                                  ref={function}
+-                                                 bis_skin_checked="1"
+                                                >
+                                          <div
+                                            className="flex h-12 items-center justify-center pb-px"
+-                                           bis_skin_checked="1"
+                                          >
+                                  ...
+                          <AppLayout>
+                            <SiteFooter>
+                              <footer className="max-w-scre...">
+                                <div
+                                  className="screen-line-before mx-auto border-x border-edge pt-4 md:max-w-3xl"
+-                                 bis_skin_checked="1"
+                                >
+                          ...
+                  ...
+
+[01:54:58.412] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:54:58.412] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:54:58.412] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:1408/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:1408/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763067070160}
+[01:54:58.412] Browser LOG     %c[Vercel Speed Insights]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:55:06.515] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"attribution":{"eventTarget":"body","eventType":"keydown"},"href":"http://localhost:1408/","id":"v3-1763067070163-4741847573961","route":"/","type":"FID","value":685.7},{"href":"http://localhost:1408/","id":"v3-1763067070163-5066626315962","route":"/","type":"FCP","value":3568},{"href":"http://localhost:1408/","id":"v3-1763067070163-8014084005493","route":"/","type":"TTFB","value":2329},{"attribution":{"eventTarget":"img.size-32.rounded-full.ring-1.ring-border.ring-offset-2.ring-offset-background.select-none.sm:size-40"},"href":"http://localhost:1408/","id":"v3-1763067070163-4756925961588","route":"/","type":"LCP","value":3568},{"attribution":{"eventTarget":"body","eventType":"keyup"},"href":"http://localhost:1408/","id":"v3-1763067070163-6274217014718","route":"/","type":"INP","value":1088},{"attribution":{},"href":"http://localhost:1408/","id":"v3-1763067070164-3481970407121","route":"/","type":"CLS","value":0}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}

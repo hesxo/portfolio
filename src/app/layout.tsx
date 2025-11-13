@@ -32,15 +32,27 @@ const darkModeScript = String.raw`
       document.documentElement.classList.add('os-macos')
     }
   } catch (_) {}
-
-  // Remove known extension-injected attributes that cause hydration mismatches
+  // Remove known extension-injected attributes and scripts that cause
+  // hydration mismatches. Run as early as possible during parse so the
+  // client DOM matches the SSR output.
   try {
-    // 'bis_skin_checked' is injected by some browser extensions and causes
-    // extra attributes on client DOM nodes that don't exist on the server.
-    // Remove them early (before React hydrates) so the client DOM matches SSR.
-    const injected = document.querySelectorAll('[bis_skin_checked]');
-    for (let i = 0; i < injected.length; i++) {
-      injected[i].removeAttribute('bis_skin_checked');
+    // Remove attributes beginning with 'bis_' or 'data-bis'
+    const all = document.getElementsByTagName('*');
+    for (let i = 0; i < all.length; i++) {
+      const el = all[i];
+      const attrs = Array.from(el.attributes || []);
+      for (let j = 0; j < attrs.length; j++) {
+        const name = attrs[j] && attrs[j].name;
+        if (name && (name.startsWith('bis_') || name.startsWith('data-bis'))) {
+          el.removeAttribute(name);
+        }
+      }
+    }
+
+    // Remove any script tags injected from chrome extensions
+    const extScripts = document.querySelectorAll('script[src^="chrome-extension://"]');
+    for (let k = 0; k < extScripts.length; k++) {
+      extScripts[k].remove();
     }
   } catch (_) {}
 `;
