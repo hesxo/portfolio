@@ -77,19 +77,6 @@ export const TECH_STACK: TechStack[] = [
     theme: true,
   },
   {
-    key: "motion",
-    title: "Motion",
-    href: "https://motion.dev/",
-    categories: ["Library", "Animation"],
-  },
-  {
-    key: "tanstack",
-    title: "TanStack",
-    href: "https://tanstack.com/",
-    categories: ["Library"],
-    theme: true,
-  },
-  {
     key: "mobx-state-tree",
     title: "MobX-State-Tree",
     href: "https://mobx-state-tree.js.org/",
@@ -100,12 +87,6 @@ export const TECH_STACK: TechStack[] = [
     title: "Redux",
     href: "https://redux.js.org/",
     categories: ["State Management"],
-  },
-  {
-    key: "antd",
-    title: "Ant Design",
-    href: "https://ant.design/",
-    categories: ["Library", "UI Library"],
   },
   {
     key: "react-router",
@@ -154,12 +135,6 @@ export const TECH_STACK: TechStack[] = [
     key: "mongodb",
     title: "MongoDB",
     href: "https://www.mongodb.com/",
-    categories: ["Database"],
-  },
-  {
-    key: "redis",
-    title: "Redis",
-    href: "https://redis.io/",
     categories: ["Database"],
   },
   {
