@@ -1,5 +1,4 @@
 {
   "/(app)/(root)/page": "app/(app)/(root)/page.js",
-  "/api/github-stars/route": "app/api/github-stars/route.js",
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js"
 }

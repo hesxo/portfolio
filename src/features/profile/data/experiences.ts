@@ -4,7 +4,7 @@ export const EXPERIENCES: Experience[] = [
   {
     id: "simplamo",
     companyName: "University of Westminster",
-    companyLogo: "https://i.postimg.cc/3rFrrK0T/Westminster-University-05.png",
+    companyLogo: "https://i.postimg.cc/Ls08RXGB/468399593-10162399169288200-8573338112302853354-n.jpg", // Dark mode logo
     positions: [
       {
         id: "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e",

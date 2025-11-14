@@ -79,7 +79,7 @@ export async function NavItemGitHub() {
         </Button>
       </TooltipTrigger>
 
-      <TooltipContent>
+      <TooltipContent className="rounded-full bg-black dark:bg-zinc-800 px-3 py-1 text-sm text-white font-mono">
         {new Intl.NumberFormat("en-US").format(stargazers_count)} stars
       </TooltipContent>
     </Tooltip>
