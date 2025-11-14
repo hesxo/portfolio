@@ -34,3 +34,4 @@
 [07:45:28.855] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:1408/blog color: rgb(120, 120, 120) color: inherit {"dp":"/blog","o":"http://localhost:1408/blog","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763095479936}
 [07:45:31.788] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:1408/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:1408/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763095482717}
 [07:56:19.879] Server  LOG      ✓ Compiled in 2.2s
+[08:12:13.089] Server  LOG      ✓ Compiled in 1642ms

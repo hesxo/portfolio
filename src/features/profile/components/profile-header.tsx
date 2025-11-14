@@ -30,7 +30,7 @@ export function ProfileHeader() {
         </div>
 
         <div className="border-t border-edge">
-          <h1 className="flex items-center flex-wrap pl-4 text-2xl sm:text-3xl font-semibold">
+          <h1 className="flex items-center flex-wrap pl-4 text-2xl sm:text-3xl font-semibold w-full gap-2 leading-tight break-words">
             {USER.displayName}
             &nbsp;
             <SimpleTooltip content="Verified">
