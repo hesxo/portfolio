@@ -785,8 +785,24 @@
     top: calc(var(--spacing) * 4);
   }
 
+  .top-6 {
+    top: calc(var(--spacing) * 6);
+  }
+
   .top-16 {
     top: calc(var(--spacing) * 16);
+  }
+
+  .top-20 {
+    top: calc(var(--spacing) * 20);
+  }
+
+  .top-\[62\%\] {
+    top: 62%;
+  }
+
+  .top-\[calc\(100\%_-_64px\)\] {
+    top: calc(100% - 64px);
   }
 
   .-right-\[5px\] {
@@ -811,6 +827,14 @@
 
   .right-4 {
     right: calc(var(--spacing) * 4);
+  }
+
+  .right-6 {
+    right: calc(var(--spacing) * 6);
+  }
+
+  .right-8 {
+    right: calc(var(--spacing) * 8);
   }
 
   .right-10 {
@@ -875,6 +899,14 @@
 
   .z-10 {
     z-index: 10;
+  }
+
+  .z-20 {
+    z-index: 20;
+  }
+
+  .z-30 {
+    z-index: 30;
   }
 
   .z-50 {
@@ -1904,6 +1936,10 @@
     height: calc(var(--spacing) * 8);
   }
 
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
+
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -1970,6 +2006,14 @@
 
   .w-4 {
     width: calc(var(--spacing) * 4);
+  }
+
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
+
+  .w-9 {
+    width: calc(var(--spacing) * 9);
   }
 
   .w-10 {
@@ -2523,6 +2567,10 @@
 
   .bg-code {
     background-color: var(--code);
+  }
+
+  .bg-current {
+    background-color: currentColor;
   }
 
   .bg-destructive {
@@ -3863,6 +3911,12 @@
   }
 
   @media (hover: hover) {
+    .hover\:bg-zinc-100:hover {
+      background-color: var(--color-zinc-100);
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:text-accent-foreground:hover {
       color: var(--accent-foreground);
     }
@@ -4380,6 +4434,24 @@
   }
 
   @media (min-width: 40rem) {
+    .sm\:top-24 {
+      top: calc(var(--spacing) * 24);
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:top-\[66\%\] {
+      top: 66%;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:top-\[calc\(100\%_-_72px\)\] {
+      top: calc(100% - 72px);
+    }
+  }
+
+  @media (min-width: 40rem) {
     .sm\:block {
       display: block;
     }
@@ -4798,6 +4870,12 @@
   @supports (color: color-mix(in lab, red, red)) {
     .dark\:group-\[\.toaster\]\:ring-white\/15\!:where(.dark, .dark *):is(:where(.group).toaster *) {
       --tw-ring-color: color-mix(in oklab, var(--color-white) 15%, transparent) !important;
+    }
+  }
+
+  @media (hover: hover) {
+    .dark\:hover\:bg-zinc-800:where(.dark, .dark *):hover {
+      background-color: var(--color-zinc-800);
     }
   }
 

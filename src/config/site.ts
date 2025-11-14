@@ -3,7 +3,7 @@ import type { NavItem } from "@/types/nav";
 
 export const SITE_INFO = {
   name: USER.displayName,
-  url: process.env.APP_URL || "https://chanhdai.com",
+  url: process.env.APP_URL || "https://hasal.de",
   ogImage: USER.ogImage,
   description: USER.bio,
   keywords: USER.keywords,
@@ -25,12 +25,14 @@ export const MAIN_NAV: NavItem[] = [
   },
 ];
 
-export const GITHUB_USERNAME = "ncdai";
-export const SOURCE_CODE_GITHUB_REPO = "ncdai/chanhdai.com";
-export const SOURCE_CODE_GITHUB_URL = "https://github.com/hesxo";
+export const GITHUB_USERNAME = "hesxo";
+// The GitHub repo for this project (owner/repo)
+export const SOURCE_CODE_GITHUB_REPO = "hesxo/portfolio";
+// Full URL to the source code repo
+export const SOURCE_CODE_GITHUB_URL = "https://github.com/hesxo/portfolio";
 
 export const UTM_PARAMS = {
-  utm_source: "chanhdai.com",
+  utm_source: "hasal.de",
   utm_medium: "portfolio_website",
   utm_campaign: "referral",
 };

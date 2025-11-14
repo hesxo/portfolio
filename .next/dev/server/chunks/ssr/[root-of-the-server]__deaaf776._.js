@@ -116,7 +116,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$features$2f$profile$2
 ;
 const SITE_INFO = {
     name: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$features$2f$profile$2f$data$2f$user$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["USER"].displayName,
-    url: process.env.APP_URL || "https://chanhdai.com",
+    url: process.env.APP_URL || "https://hasal.de",
     ogImage: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$features$2f$profile$2f$data$2f$user$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["USER"].ogImage,
     description: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$features$2f$profile$2f$data$2f$user$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["USER"].bio,
     keywords: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$features$2f$profile$2f$data$2f$user$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["USER"].keywords
@@ -135,11 +135,11 @@ const MAIN_NAV = [
         href: "/blog"
     }
 ];
-const GITHUB_USERNAME = "ncdai";
-const SOURCE_CODE_GITHUB_REPO = "ncdai/chanhdai.com";
-const SOURCE_CODE_GITHUB_URL = "https://github.com/hesxo";
+const GITHUB_USERNAME = "hesxo";
+const SOURCE_CODE_GITHUB_REPO = "hesxo/portfolio";
+const SOURCE_CODE_GITHUB_URL = "https://github.com/hesxo/portfolio";
 const UTM_PARAMS = {
-    utm_source: "chanhdai.com",
+    utm_source: "hasal.de",
     utm_medium: "portfolio_website",
     utm_campaign: "referral"
 };

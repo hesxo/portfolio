@@ -953,18 +953,53 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$t
 ;
 ;
 async function NavItemGitHub() {
-    const data = await fetch(`https://api.github.com/repos/${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$site$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["SOURCE_CODE_GITHUB_REPO"]}`, {
-        headers: {
+    let stargazers_count = 0;
+    try {
+        // Build headers only when a token is present to avoid invalid auth failures
+        const headers = {
             Accept: "application/vnd.github+json",
-            Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}`,
             "X-GitHub-Api-Version": "2022-11-28"
-        },
-        next: {
-            revalidate: 86400
+        };
+        if (process.env.GITHUB_API_TOKEN) {
+            headers.Authorization = `Bearer ${process.env.GITHUB_API_TOKEN}`;
         }
-    });
-    const json = await data.json();
-    const stargazers_count = json?.stargazers_count ?? 0;
+        // If we're running locally (dev) and don't have a GitHub token, skip the API
+        // call to avoid 404s for private or non-published repos and to prevent
+        // noisy warnings during development. In production, or when a token is
+        // provided, fetch the repo info so we can show star counts.
+        const isProduction = ("TURBOPACK compile-time value", "development") === "production";
+        const hasToken = Boolean(process.env.GITHUB_API_TOKEN);
+        if (!isProduction && !hasToken) {
+            // Skip fetching in dev without a token; return graceful fallback.
+            // eslint-disable-next-line no-console
+            console.debug("NavItemGitHub: skipping GitHub API fetch in dev (no token)");
+        } else {
+            // Allow overriding the repo at runtime via env for debugging or CI
+            const repoToFetch = process.env.SOURCE_CODE_GITHUB_REPO ?? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$site$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["SOURCE_CODE_GITHUB_REPO"];
+            const apiUrl = `https://api.github.com/repos/${repoToFetch}`;
+            const res = await fetch(apiUrl, {
+                headers,
+                next: {
+                    revalidate: 86400
+                }
+            });
+            if (res.ok) {
+                const json = await res.json();
+                stargazers_count = json?.stargazers_count ?? 0;
+            } else {
+                // Non-OK responses (rate limit, forbidden, not found) should not crash the app.
+                // Log more details to help debugging (which URL was requested and status).
+                console.warn("NavItemGitHub: GitHub API returned non-OK response", res.status, res.statusText, {
+                    url: apiUrl
+                });
+            }
+        }
+    } catch (err) {
+        // Network or runtime errors (e.g. fetch failed) should be handled gracefully
+        // so the layout can render without failing.
+        // eslint-disable-next-line no-console
+        console.warn("NavItemGitHub: failed to fetch GitHub repo info", err);
+    }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Tooltip"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["TooltipTrigger"], {
@@ -982,7 +1017,7 @@ async function NavItemGitHub() {
                                 className: "-translate-y-px"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/nav-item-github.tsx",
-                                lineNumber: 30,
+                                lineNumber: 70,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -990,7 +1025,7 @@ async function NavItemGitHub() {
                                 children: "GitHub"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/nav-item-github.tsx",
-                                lineNumber: 31,
+                                lineNumber: 71,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1001,23 +1036,23 @@ async function NavItemGitHub() {
                                 }).format(stargazers_count)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/nav-item-github.tsx",
-                                lineNumber: 32,
+                                lineNumber: 72,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/nav-item-github.tsx",
-                        lineNumber: 29,
+                        lineNumber: 69,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/nav-item-github.tsx",
-                    lineNumber: 28,
+                    lineNumber: 68,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/nav-item-github.tsx",
-                lineNumber: 27,
+                lineNumber: 67,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -1027,13 +1062,13 @@ async function NavItemGitHub() {
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/nav-item-github.tsx",
-                lineNumber: 42,
+                lineNumber: 82,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/nav-item-github.tsx",
-        lineNumber: 26,
+        lineNumber: 66,
         columnNumber: 5
     }, this);
 }

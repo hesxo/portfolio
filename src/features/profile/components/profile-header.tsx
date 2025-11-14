@@ -1,12 +1,13 @@
 import { USER } from "@/features/profile/data/user";
 import { FlipSentences } from "@/registry/flip-sentences";
 import { VerifiedButton } from "./verified-button";
+import { DownloadIcon } from "lucide-react";
 
 export function ProfileHeader() {
   return (
     <div suppressHydrationWarning={true} className="screen-line-after flex border-x border-edge">
       <div className="shrink-0 border-r border-edge pr-3">
-        <div className="mx-0.5 my-[3px]">
+        <div className="mx-0.5 my-[3px] relative">
           <img
             className="size-40 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none"
             alt={`${USER.displayName}'s avatar`}

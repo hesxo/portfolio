@@ -7,20 +7,60 @@ import { Icons } from "./icons";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 export async function NavItemGitHub() {
-  const data = await fetch(
-    `https://api.github.com/repos/${SOURCE_CODE_GITHUB_REPO}`,
-    {
-      headers: {
-        Accept: "application/vnd.github+json",
-        Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}`,
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-      next: { revalidate: 86400 }, // Cache for 1 day (86400 seconds)
-    }
-  );
-  const json = await data.json();
+  let stargazers_count = 0;
 
-  const stargazers_count = json?.stargazers_count ?? 0;
+  try {
+    // Build headers only when a token is present to avoid invalid auth failures
+    const headers: Record<string, string> = {
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+    };
+
+    if (process.env.GITHUB_API_TOKEN) {
+      headers.Authorization = `Bearer ${process.env.GITHUB_API_TOKEN}`;
+    }
+
+    // If we're running locally (dev) and don't have a GitHub token, skip the API
+    // call to avoid 404s for private or non-published repos and to prevent
+    // noisy warnings during development. In production, or when a token is
+    // provided, fetch the repo info so we can show star counts.
+    const isProduction = process.env.NODE_ENV === "production";
+    const hasToken = Boolean(process.env.GITHUB_API_TOKEN);
+
+    if (!isProduction && !hasToken) {
+      // Skip fetching in dev without a token; return graceful fallback.
+      // eslint-disable-next-line no-console
+      console.debug("NavItemGitHub: skipping GitHub API fetch in dev (no token)");
+    } else {
+      // Allow overriding the repo at runtime via env for debugging or CI
+      const repoToFetch = process.env.SOURCE_CODE_GITHUB_REPO ?? SOURCE_CODE_GITHUB_REPO;
+      const apiUrl = `https://api.github.com/repos/${repoToFetch}`;
+
+      const res = await fetch(apiUrl, {
+        headers,
+        next: { revalidate: 86400 }, // Cache for 1 day
+      });
+
+      if (res.ok) {
+        const json = await res.json();
+        stargazers_count = json?.stargazers_count ?? 0;
+      } else {
+        // Non-OK responses (rate limit, forbidden, not found) should not crash the app.
+        // Log more details to help debugging (which URL was requested and status).
+        console.warn(
+          "NavItemGitHub: GitHub API returned non-OK response",
+          res.status,
+          res.statusText,
+          { url: apiUrl }
+        );
+      }
+    }
+  } catch (err) {
+    // Network or runtime errors (e.g. fetch failed) should be handled gracefully
+    // so the layout can render without failing.
+    // eslint-disable-next-line no-console
+    console.warn("NavItemGitHub: failed to fetch GitHub repo info", err);
+  }
 
   return (
     <Tooltip>

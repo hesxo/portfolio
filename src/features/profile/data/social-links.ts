@@ -17,7 +17,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     icon: "https://assets.chanhdai.com/images/link-icons/x.webp?t=1759581475",
     title: "X (Formerly Twitter)",
     description: "@iamncdai",
-    href: "https://x.com/iamncdai",
+    href: "https://x.com/HasalD82653",
   },
   {
     icon: "https://i.postimg.cc/7Zr2FtSQ/medium-logo-icon.png",

@@ -49,16 +49,12 @@ type CommandLinkItem = {
 
   icon?: React.ComponentType<LucideProps>;
   iconImage?: string;
+  tooltip?: string;
   keywords?: string[];
   openInNewTab?: boolean;
 };
 
 const MENU_LINKS: CommandLinkItem[] = [
-  {
-    title: "Components",
-    href: "/components",
-    icon: Icons.react,
-  },
   {
     title: "Blog",
     href: "/blog",
@@ -98,14 +94,16 @@ const DAIFOLIO_LINKS: CommandLinkItem[] = [
     icon: Icons.certificate,
   },
   {
-    title: "Testimonials",
-    href: "/#testimonials",
-    icon: MessageCircleMoreIcon,
-  },
-  {
     title: "Download vCard",
     href: "/vcard",
     icon: CircleUserIcon,
+  },
+  {
+    title: "Download CV (EN)",
+    href: "https://drive.google.com/uc?export=download&id=1mHTs6fdXmnr0MxHwqaONN57R-JepQA_c",
+    icon: DownloadIcon,
+    openInNewTab: true,
+    tooltip: "Download CV",
   },
 ];
 
@@ -280,46 +278,7 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
 
           <CommandSeparator />
 
-          <CommandGroup heading="Brand Assets">
-            <CommandItem
-              onSelect={() => {
-                handleCopyText(
-                  getMarkSVG(resolvedTheme === "light" ? "#000" : "#fff"),
-                  "Copied Mark as SVG"
-                );
-              }}
-            >
-              <ChanhDaiMark />
-              Copy Mark as SVG
-            </CommandItem>
-
-            <CommandItem
-              onSelect={() => {
-                handleCopyText(
-                  getWordmarkSVG(resolvedTheme === "light" ? "#000" : "#fff"),
-                  "Copied Logotype as SVG"
-                );
-              }}
-            >
-              <TypeIcon />
-              Copy Logotype as SVG
-            </CommandItem>
-
-            <CommandItem
-              onSelect={() => handleOpenLink("/blog/chanhdai-brand")}
-            >
-              <TriangleDashedIcon />
-              Brand Guidelines
-            </CommandItem>
-
-            <CommandItem asChild>
-              <a href="https://assets.chanhdai.com/chanhdai-brand.zip" download>
-                <DownloadIcon />
-                Download Brand Assets
-              </a>
-            </CommandItem>
-          </CommandGroup>
-
+          {/* Brand Assets group removed per user request */}
           <CommandSeparator />
 
           <CommandGroup heading="Theme">
@@ -385,7 +344,14 @@ function CommandLinkGroup({
                 unoptimized
               />
             ) : (
-              <Icon />
+              // If a tooltip is provided, attach it to the icon so hovering the icon shows the message
+              link.tooltip ? (
+                <span title={link.tooltip} className="inline-block">
+                  <Icon />
+                </span>
+              ) : (
+                <Icon />
+              )
             )}
             {link.title}
           </CommandItem>
@@ -413,15 +379,10 @@ function buildCommandMetaMap() {
   commandMetaMap.set("Dark", { commandKind: "command" });
   commandMetaMap.set("Auto", { commandKind: "command" });
 
-  commandMetaMap.set("Copy Mark as SVG", {
-    commandKind: "command",
-  });
-  commandMetaMap.set("Copy Logotype as SVG", {
-    commandKind: "command",
-  });
-  commandMetaMap.set("Download Brand Assets", {
-    commandKind: "command",
-  });
+  // Add the CV download command so the footer action label shows correctly
+  commandMetaMap.set("Download CV (EN)", { commandKind: "command" });
+
+  // Brand-related copy/download commands removed from the command menu.
 
   SOCIAL_LINK_ITEMS.forEach((item) => {
     commandMetaMap.set(item.title, {

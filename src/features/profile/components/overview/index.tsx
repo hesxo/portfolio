@@ -1,4 +1,5 @@
-import { GlobeIcon, MapPinIcon, MarsIcon, VenusIcon } from "lucide-react";
+import { GlobeIcon, MapPinIcon, MarsIcon, VenusIcon, DownloadIcon } from "lucide-react";
+import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 
 import { USER } from "@/features/profile/data/user";
 import { urlToName } from "@/utils/url";
@@ -43,6 +44,25 @@ export function Overview() {
           content={USER.pronouns}
         />
       </PanelContent>
+
+      {/* Download button positioned inside the panel's top-right decorative circle */}
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1mHTs6fdXmnr0MxHwqaONN57R-JepQA_c"
+              title="Download vCard"
+              aria-label="Download vCard"
+              className="absolute right-4 top-4 z-30 flex h-9 w-9 items-center justify-center rounded-full bg-zinc-50 text-muted-foreground ring-1 ring-border hover:bg-zinc-100 dark:bg-zinc-900 dark:hover:bg-zinc-800"
+            >
+              <DownloadIcon className="h-4 w-4" aria-hidden="true" />
+              <span className="sr-only">Download CV</span>
+            </a>
+          </TooltipTrigger>
+
+            <TooltipContent className="rounded-full bg-black dark:bg-zinc-800 px-4 py-2 text-sm text-white font-mono">
+            Download CV
+          </TooltipContent>
+        </Tooltip>
 
       <div className="pointer-events-none absolute -inset-x-px inset-y-0 rounded-2xl border" />
     </Panel>
