@@ -164,6 +164,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../src/app/api/github-stars/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/github-stars">> = Specific
+  const handler = {} as typeof import("../../../src/app/api/github-stars/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../src/app/og/domain/route.tsx
 {
   type __IsExpected<Specific extends RouteHandlerConfig<"/og/domain">> = Specific
