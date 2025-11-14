@@ -1,0 +1,3 @@
+{
+  "/api/github-stars/route": "app/api/github-stars/route.js"
+}
