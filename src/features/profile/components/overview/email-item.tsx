@@ -15,7 +15,8 @@ export function EmailItem({ email }: { email: string }) {
     <IntroItem
       icon={MailIcon}
       content={isClient ? emailDecoded : "[Email protected]"}
-      href={isClient ? `mailto:${emailDecoded}` : "#"}
+      // Open Gmail using the user's preferred compose URL (opens compose in inbox).
+      href={isClient ? "https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRspgxltzblxBgtMWhNlNtZvVnhXDscgnRsPNHqvGDrwcZPszJTNQvLGwLZXrScRvkHNQwl" : "#"}
     />
   );
 }

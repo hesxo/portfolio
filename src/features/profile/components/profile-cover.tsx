@@ -17,16 +17,6 @@ export function ProfileCover() {
         id="js-cover-mark"
         className="h-14 w-28 sm:h-16 sm:w-32"
       />
-      {/* small download button inside the decorative top-right circle */}
-      <a
-        href="/vcard"
-        title="Download vCard"
-        aria-label="Download vCard"
-        className="absolute z-20 right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full bg-zinc-50 text-muted-foreground ring-1 ring-border hover:bg-zinc-100 dark:bg-zinc-900 dark:hover:bg-zinc-800"
-      >
-        <DownloadIcon className="h-5 w-5" aria-hidden="true" />
-        <span className="sr-only">Download vCard</span>
-      </a>
     </div>
   );
 }

@@ -301,7 +301,8 @@ function EmailItem({ email }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$features$2f$profile$2f$components$2f$overview$2f$intro$2d$item$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["IntroItem"], {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__MailIcon$3e$__["MailIcon"],
         content: isClient ? emailDecoded : "[Email protected]",
-        href: isClient ? `mailto:${emailDecoded}` : "#"
+        // Open Gmail using the user's preferred compose URL (opens compose in inbox).
+        href: isClient ? "https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRspgxltzblxBgtMWhNlNtZvVnhXDscgnRsPNHqvGDrwcZPszJTNQvLGwLZXrScRvkHNQwl" : "#"
     }, void 0, false, {
         fileName: "[project]/src/features/profile/components/overview/email-item.tsx",
         lineNumber: 15,
