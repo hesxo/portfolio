@@ -1682,10 +1682,6 @@
     margin-top: calc(var(--spacing) * .5);
   }
 
-  .mt-1 {
-    margin-top: calc(var(--spacing) * 1);
-  }
-
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -1863,11 +1859,6 @@
   .size-12 {
     width: calc(var(--spacing) * 12);
     height: calc(var(--spacing) * 12);
-  }
-
-  .size-16 {
-    width: calc(var(--spacing) * 16);
-    height: calc(var(--spacing) * 16);
   }
 
   .size-40 {
@@ -2235,10 +2226,6 @@
 
   .items-end {
     align-items: flex-end;
-  }
-
-  .items-start {
-    align-items: flex-start;
   }
 
   .justify-between {
@@ -3081,6 +3068,10 @@
     color: var(--info);
   }
 
+  .text-inherit {
+    color: inherit;
+  }
+
   .text-muted-foreground {
     color: var(--muted-foreground);
   }
@@ -3347,6 +3338,11 @@
     transition-property: transform, translate, scale, rotate;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+
+  .duration-150 {
+    --tw-duration: .15s;
+    transition-duration: .15s;
   }
 
   .duration-200 {
@@ -3950,6 +3946,11 @@
     }
   }
 
+  .focus\:outline-none:focus {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+
   .focus-visible\:border-ring:focus-visible {
     border-color: var(--ring);
   }
@@ -4379,12 +4380,6 @@
   }
 
   @media (min-width: 40rem) {
-    .sm\:mt-0 {
-      margin-top: calc(var(--spacing) * 0);
-    }
-  }
-
-  @media (min-width: 40rem) {
     .sm\:block {
       display: block;
     }
@@ -4405,13 +4400,6 @@
   @media (min-width: 40rem) {
     .sm\:aspect-3\/1 {
       aspect-ratio: 3;
-    }
-  }
-
-  @media (min-width: 40rem) {
-    .sm\:size-28 {
-      width: calc(var(--spacing) * 28);
-      height: calc(var(--spacing) * 28);
     }
   }
 
@@ -4466,12 +4454,6 @@
   @media (min-width: 40rem) {
     .sm\:flex-row {
       flex-direction: row;
-    }
-  }
-
-  @media (min-width: 40rem) {
-    .sm\:items-center {
-      align-items: center;
     }
   }
 
@@ -4573,13 +4555,6 @@
   @media (min-width: 48rem) {
     .md\:aspect-3\/1 {
       aspect-ratio: 3;
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:size-40 {
-      width: calc(var(--spacing) * 40);
-      height: calc(var(--spacing) * 40);
     }
   }
 

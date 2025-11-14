@@ -1,8 +1,6 @@
-import { SimpleTooltip } from "@/components/ui/tooltip";
 import { USER } from "@/features/profile/data/user";
 import { FlipSentences } from "@/registry/flip-sentences";
-
-import { VerifiedIcon as VerifiedIconNew } from "./verified-icon2";
+import { VerifiedButton } from "./verified-button";
 
 export function ProfileHeader() {
   return (
@@ -30,14 +28,11 @@ export function ProfileHeader() {
         </div>
 
         <div className="border-t border-edge">
-          <h1 className="flex sm:flex-row flex-col sm:items-center items-start pl-4 text-2xl sm:text-3xl font-semibold w-full gap-2 leading-tight">
-            <span className="break-words w-full">{USER.displayName}</span>
+          <h1 className="flex flex-row items-center pl-4 text-2xl sm:text-3xl font-semibold w-full gap-2 leading-tight">
+            <span className="break-words">{USER.displayName}</span>
 
-            <div className="mt-1 sm:mt-0">
-              <SimpleTooltip content="Verified">
-                <VerifiedIconNew className="size-[0.6em] translate-y-px text-info select-none" />
-              </SimpleTooltip>
-            </div>
+            {/* Verified badge: render inline immediately next to the name */}
+            <VerifiedButton displayName={USER.displayName} />
           </h1>
 
           <div className="h-12 border-t border-edge py-1 pl-4 sm:h-auto">
