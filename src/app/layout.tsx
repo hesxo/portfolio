@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import type { WebSite, WithContext } from "schema-dts";
+import type { Person, WebSite, WithContext } from "schema-dts";
 
 import { Providers } from "@/components/providers";
 import { META_THEME_COLORS, SITE_INFO } from "@/config/site";
@@ -16,6 +16,20 @@ function getWebSiteJsonLd(): WithContext<WebSite> {
     name: SITE_INFO.name,
     url: SITE_INFO.url,
     alternateName: [USER.username],
+  };
+}
+
+function getPersonJsonLd(): WithContext<Person> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: USER.displayName,
+    givenName: USER.firstName,
+    familyName: USER.lastName,
+    jobTitle: USER.jobTitle,
+    url: USER.website || SITE_INFO.url,
+    sameAs: [SITE_INFO.url],
+    description: SITE_INFO.description,
   };
 }
 // Thanks @shadcn-ui, @tailwindcss
@@ -71,11 +85,11 @@ export const metadata: Metadata = {
   keywords: SITE_INFO.keywords,
   authors: [
     {
-      name: "ncdai",
+      name: USER.displayName,
       url: SITE_INFO.url,
     },
   ],
-  creator: "ncdai",
+  creator: USER.displayName,
   openGraph: {
     siteName: SITE_INFO.name,
     url: "/",
@@ -95,23 +109,26 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    creator: "@iamncdai", // Twitter username
+    creator: "@hesxo", // Twitter username
     images: [SITE_INFO.ogImage],
   },
   icons: {
     icon: [
       {
-        url: "https://i.postimg.cc/YqFC7XHk/HD-logo.jpg",
+        url: "/icons/icon-vector.svg",
         sizes: "any",
       },
       {
-        url: "https://i.postimg.cc/YqFC7XHk/HD-logo.jpg",
+        url: "/icons/icon-vector.svg",
         type: "image/svg+xml",
       },
     ],
     apple: {
-      url: "https://i.postimg.cc/YqFC7XHk/HD-logo.jpg",
-      type: "image/png",
+      // Use the local SVG icon for apple/manifest; consider adding a
+      // 180x180 PNG at `public/icons/apple-touch-icon.png` for best
+      // compatibility with older devices.
+      url: "/icons/icon-vector.svg",
+      type: "image/svg+xml",
       sizes: "180x180",
     },
   },
@@ -215,6 +232,13 @@ export default function RootLayout({
           suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(getWebSiteJsonLd()).replace(/</g, "\\u003c"),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getPersonJsonLd()).replace(/</g, "\\u003c"),
           }}
         />
       </head>

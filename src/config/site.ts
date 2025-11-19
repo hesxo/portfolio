@@ -3,7 +3,7 @@ import type { NavItem } from "@/types/nav";
 
 export const SITE_INFO = {
   name: USER.displayName,
-  url: process.env.APP_URL || "https://hasal.de",
+  url: process.env.APP_URL || "https://hasal.me",
   ogImage: USER.ogImage,
   description: USER.bio,
   keywords: USER.keywords,
@@ -32,7 +32,7 @@ export const SOURCE_CODE_GITHUB_REPO = "hesxo/portfolio";
 export const SOURCE_CODE_GITHUB_URL = "https://github.com/hesxo/portfolio";
 
 export const UTM_PARAMS = {
-  utm_source: "hasal.de",
+  utm_source: "hasal.me",
   utm_medium: "portfolio_website",
   utm_campaign: "referral",
 };

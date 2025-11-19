@@ -2756,10 +2756,6 @@
     object-fit: contain;
   }
 
-  .object-cover {
-    object-fit: cover;
-  }
-
   .p-0 {
     padding: calc(var(--spacing) * 0);
   }
@@ -3138,10 +3134,6 @@
 
   .opacity-0 {
     opacity: 0;
-  }
-
-  .opacity-10 {
-    opacity: .1;
   }
 
   .opacity-50 {
@@ -4729,10 +4721,6 @@
 
   .dark\:text-zinc-800:where(.dark, .dark *) {
     color: var(--color-zinc-800);
-  }
-
-  .dark\:opacity-10:where(.dark, .dark *) {
-    opacity: .1;
   }
 
   .dark\:inset-shadow-\[1px_1px_1px\,0px_0px_2px\]:where(.dark, .dark *) {
