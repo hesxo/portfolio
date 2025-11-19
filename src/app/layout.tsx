@@ -241,15 +241,17 @@ export default function RootLayout({
             __html: JSON.stringify(getPersonJsonLd()).replace(/</g, "\\u003c"),
           }}
         />
-      </head>
-
         {/* Explicit favicons: some crawlers and older browsers expect /favicon.* links
             and may not read Next's metadata/icons. Provide explicit links to local
             files so search engines pick up the correct icon. */}
+        {/* Fallback order: .ico (legacy), .png (broad support), .svg (scalable) */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="icon" href="/favicon.svg" />
         <link rel="apple-touch-icon" href="/icons/icon-vector.svg" />
         <link rel="mask-icon" href="/icons/maskable-icon.svg" color="#000000" />
 
+      </head>
       <body suppressHydrationWarning>
         <Providers>{children}</Providers>
       </body>
