@@ -33,7 +33,6 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    "packages/ncdai/dist/**",
   ]),
 ]);
 
