@@ -215,3 +215,102 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [00:50:36.803] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:1408/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:1408/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1768794663279}
 [00:50:36.803] Browser LOG     %c[Vercel Speed Insights]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
 [00:50:45.998] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"href":"http://localhost:1408/","id":"v3-1768794663280-2789455803224","route":"/","type":"FCP","value":760},{"href":"http://localhost:1408/","id":"v3-1768794663280-1116137729191","route":"/","type":"TTFB","value":594},{"attribution":{"eventTarget":"img.size-24.sm:size-40.rounded-full.ring-1.ring-border.ring-offset-2.ring-offset-background.select-none"},"href":"http://localhost:1408/","id":"v3-1768794663279-5310085176866","route":"/","type":"LCP","value":760},{"attribution":{"eventTarget":"nav.flex.items-center.gap-4.max-sm:hidden"},"href":"http://localhost:1408/","id":"v3-1768794663287-3130833995976","route":"/","type":"CLS","value":0.0004}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}
+[00:52:35.773] Server  LOG      ✓ Compiled in 169ms
+[00:52:35.937] Server  DEBUG   NavItemGitHub: skipping GitHub API fetch in dev (no token)
+[00:52:36.257] Browser ERROR   ./src/components/site-header.tsx:59:4
+Parsing ecmascript source code failed
+  57 |         <DesktopNav items={MAIN_NAV} />
+  58 |
+> 59 | <<<<<<< HEAD
+     |    ^^
+  60 |         <HeaderActions posts={posts} navItems={MAIN_NAV}>
+  61 |           <NavItemGitHub />
+  62 |         </HeaderActions>
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/components/site-header.tsx
+    ./src/app/(app)/layout.tsx
+[00:52:36.257] Browser ERROR   ./src/components/site-header.tsx:49:1
+Parsing ecmascript source code failed
+  47 | =======
+  48 |         suppressHydrationWarning={true}
+> 49 | >>>>>>> origin/main
+     | ^^^^^^^
+  50 |       >
+  51 |         <Link href="/" aria-label="Home" className="[&_svg]:h-8">
+  52 |           <SiteHeaderMark />
+
+Merge conflict marker encountered.
+
+Import trace:
+  Server Component:
+    ./src/components/site-header.tsx
+    ./src/app/(app)/layout.tsx
+[00:52:36.257] Browser ERROR   ./src/features/profile/components/certifications/certification-item.tsx:72:1
+Parsing ecmascript source code failed
+  70 |             style.text,
+  71 |             style.bg
+> 72 | =======
+     | ^^^^^^^
+  73 |             "border border-muted-foreground/15 ring-1 ring-edge ring-offset-1 ring-offset-background",
+  74 |             "bg-muted text-muted-foreground [&_svg]:size-4"
+  75 | >>>>>>> origin/main
+
+Merge conflict marker encountered.
+
+Import trace:
+  Server Component:
+    ./src/features/profile/components/certifications/certification-item.tsx
+    ./src/features/profile/components/certifications/index.tsx
+    ./src/app/(app)/(root)/page.tsx
+[00:52:36.257] Browser ERROR   ./src/features/profile/components/profile-header.tsx:9:4
+Parsing ecmascript source code failed
+   7 |   return (
+   8 |     <div suppressHydrationWarning={true} className="screen-line-after flex border-x border-edge">
+>  9 | <<<<<<< HEAD
+     |    ^^
+  10 |       <div className="shrink-0 border-r border-edge pr-3 max-sm:pr-2">
+  11 |         <div className="mx-0.5 my-[3px] relative">
+  12 |           <img
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./src/features/profile/components/profile-header.tsx
+    ./src/app/(app)/(root)/page.tsx
+[00:52:36.257] Browser ERROR   ./src/features/profile/data/projects.ts:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | export const PROJECTS: Project[] = [
+> 4 | <<<<<<< HEAD
+    | ^^^^^^^
+  5 |   {
+  6 |     id: "sq3",
+  7 |     title: "SQ3 – Smart Business Conversation Management Platform",
+
+Merge conflict marker encountered.
+
+Import trace:
+  Server Component:
+    ./src/features/profile/data/projects.ts
+    ./src/features/profile/components/projects/index.tsx
+    ./src/app/(app)/(root)/page.tsx
+[00:52:36.474] Server  DEBUG   NavItemGitHub: skipping GitHub API fetch in dev (no token)
+[00:52:36.677] Server  DEBUG   NavItemGitHub: skipping GitHub API fetch in dev (no token)
+[00:53:03.586] Server  DEBUG   NavItemGitHub: skipping GitHub API fetch in dev (no token)
+[00:53:04.026] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:53:04.380] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:53:04.380] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:53:04.380] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:1408/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:1408/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1768794810853}
+[00:53:04.380] Browser LOG     %c[Vercel Speed Insights]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:53:14.000] Browser LOG     %c[Vercel Speed Insights]%c [vitals] color: rgb(120, 120, 120) color: inherit {"metrics":[{"href":"http://localhost:1408/","id":"v3-1768794810853-9660963252625","route":"/","type":"FCP","value":548},{"href":"http://localhost:1408/","id":"v3-1768794810853-8191892678717","route":"/","type":"TTFB","value":385},{"attribution":{"eventTarget":"img.size-24.sm:size-40.rounded-full.ring-1.ring-border.ring-offset-2.ring-offset-background.select-none"},"href":"http://localhost:1408/","id":"v3-1768794810853-7813573236097","route":"/","type":"LCP","value":548},{"attribution":{"eventTarget":"body>main.max-w-screen.overflow-x-hidden.px-2","eventType":"pointerdown"},"href":"http://localhost:1408/","id":"v3-1768794810853-9417128532853","route":"/","type":"FID","value":15.09},{"attribution":{"eventTarget":"body>main.max-w-screen.overflow-x-hidden.px-2","eventType":"pointerdown"},"href":"http://localhost:1408/","id":"v3-1768794810853-9401537852795","route":"/","type":"INP","value":24},{"attribution":{"eventTarget":"nav.flex.items-center.gap-4.max-sm:hidden"},"href":"http://localhost:1408/","id":"v3-1768794810877-5930761351958","route":"/","type":"CLS","value":0.0004}],"scriptVersion":"0.1.3","sdkName":"@vercel/speed-insights/next","sdkVersion":"1.2.0","speed":"4g"}
+[00:59:13.918] Server  DEBUG   NavItemGitHub: skipping GitHub API fetch in dev (no token)
+[00:59:14.321] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:59:14.749] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:59:14.749] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:59:14.749] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:1408/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:1408/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1768795181218}
+[00:59:14.749] Browser LOG     %c[Vercel Speed Insights]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
