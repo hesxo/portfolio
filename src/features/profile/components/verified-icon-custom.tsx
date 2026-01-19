@@ -1,7 +1,7 @@
 import React from "react";
 
 export function VerifiedIcon(props: React.ComponentProps<"svg">) {
-  const { className, width, height, ...rest } = props as any;
+  const { className, width, height, ...rest } = props;
 
   return (
     <svg

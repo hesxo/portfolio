@@ -15,7 +15,8 @@ function cleanSvgProps(props: IconProps) {
   // (e.g. `focusable` or `hidden`) so we don't accidentally render
   // them when callers pass them. Keep the rest so callers can set
   // className, aria-* and other useful attributes.
-  const { focusable, hidden, ...rest } = props as any;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { focusable, hidden, ...rest } = props as Record<string, unknown>;
   return rest as IconProps;
 }
 

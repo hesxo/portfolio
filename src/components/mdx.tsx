@@ -148,7 +148,7 @@ const components: MDXRemoteProps["components"] = {
   ),
   YouTubeEmbed,
   FramedImage,
-  iframe: (props: any) => {
+  iframe: (props: Record<string, unknown>) => {
     // Normalize common HTML attributes that MDX authors (or embeds) may write
     // in lowercase (e.g. `frameborder`) which React expects in camelCase.
     const {
@@ -158,7 +158,7 @@ const components: MDXRemoteProps["components"] = {
       ...rest
     } = props || {};
 
-    const normalized: any = { ...rest };
+    const normalized: Record<string, unknown> = { ...rest };
 
     if (frameborder !== undefined && normalized.frameBorder === undefined) {
       normalized.frameBorder = frameborder;
@@ -174,7 +174,7 @@ const components: MDXRemoteProps["components"] = {
 
     return <iframe {...(normalized as React.ComponentProps<"iframe">)} />;
   },
-  img: (props: any) => {
+  img: (props: Record<string, unknown>) => {
     // Some MDX content uses a string `style` attribute (HTML form).
     // React expects a style object. Parse the string into an object as a
     // fallback so runtime doesn't error.
@@ -196,7 +196,7 @@ const components: MDXRemoteProps["components"] = {
 
     const parsedStyle = typeof style === "string" ? parseStyleString(style) : style;
 
-    return <img {...(rest as React.ComponentProps<"img">)} style={parsedStyle} />;
+    return <img {...(rest as React.ComponentProps<"img">)} style={parsedStyle as React.CSSProperties} />;
   },
 };
 
@@ -212,7 +212,7 @@ const options: MDXRemoteProps["options"] = {
       // Convert inline HTML `style` attribute strings into JS style objects
       // so React receives the proper `style` prop shape during hydration.
       () => (tree) => {
-        visit(tree, (node: any) => {
+        visit(tree, (node) => {
           if (node?.type === "element") {
             const props = node.properties || {};
             if (typeof props.style === "string") {
@@ -238,7 +238,7 @@ const options: MDXRemoteProps["options"] = {
       // DOM props). Convert them to the camelCase properties expected by React
       // so the server-rendered markup matches the client.
       () => (tree) => {
-        visit(tree, (node: any) => {
+        visit(tree, (node) => {
           if (node?.type === "element" && node?.tagName === "iframe") {
             const props = node.properties || {};
 
