@@ -77,7 +77,7 @@ SQ3 is designed to **augment human agents**, not replace them—balancing automa
     ],
     description: `Imagine Entertainment Platform is a **bespoke, production-grade web system** built for Sri Lanka’s premier event production company with over **37 years of industry excellence**.
 
-I led this project end-to-end after acquiring the engagement directly from the client, taking ownership of **system architecture, full-stack development, and technical delivery**, while collaborating with **Tharuka Karunanayaka** on business coordination and creative direction.
+I led this project end-to-end after acquiring the engagement directly from the client, taking ownership of **system architecture, full-stack development, and technical delivery**, while collaborating with [**Tharuka Karunanayaka**](https://www.linkedin.com/in/tharukakarunanayaka) on business coordination and creative direction.
 
 **Core Capabilities:**
 
