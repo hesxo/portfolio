@@ -1,3 +1,0 @@
-{
-  "/(llms)/blog.mdx/[slug]/route": "app/(llms)/blog.mdx/[slug]/route.js"
-}
