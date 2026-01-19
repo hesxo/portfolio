@@ -54,7 +54,8 @@ SQ3 is designed to **augment human agents**, not replace them—balancing automa
     id: "imagine-entertainment",
     title: "Imagine Entertainment – Cloud-Native Event Platform & Custom Dashboard",
     period: {
-      start: "2024",
+      start: "11.2025",
+      end: "11.2025",
     },
     link: "https://www.imaginesl.com/",
     skills: [
@@ -113,7 +114,8 @@ I led this project end-to-end after acquiring the engagement directly from the c
     id: "stayza",
     title: "Stayza – Hotel Booking & Reservation Platform",
     period: {
-      start: "11.2024",
+      start: "11.2025",
+      end: "11.2025",
     },
     link: "https://stayza-frontend.vercel.app",
     skills: [
@@ -152,6 +154,7 @@ I led this project end-to-end after acquiring the engagement directly from the c
     title: "Cutting Edge – Student Innovation Exhibition @ Informatics Institute of Technology (IIT)",
     period: {
       start: "06.2025",
+      end: "07.2025",
     },
     link: "https://cuttingedge.iit.ac.lk/",
     skills: [
@@ -185,7 +188,8 @@ A key vehicle for fostering innovation, entrepreneurship and real-world applicat
     id: "ietoncampus",
     title: "IET On Campus – Student Chapter Website",
     period: {
-      start: "09.2024",
+      start: "09.2025",
+      end: "10.2025",
     },
     link: "https://github.com/hesxo/ietoncampus/tree/main",
     skills: [
@@ -247,71 +251,5 @@ LinkedIn (School): https://www.linkedin.com/school/kingswoodcollegelk/
 A polished, competition-ready full-stack front-end submission showcasing strong UI engineering and teamwork.`,
     logo: "https://i.postimg.cc/DZPVw26f/Kingswood-Logo.webp",
     isExpanded: true
-  },
-  {
-    id: "unlimitedstudy",
-    title: "UnlimitedStudy",
-    period: {
-      start: "01.2017",
-      end: "08.2018",
-    },
-    link: "https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm",
-    skills: [
-      "National Competition",
-      "Creative Software",
-      "PHP",
-      "Laravel 4",
-      "MySQL",
-      "jQuery",
-      "Bootstrap 3",
-    ],
-    description: `UnlimitedStudy is a website that provides teaching and learning support tools for teachers and students.
-- 3rd Prize — National Science and Engineering Fair 2018 (ViSEF)
-- 1st Prize — Can Tho City Science and Engineering Fair 2018
-- 3rd Prize — National Young Informatics Contest 2018
-- 2nd Prize — Can Tho City Youth and Children's Creativity Contest 2018
-- 3rd Prize — Can Tho City Young Informatics Contest 2018
-- Reached 7k+ users, mainly high school students in Can Tho City
-- Pilot implemented in high schools across Can Tho City with English quizzes, supervised by English subject specialists from the Can Tho City Department of Education and Training`,
-    logo: "https://assets.chanhdai.com/images/project-logos/unlimitedstudy.webp",
-  },
-  {
-    id: "dmessage",
-    title: "DMessage",
-    period: {
-      start: "05.2017",
-      end: "05.2017",
-    },
-    link: "https://github.com/ncdai/DMessage",
-    skills: [
-      "Self-learning Project",
-      "Pet Project",
-      "Express.js",
-      "Socket.io",
-      "MongoDB",
-      "Mongoose ODM",
-    ],
-    description:
-      "A Messenger clone built to practice real-time communication using Socket.IO. This project showcases my self-learning journey in implementing WebSockets for instant messaging.",
-  },
-  {
-    id: "study-english",
-    title: "Study English",
-    period: {
-      start: "11.2016",
-      end: "12.2017",
-    },
-    link: "https://www.youtube.com/watch?v=OYgugvjqU4A",
-    skills: [
-      "National Competition",
-      "Creative Software",
-      "PHP",
-      "Laravel 4",
-      "MySQL",
-    ],
-    description: `Study English is a free, mobile-friendly website for high school English learning, offering vocabulary, quizzes, listening practice, and more.
-- Consolation Prize — National Youth and Children's Creativity Contest 2016
-- 1st Prize — Can Tho City Youth and Children's Creativity Contest 2016
-- Consolation Prize — Can Tho City Young Informatics Contest 2016`,
   },
 ];
