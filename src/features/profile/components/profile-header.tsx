@@ -1,7 +1,9 @@
+import { DownloadIcon } from "lucide-react";
+
 import { USER } from "@/features/profile/data/user";
 import { FlipSentences } from "@/registry/flip-sentences";
+
 import { VerifiedButton } from "./verified-button";
-import { DownloadIcon } from "lucide-react";
 
 export function ProfileHeader() {
   return (

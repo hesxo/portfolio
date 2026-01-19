@@ -1,7 +1,9 @@
 "use client";
 
 import * as React from "react";
+
 import { SimpleTooltip } from "@/components/ui/tooltip";
+
 import { VerifiedIcon as VerifiedIconOriginal } from "./verified-icon2";
 
 export function VerifiedButton({

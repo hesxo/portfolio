@@ -29,7 +29,7 @@ export async function NavItemGitHub() {
 
     if (!isProduction && !hasToken) {
       // Skip fetching in dev without a token; return graceful fallback.
-      // eslint-disable-next-line no-console
+       
       console.debug("NavItemGitHub: skipping GitHub API fetch in dev (no token)");
     } else {
       // Allow overriding the repo at runtime via env for debugging or CI
@@ -58,7 +58,7 @@ export async function NavItemGitHub() {
   } catch (err) {
     // Network or runtime errors (e.g. fetch failed) should be handled gracefully
     // so the layout can render without failing.
-    // eslint-disable-next-line no-console
+     
     console.warn("NavItemGitHub: failed to fetch GitHub repo info", err);
   }
 

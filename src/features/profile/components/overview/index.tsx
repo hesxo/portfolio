@@ -1,6 +1,6 @@
-import { GlobeIcon, MapPinIcon, MarsIcon, VenusIcon, DownloadIcon } from "lucide-react";
-import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
+import { DownloadIcon,GlobeIcon, MapPinIcon, MarsIcon, VenusIcon } from "lucide-react";
 
+import { Tooltip, TooltipContent,TooltipTrigger } from "@/components/ui/tooltip";
 import { USER } from "@/features/profile/data/user";
 import { urlToName } from "@/utils/url";
 

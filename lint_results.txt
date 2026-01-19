@@ -1,0 +1,104 @@
+ WARN  Unsupported engine: wanted: {"node":"22.x"} (current: {"node":"v25.2.1","pnpm":"10.10.0"})
+
+> hasal.de@0.1.0 lint /Users/hasal/Downloads/My Project/portfolio-main
+> eslint .
+
+
+/Users/hasal/Downloads/My Project/portfolio-main/src/app/layout.tsx
+  8:10  warning  'META_THEME_COLORS' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/hasal/Downloads/My Project/portfolio-main/src/components/command-menu.tsx
+   11:3   warning  'MessageCircleMoreIcon' is defined but never used    @typescript-eslint/no-unused-vars
+   16:3   warning  'TriangleDashedIcon' is defined but never used       @typescript-eslint/no-unused-vars
+   17:3   warning  'TypeIcon' is defined but never used                 @typescript-eslint/no-unused-vars
+   40:24  warning  'getMarkSVG' is defined but never used               @typescript-eslint/no-unused-vars
+   41:10  warning  'getWordmarkSVG' is defined but never used           @typescript-eslint/no-unused-vars
+  120:21  warning  'resolvedTheme' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  166:9   warning  'handleCopyText' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/hasal/Downloads/My Project/portfolio-main/src/components/icons.tsx
+  18:11  warning  'focusable' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  18:22  warning  'hidden' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  18:51  error    Unexpected any. Specify a different type        @typescript-eslint/no-explicit-any
+
+/Users/hasal/Downloads/My Project/portfolio-main/src/components/mdx.tsx
+  151:19  error    Unexpected any. Specify a different type                                                                   @typescript-eslint/no-explicit-any
+  161:23  error    Unexpected any. Specify a different type                                                                   @typescript-eslint/no-explicit-any
+  177:16  error    Unexpected any. Specify a different type                                                                   @typescript-eslint/no-explicit-any
+  199:12  warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images  jsx-a11y/alt-text
+  215:28  error    Unexpected any. Specify a different type                                                                   @typescript-eslint/no-explicit-any
+  241:28  error    Unexpected any. Specify a different type                                                                   @typescript-eslint/no-explicit-any
+
+/Users/hasal/Downloads/My Project/portfolio-main/src/features/profile/components/profile-cover.tsx
+  1:10  warning  'DownloadIcon' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/hasal/Downloads/My Project/portfolio-main/src/features/profile/components/profile-header.tsx
+  1:10  warning  'DownloadIcon' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/hasal/Downloads/My Project/portfolio-main/src/features/profile/components/verified-button.tsx
+  23:12  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+  31:12  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/hasal/Downloads/My Project/portfolio-main/src/features/profile/components/verified-icon-custom.tsx
+  4:58  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/hasal/Downloads/My Project/portfolio-main/src/features/profile/components/verified-icon2.tsx
+  4:58  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/hasal/Downloads/My Project/portfolio-main/src/hooks/use-is-client.ts
+  7:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/hasal/Downloads/My Project/portfolio-main/src/hooks/use-is-client.ts:7:5
+   5 |
+   6 |   useEffect(() => {
+>  7 |     setIsClient(true);
+     |     ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+   8 |   }, []);
+   9 |
+  10 |   return isClient;  react-hooks/set-state-in-effect
+
+/Users/hasal/Downloads/My Project/portfolio-main/src/hooks/use-media-query.ts
+  20:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/hasal/Downloads/My Project/portfolio-main/src/hooks/use-media-query.ts:20:5
+  18 |     );
+  19 |
+> 20 |     setValue(result.matches);
+     |     ^^^^^^^^ Avoid calling setState() directly within an effect
+  21 |
+  22 |     return () => {
+  23 |       abortController.abort();  react-hooks/set-state-in-effect
+
+/Users/hasal/Downloads/My Project/portfolio-main/src/registry/theme-switcher/theme-switcher.tsx
+  69:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/hasal/Downloads/My Project/portfolio-main/src/registry/theme-switcher/theme-switcher.tsx:69:5
+  67 |
+  68 |   useEffect(() => {
+> 69 |     setIsMounted(true);
+     |     ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  70 |   }, []);
+  71 |
+  72 |   if (!isMounted) {  react-hooks/set-state-in-effect
+
+✖ 26 problems (11 errors, 15 warnings)
+
+ ELIFECYCLE  Command failed with exit code 1.

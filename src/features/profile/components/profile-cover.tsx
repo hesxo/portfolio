@@ -1,6 +1,7 @@
+import { DownloadIcon } from "lucide-react";
+
 import { ChanhDaiMark } from "@/components/chanhdai-mark";
 import { cn } from "@/lib/utils";
-import { DownloadIcon } from "lucide-react";
 
 export function ProfileCover() {
   return (
