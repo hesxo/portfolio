@@ -1,0 +1,194 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [
+      {
+        "source": "/blog/:slug.mdx",
+        "destination": "/blog.mdx/:slug",
+        "regex": "^/blog(?:/([^/]+?))\\.mdx(?:/)?$"
+      },
+      {
+        "source": "/components/:slug.mdx",
+        "destination": "/blog.mdx/:slug",
+        "regex": "^/components(?:/([^/]+?))\\.mdx(?:/)?$"
+      }
+    ],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/blog/[slug]",
+      "regex": "^/blog/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/blog.mdx/[slug]",
+      "regex": "^/blog\\.mdx/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/blog\\.mdx/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/components/[slug]",
+      "regex": "^/components/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/components/(?<nxtPslug>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about.md",
+      "regex": "^/about\\.md(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about\\.md(?:/)?$"
+    },
+    {
+      "page": "/awards.md",
+      "regex": "^/awards\\.md(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/awards\\.md(?:/)?$"
+    },
+    {
+      "page": "/blog",
+      "regex": "^/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog(?:/)?$"
+    },
+    {
+      "page": "/certifications.md",
+      "regex": "^/certifications\\.md(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/certifications\\.md(?:/)?$"
+    },
+    {
+      "page": "/experience.md",
+      "regex": "^/experience\\.md(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/experience\\.md(?:/)?$"
+    },
+    {
+      "page": "/llms-full.txt",
+      "regex": "^/llms\\-full\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/llms\\-full\\.txt(?:/)?$"
+    },
+    {
+      "page": "/llms.txt",
+      "regex": "^/llms\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/llms\\.txt(?:/)?$"
+    },
+    {
+      "page": "/manifest.webmanifest",
+      "regex": "^/manifest\\.webmanifest(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/manifest\\.webmanifest(?:/)?$"
+    },
+    {
+      "page": "/og",
+      "regex": "^/og(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/og(?:/)?$"
+    },
+    {
+      "page": "/og/domain",
+      "regex": "^/og/domain(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/og/domain(?:/)?$"
+    },
+    {
+      "page": "/og/simple",
+      "regex": "^/og/simple(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/og/simple(?:/)?$"
+    },
+    {
+      "page": "/projects.md",
+      "regex": "^/projects\\.md(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/projects\\.md(?:/)?$"
+    },
+    {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
+      "page": "/rss",
+      "regex": "^/rss(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/rss(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    },
+    {
+      "page": "/vcard",
+      "regex": "^/vcard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/vcard(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

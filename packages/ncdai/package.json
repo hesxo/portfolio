@@ -1,0 +1,49 @@
+{
+  "name": "hasal",
+  "version": "0.0.3",
+  "description": "A simple CLI wrapper for adding components from chanhdai.com component registry using shadcn.",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "start:dev": "node dist/index.js",
+    "publish:release": "pnpm build && pnpm publish --access public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hasal",
+    "cli",
+    "shadcn",
+    "components",
+    "registry"
+  ],
+  "author": "Hasal Dharmagunawardana ",
+  "license": "UNLICENSED",
+  "homepage": "h",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hesxo/portfolio.git",
+    "directory": "packages/ncdai"
+  },
+  "funding": "https://github.com/sponsors/hasal",
+  "bugs": {
+    "url": "https://github.com/hesxo/portfolio/issues"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0"
+  },
+  "packageManager": "pnpm@10.10.0"
+}

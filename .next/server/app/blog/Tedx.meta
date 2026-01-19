@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(app)/layout,_N_T_/(app)/(docs)/layout,_N_T_/(app)/(docs)/blog/layout,_N_T_/(app)/(docs)/blog/[slug]/layout,_N_T_/(app)/(docs)/blog/[slug]/page,_N_T_/blog/Tedx"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KGFwcCk/!KGRvY3Mp/blog/$d$slug/__PAGE__",
+    "/!KGFwcCk/!KGRvY3Mp/blog/$d$slug",
+    "/!KGFwcCk/!KGRvY3Mp/blog",
+    "/!KGFwcCk/!KGRvY3Mp",
+    "/!KGFwcCk",
+    "/_index"
+  ]
+}

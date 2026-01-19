@@ -1,0 +1,95 @@
+import type { User } from "@/features/profile/types/user";
+
+export const USER: User = {
+  firstName: "Hasal",
+  lastName: "Dharmagunawardana",
+  displayName: "Hasal Dharmagunawardana",
+  username: "hesxo",
+  gender: "male",
+  pronouns: "he/him",
+  bio: "Creating with code. Small details matter.",
+  flipSentences: [
+    "Software Developer",
+    "Web Developer",
+    "Full Stack Developer",
+  ],
+  address: "Colombo, Sri Lanka",
+  phoneNumber: "Kzk0IDc3IDMzOCAxMDM5", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
+  email: "aGFzYWxkaGFybWFndW5hd2FyZGFuYUBnbWFpbC5jb20KCg", // base64 encoded
+  website: "https://hasal.me",
+  jobTitle: "Design Engineer",
+   jobs: [
+    {
+      title: "Computer Science Undergraduate",
+      company: "University of Westminster",
+      website: "https://www.westminster.ac.uk/",
+    },
+  ],
+  about: `
+A 20-year-old computer science student developing breadth across full-stack engineering, cloud infrastructure,
+ and applied AI. Strong grounding in frontend work with React, Next.js, Tailwind CSS, and ShadCN, paired with backend capability in
+  Node.js, Spring Boot, and Appwrite. Active in DevOps through CI/CD pipelines, Docker, Kubernetes, and deployments on GCP and AWS.
+   Integrated experience across machine learning, UI/UX design, and digital media. Focused on building scalable systems, leading effective project teams,
+    and delivering solutions with clear technical impact.
+
+Let's connect and collaborate!
+  `,
+  avatar: "https://i.postimg.cc/FFC05vqp/Firefly-20250222195436.png",
+  ogImage: "https://i.postimg.cc/FFC05vqp/Firefly-20250222195436.png",
+  namePronunciationUrl: "",
+  keywords: [
+    "Hasal",
+    "Dharmagunawardana",
+    "Hasal Hansada Dharmagunawardana",
+    "Hansada",
+    "hesxo",
+    "thurstan",
+    "it",
+    "cricketer",
+    "Welikanna",
+   
+      "Hasal Dharmagunawardana",
+      "Hasal Hansada Dharmagunawardana",
+      "Hasal",
+      "Hansada",
+      "hansada",
+      "hasal",
+      "hesxo",
+      "software developer",
+      "web developer",
+      "full stack developer",
+      "computer science student",
+      "university of westminster",
+      "westminster",
+      "uk",
+      "sri lanka",
+      "colombo",
+      "lk",
+      "sri lankan",
+      "sri lankan software developer",
+      "sri lankan web developer",
+      "sri lankan full stack developer",
+      "sri lankan computer science student",
+      "sri lankan university of westminster",
+      "sri lankan westminster",
+      "iit",
+      "iit university",
+      "iit university of westminster",
+      "iit university of westminster computer science student",
+      "iit university of westminster web developer",
+      "iit university of westminster full stack developer",
+      "iit university of westminster software developer",
+      "iit university of westminster computer science",
+      "iit university of westminster computer science student",
+      "iit university of westminster web developer",
+      "iit university of westminster full stack developer",
+      "iit university of westminster software developer",
+      "iit university of westminster computer science",
+      "iit university of westminster computer science student",
+      "iit university of westminster web developer",
+      "iit university of westminster full stack developer",
+      "iit university of westminster software developer",
+      "iit university of westminster computer science",
+    ],
+  dateCreated: "2023-10-20", // YYYY-MM-DD
+};

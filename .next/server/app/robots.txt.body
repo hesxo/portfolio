@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://hasal.me
+Sitemap: https://hasal.me/sitemap.xml

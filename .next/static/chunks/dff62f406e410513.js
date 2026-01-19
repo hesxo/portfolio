@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,58101,e=>{"use strict";e.i(96811),e.s([])},67757,e=>{"use strict";var t=e.i(43476);e.i(58101);var i=e.i(96811);function s(){return(0,t.jsx)(i.AppleHelloVietnameseEffect,{})}e.s(["default",()=>s])}]);

@@ -1,0 +1,627 @@
+<SYSTEM>This document contains comprehensive information about Hasal Dharmagunawardana's professional profile, portfolio, and blog content. It includes personal details, work experience, projects, achievements, certifications, and all published blog posts. This data is formatted for consumption by Large Language Models (LLMs) to provide accurate and up-to-date information about Hasal Dharmagunawardana's background, skills, and expertise as a Design Engineer.</SYSTEM>
+
+# chanhdai.com
+
+> A minimal, pixel-perfect dev portfolio, component registry, and blog to showcase my work as a Design Engineer.
+
+## About
+
+A 20-year-old computer science student developing breadth across full-stack engineering, cloud infrastructure,
+ and applied AI. Strong grounding in frontend work with React, Next.js, Tailwind CSS, and ShadCN, paired with backend capability in
+  Node.js, Spring Boot, and Appwrite. Active in DevOps through CI/CD pipelines, Docker, Kubernetes, and deployments on GCP and AWS.
+   Integrated experience across machine learning, UI/UX design, and digital media. Focused on building scalable systems, leading effective project teams,
+    and delivering solutions with clear technical impact.
+
+Let's connect and collaborate!
+
+### Personal Information
+
+- First Name: Hasal
+- Last Name: Dharmagunawardana
+- Display Name: Hasal Dharmagunawardana
+- Location: Colombo, Sri Lanka
+- Website: https://hasal.me
+
+### Social Links
+
+- [LinkedIn](https://linkedin.com/in/hasal)
+- [GitHub](https://github.com/hesxo)
+- [X (Formerly Twitter)](https://x.com/HasalD82653)
+- [Medium](https://medium.com/@hasaldharmagunawardana)
+
+### Tech Stack
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Python](https://www.python.org/)
+- [PHP](https://www.php.net/)
+- [Java](https://www.java.com/)
+- [Node.js](https://nodejs.org/)
+- [Bun](https://bun.sh/)
+- [React](https://react.dev/)
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Radix UI](https://www.radix-ui.com/)
+- [MobX-State-Tree](https://mobx-state-tree.js.org/)
+- [Redux](https://redux.js.org/)
+- [React Router](https://reactrouter.com/)
+- [React Navigation](https://reactnavigation.org/)
+- [LoopBack](https://loopback.io/)
+- [Laravel](https://laravel.com/)
+- [Git](https://git-scm.com/)
+- [Docker](https://www.docker.com/)
+- [MySQL](https://www.mysql.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Figma](https://www.figma.com/)
+- [Adobe Photoshop](https://www.adobe.com/vn_en/products/photoshop.html)
+- [ChatGPT](https://chatgpt.com/)
+
+## Experience
+
+### Computer Science Undergraduate | University of Westminster
+
+Duration: 01.2025 - 11.2027
+
+Skills: N/A
+
+Computer Science undergraduate.
+
+### Activities and Societies | Thurstan College Colombo 07
+
+Duration:  - 2024
+
+Skills: N/A
+
+.
+Activities and societies:
+- Member of Entrepreneurs Circle (2023-2024)
+- Director of ICT Society
+- Member of Media Club (2023-2024)
+
+## Projects
+
+### Stayza – Hotel Booking & Reservation Platform
+
+Project URL: https://stayza-frontend.vercel.app
+
+Skills: Next.js 15, React, TypeScript, Tailwind CSS, Shadcn UI, Clerk Auth, Stripe Checkout, Server Actions, Vercel
+
+End-to-end hotel booking platform with real-time availability, secure authentication, and integrated payments.
+
+**Core Features:**
+
+- Fast, responsive Next.js 15 frontend
+- Secure authentication & session management via Clerk
+- Stripe-powered checkout with automated payment confirmation
+- Dynamic room search with filters, images, and live pricing
+- Booking history with detailed status tracking
+- Modern UI built with Tailwind + shadcn/ui components
+- Optimized routing, caching, and transitions using Server Actions
+
+**Technical Highlights:**
+
+- Fully decoupled frontend connected to a modular backend
+- Deployed on Vercel with edge-optimized performance
+- Clean, maintainable architecture ready for scaling
+
+### Cutting Edge – Student Innovation Exhibition @ Informatics Institute of Technology (IIT)
+
+Project URL: https://cuttingedge.iit.ac.lk/
+
+Skills: Innovation Showcase, Student Projects, IT & Business Solutions, Exhibition Event, Entrepreneurship, Technology Integration
+
+An annual exhibition organised by IIT to present cutting-edge student-driven solutions addressing real-world technological challenges.  [oai_citation:0‡Informatics Institute of Technology](https://www.iit.ac.lk/annual-events/cutting-edge/?utm_source=chatgpt.com)
+
+**Highlights:**
+
+- Platform for student teams to showcase prototypes spanning mobile apps, web platforms, AI, and business innovation. 
+- Interdisciplinary mix: IT, business, design and societal impact. 
+- Recognised event with national & international awards for outstanding projects.  [Informatics Institute of Technology](https://www.iit.ac.lk/annual-events/cutting-edge/?utm_source=chatgpt.com)  
+
+**Technical & Organisational Features:**
+
+- Live event with schedule (e.g., 17 June 2025, 9 am–5 pm) at Temple Trees Auditorium.  [Cutting Edge IIT](https://youtu.be/GEjjlMpwcQs)  
+- Multiple competition tracks such as “Code Quest” and “Vision Quest”, enabling thematic focus on coding and visionary project work.  
+- Show-case gallery of projects and live demos.  
+- Target audience includes students, industry partners, academic staff, and potential investors.  
+
+A key vehicle for fostering innovation, entrepreneurship and real-world application among emerging tech talent.
+
+### IET On Campus – Student Chapter Website
+
+Project URL: https://github.com/hesxo/ietoncampus/tree/main
+
+Skills: Next.js, React, TypeScript, Tailwind CSS, MDX, Student Organisation Website, Content Management, Responsive Layout
+
+Website for the Institution of Engineering and Technology (IET) Student Chapter ‘‘On Campus’’ covering chapter events, news, and member resources.
+
+**Features:**
+- Built with Next.js + React & TypeScript (97% TS).  [GitHub](https://github.com/hesxo/ietoncampus/tree/main)  
+- Utilises Tailwind CSS for styling and responsive design.  
+- Organized folder structure: app, components, content/events, hooks, lib, types.  
+- Event listing and content pages authored in MDX/Markdown.  
+- Public-facing repository, open for chapter members to contribute.
+
+**Purpose:**
+- Provide accessible portal for chapter members and visitors to browse upcoming events, view past sessions, and access resources.  
+- Modular codebase enables future extension (blog, member directory, sponsorship page).
+
+### Luna-23 – All-Island Web Development Competition (Winners)
+
+Project URL: https://luna-23.vercel.app/
+
+Skills: Html, CSS, JavaScript, Bootstrap 5, UI/UX, Frontend Engineering, Competition Project
+
+Luna-23 was built for the All-Island Web Development Competition organised by Kingswood College, Kandy. The project secured **First Place** among nationwide competitors.  
+LinkedIn (School): https://www.linkedin.com/school/kingswoodcollegelk/
+
+**Project Scope:**
+- Fully responsive landing experience built with Next.js and Tailwind  
+- Clean UI flow, animated sections, and modern layout techniques  
+- Optimised for competition scoring criteria: design quality, technical execution, performance, and creativity  
+- Structured codebase with components, hooks, and layout organisation  
+- Deployed on Vercel for fast edge-delivery
+
+**Team Achievement:**
+- Won **1st Place** in the All-Island Web Development Competition  
+- Team members included:  
+  - [**Dasith Kodithuwakku**](https://www.linkedin.com/in/dasith-t/)
+
+A polished, competition-ready full-stack front-end submission showcasing strong UI engineering and teamwork.
+
+### UnlimitedStudy
+
+Project URL: https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm
+
+Skills: National Competition, Creative Software, PHP, Laravel 4, MySQL, jQuery, Bootstrap 3
+
+UnlimitedStudy is a website that provides teaching and learning support tools for teachers and students.
+- 3rd Prize — National Science and Engineering Fair 2018 (ViSEF)
+- 1st Prize — Can Tho City Science and Engineering Fair 2018
+- 3rd Prize — National Young Informatics Contest 2018
+- 2nd Prize — Can Tho City Youth and Children's Creativity Contest 2018
+- 3rd Prize — Can Tho City Young Informatics Contest 2018
+- Reached 7k+ users, mainly high school students in Can Tho City
+- Pilot implemented in high schools across Can Tho City with English quizzes, supervised by English subject specialists from the Can Tho City Department of Education and Training
+
+### DMessage
+
+Project URL: https://github.com/ncdai/DMessage
+
+Skills: Self-learning Project, Pet Project, Express.js, Socket.io, MongoDB, Mongoose ODM
+
+A Messenger clone built to practice real-time communication using Socket.IO. This project showcases my self-learning journey in implementing WebSockets for instant messaging.
+
+### Study English
+
+Project URL: https://www.youtube.com/watch?v=OYgugvjqU4A
+
+Skills: National Competition, Creative Software, PHP, Laravel 4, MySQL
+
+Study English is a free, mobile-friendly website for high school English learning, offering vocabulary, quizzes, listening practice, and more.
+- Consolation Prize — National Youth and Children's Creativity Contest 2016
+- 1st Prize — Can Tho City Youth and Children's Creativity Contest 2016
+- Consolation Prize — Can Tho City Young Informatics Contest 2016
+
+## Awards
+
+### school colours | Cricketer
+
+Awarded school colours for outstanding performance and dedication .
+
+## Certifications
+
+- [C for Everyone: Programming Fundamentals](https://www.coursera.org/account/accomplishments/verify/30YFNDZWWZN5)
+- [Financial Markets (with Honors)](https://www.coursera.org/account/accomplishments/verify/GSNFNYBBM3PE)
+- [Machine Learning for All](https://www.coursera.org/account/accomplishments/verify/867SU26BQ0S5)
+- [Python for Beginners](https://www.linkedin.com/in/hasal/details/certifications/1737699131335/single-media-viewer/?profileId=ACoAADvcZ1kB4UtZGY3ym2AlcO_zDHCQck3Zwxw)
+- [Generative AI in Action: Real-World Use Cases](https://www.linkedin.com/in/hasal/details/certifications/1747490827614/single-media-viewer/?profileId=ACoAADvcZ1kB4UtZGY3ym2AlcO_zDHCQck3Zwxw)
+- [GitHub Foundations](http://credly.com/badges/a03ff322-0798-4b2f-812f-7fc346f1289d/linked_in_profile)
+- [Microsoft Certified: Azure AI Fundamentals](https://www.credly.com/badges/9b84ba19-86b5-4c74-baa4-14c30aac9edf/linked_in_profile)
+- [No-code Machine Learning and Generative AI on AWS](https://www.linkedin.com/in/hasal/details/certifications/1747238136014/single-media-viewer/?profileId=ACoAADvcZ1kB4UtZGY3ym2AlcO_zDHCQck3Zwxw)
+- [Advanced Python (2018)]()
+- [Python Statistics Essential Training]()
+- [Learning Python (2021)]()
+- [Python Essential Training]()
+- [Data Science 101](https://courses.cognitiveclass.ai/certificates/f18cd6c7ffd0469e9a99b4f1b8b9bad6)
+- [Foundations of Cybersecurity](https://www.coursera.org/account/accomplishments/verify/57CC3BB80X8A)
+- [Introduction to Game Design](https://www.coursera.org/account/accomplishments/verify/09NR2Y61RIC9)
+- [SQL and Relational Databases 101](https://courses.cognitiveclass.ai/certificates/7faf830dfef04f1ba37c108435e2122a)
+- [Python (Basic)]()
+- [Attract and Engage Customers with Digital Marketing]()
+- [Foundations of Coding Full-Stack](https://www.coursera.org/account/accomplishments/verify/0A5NWVW5E7ED?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course)
+- [Angular (Basic)]()
+- [C# (Basic)]()
+- [Dynamics of Information Security Management System (ISMS)]()
+- [Foundations of Coding Front-End](https://www.coursera.org/account/accomplishments/verify/VL95K32BJHV8?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course)
+- [Fundamentals of Analytics on AWS]()
+- [Introduction to Data Analytics](https://www.coursera.org/account/accomplishments/verify/KYTEQTROCGTE?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button)
+- [Introduction to Front-End Development](https://www.coursera.org/account/accomplishments/verify/91X8YDBI088L?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button)
+- [Introduction to Programming With C#]()
+- [JavaScript (Intermediate)]()
+- [React (Basic)]()
+- [SQL (Advanced)]()
+- [SQL (Basic)]()
+- [IET Cipher]()
+
+## Blog
+
+---
+title: "Behind the Scenes at TEDxColombo 2025 — My Volunteer Journey"
+description: "A simple reflection on my volunteer experience at TEDxColombo 2025, the ideas that shaped the day, and the moments that unfolded backstage."
+last_updated: "December 2, 2025"
+source: "https://hasal.me/blog/Tedx"
+---
+
+# Behind the Scenes at TEDxColombo 2025 — My Volunteer Journey
+
+A simple reflection on my volunteer experience at TEDxColombo 2025, the ideas that shaped the day, and the moments that unfolded backstage.
+
+# TEDxColombo 2025 — Where Ideas Collide and Minds Expand
+
+![TEDxColombo 2025 Highlights](https://i.postimg.cc/cLsHYymv/54562600271-44de5f8ff7-o.jpg)
+
+TEDxColombo 2025 brought together thinkers, creators, and everyday people with powerful stories.\
+I joined the event as a volunteer, and seeing everything from the inside gave me a different kind of understanding.\
+Here is my full experience, written simply, with space left for photos I took throughout the day.
+
+***
+
+## Behind the Scenes: Volunteering Within the “MADness”
+
+![Arrival & Volunteer Briefing](https://i.postimg.cc/yxHBHcpm/Whats-App-Image-2025-06-01-at-13-27-28.jpg)
+
+I arrived early at Nelum Pokuna Theatre for the volunteer briefing.\
+The theme was **MADness**—breaking norms and stepping into uncomfortable ideas.\
+Even before the doors opened, I felt how much effort goes into making an event like this work.\
+Backstage is quiet, but everything starts there.
+
+***
+
+![Stage & Lighting Setup](https://i.postimg.cc/Df94SMHr/20250601-173913.jpg)
+
+During the event, I learned valuable lessons about leadership. True leadership is not about commanding but about inspiring and enabling others to succeed. Watching the TEDxColombo team work together seamlessly, I saw how clear communication, trust, and shared purpose can turn a vision into reality.
+
+***
+
+#### **Yevan David: Mindset Is Everything**
+
+<div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+  <iframe src="https://www.youtube.com/embed/hdrKVXWoyoQ" title="Yevan David TEDxColombo" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} frameBorder="0" allowFullScreen />
+</div>
+
+Yevan spoke about racing at 250 mph and how presence can save your life.\
+He shared how he left home at 13 to live alone in Italy.\
+His lesson was simple: **resilience grows from struggle, not comfort.**
+
+#### **Jason Rajasinghe: Adapting to Chaos**
+
+<div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+  <iframe src="https://www.youtube.com/embed/Y2064LlhKhY" title="Jason Rajasinghe TEDxColombo" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} frameBorder="0" allowFullScreen />
+</div>
+
+Jason talked about the Sri Lankan reality—how our systems make simple things difficult.\
+He explained how we move through “15 steps when others take 2.”\
+His message: **adaptation is survival. Stress can push us to evolve.**\
+His reminder stayed with me:
+
+> “It’s okay—it’s just life. Don’t let the weight slow you down.”
+
+***
+
+### **Audience Engagement & Social Space**
+
+![Audience Engagement](https://i.postimg.cc/NM3TwsHp/54562930190-d1dae9f3cd-o.jpg)
+
+The audience was deeply engaged, with lively discussions in the social space.\
+This was where ideas were exchanged, connections were made, and the spirit of TEDx truly came alive.
+
+When the event began, the hall filled quickly.\
+From the side, I saw people reacting to every talk—nodding, thinking, leaning forward.\
+Outside, the social space was full of conversations, coffee, and new connections.\
+This showed me that ideas spread not only on stage, but in the small moments between people.
+
+***
+
+## Theme 2: **Game On — Infinite vs Finite Thinking**
+
+<div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+  <iframe src="https://www.youtube.com/embed/S16XUhMp-Ro" title="Sanjiva Weerawarana TEDxColombo" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} frameBorder="0" allowFullScreen />
+</div>
+
+Sanjiva Weerawarana used a cricket example to explain the difference between winning and truly building something meaningful.
+
+* Sri Lanka makes **$1.5B in IT exports**, mostly outsourcing.
+* The real potential is in **products**, not just services.
+* Deep learning matters more than scattered learning.
+
+His advice was clear:
+
+> "Don’t complain. Build. Be stubborn. Give a damn."
+
+***
+
+## Theme 3: **Culture, Courage & Compassion**
+
+### **Sonali Silva**
+
+<div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+  <iframe src="https://www.youtube.com/embed/trpKyifxS1M" title="Sonali Silva TEDxColombo" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} frameBorder="0" allowFullScreen />
+</div>
+
+Sonali spoke about abortion stigma in Sri Lanka.\
+She said something that everyone in the room felt:
+
+> “We are privately empathetic, but publicly disapproving.”
+
+Her talk reminded me that silence can be more harmful than disagreement.\
+Change starts when we choose to speak with honesty.
+
+### **Kevin Wilson**
+
+<div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+  <iframe src="https://www.youtube.com/embed/e85jWs_EzEs" title="Kevin Wilson TEDxColombo" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} frameBorder="0" allowFullScreen />
+</div>
+
+Kevin explained that fear doesn’t have to be an enemy.\
+When we welcome it, **life becomes richer and more colorful.**\
+He ended by saying something very Sri Lankan:
+
+> “Enna tea ekak bomu” — Let’s sit down for tea and talk.
+
+***
+
+### **Vikum Nawagamuwa — Closing Reflection**
+
+<div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+  <iframe src="https://www.youtube.com/embed/L-MVnFkP1Hw" title="Vikum Nawagamuwa TEDxColombo" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} frameBorder="0" allowFullScreen />
+</div>
+
+He explained that > “not giving a f\*\*\*” doesn’t mean not caring.\
+It means caring **about the right things**.\
+Let go of noise. Focus on what matters.
+
+***
+
+### **Anya Ratnayaka — Colombo Wetlands**
+
+<div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+  <iframe src="https://www.youtube.com/embed/_aiR_3LwjBo" title="Anya Ratnayaka — Colombo Wetlands" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} frameBorder="0" allowFullScreen />
+</div>
+
+Colombo’s wetlands, once overlooked, are now recognized as vital for flood control and for shaping the city’s history. These urban ecosystems support remarkable biodiversity—including the endangered fishing cat—and thrive thanks to interconnected green spaces. Beyond wildlife, wetlands reduce urban heat, improve water quality, and provide restorative spaces that boost mental well‑being. They show that nature and urban life can coexist when planning prioritizes ecological resilience.
+
+Watch Anya Ratnayaka’s talk for a thoughtful perspective on conserving Colombo’s wetlands and engaging communities in their stewardship.
+
+After the event ended, we cleaned up, moved equipment, and guided people out.\
+I heard people talking about what they learned.\
+It felt good knowing we helped create that space.
+
+***
+
+## Reflections From the Volunteer Side
+
+* Backstage work matters as much as what’s on stage.
+* MADness means stepping out of comfort, not losing control.
+* The audience completes the story.
+* Volunteers keep the message alive by keeping the event smooth.
+* When the event ends, the real thinking begins.
+
+***
+
+![Group Volunteer Photo](https://i.postimg.cc/65HTN6Rk/54562924030-b6461b405e-o.jpg)
+
+Thank you to the organisers, speakers, technical team, and every volunteer.\
+Being part of TEDxColombo 2025 wasn’t just helping an event—it was being part of change.
+
+***
+
+## Final Thought
+
+TEDxColombo 2025 didn’t give final answers.\
+It gave better questions.\
+It pushed us to build, fail, learn, adapt, and grow.
+
+Let’s change the narrative—together.
+
+
+Last updated on December 2, 2025
+
+---
+title: "Responsive Design Mastery - My Creative Adventure in Crafting Websites That Adapt to Every Screen"
+description: "A frontend developer's journey from framework dependency to mastering core CSS and media queries for building truly responsive websites from scratch."
+last_updated: "November 14, 2024"
+source: "https://hasal.me/blog/Responsive"
+---
+
+# Responsive Design Mastery - My Creative Adventure in Crafting Websites That Adapt to Every Screen
+
+A frontend developer's journey from framework dependency to mastering core CSS and media queries for building truly responsive websites from scratch.
+
+# Responsive Design Mastery: My Creative Adventure in Crafting Websites That Adapt to Every Screen
+
+As a frontend developer, I initially learned the basics of responsive design using frameworks like Tailwind CSS and Bootstrap. While these made it easier to build responsive websites, I realized I wasn't fully understanding the core principles. To improve, I decided to dive deeper into CSS and media queries. In this article, I'll share my journey and offer helpful tips for anyone wanting to enhance their knowledge of responsive design.
+
+## 1. Initial Learning and Challenges
+
+When I started frontend development, I learned basic responsive design, but it was mostly surface-level. As I worked more without frameworks, I realized I didn't fully understand the underlying concepts. This pushed me to go back to the basics of CSS and learn how to create responsive websites from scratch.
+
+**Challenge:** At first, managing breakpoints without frameworks was tough. It was hard to figure out how to target different screen sizes effectively.
+
+<FramedImage className="hidden [html.dark_&]:block" src="https://i.postimg.cc/BQMFkkW3/OKX-Main.jpg" alt="AI in F1 – Dark Theme" />
+
+## 2. Media Queries and Their Usage
+
+Media queries allow you to apply CSS styles based on the screen size or other properties. Here's an example of a basic media query:
+
+```css
+/* Base styles for mobile */
+.container {
+  padding: 10px;
+}
+
+/* Adjust padding for larger screens */
+@media (min-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}
+```
+
+**Breakthrough Tip:** Analyze how popular CSS frameworks handle breakpoints by inspecting their source code. This helped me understand the logic behind their responsive classes and implement similar practices in my projects.
+
+## 3. Frameworks and Their Take on Responsiveness
+
+While frameworks like Tailwind CSS handle responsiveness with utilities like `sm:grid` or `lg:px-4`, understanding how to write custom media queries provided me with greater flexibility and control.
+
+**Example from Tailwind:**
+
+```html
+<div class="container sm:grid lg:px-4">
+  <!-- Content -->
+</div>
+```
+
+## 4. The Process of Building Responsiveness from Scratch
+
+Here's how I approach designing responsive layouts:
+
+### Start with a Mobile-First Approach
+
+Begin with styles optimized for smaller screens and progressively add styles for larger screens.
+
+```css
+.menu {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    display: flex;
+  }
+}
+```
+
+### Use Fluid Layouts
+
+Replace fixed-width values with percentage-based or `em`, `rem`, `vw`, and `vh` units to create adaptable layouts.
+
+### Responsive Media
+
+Apply `max-width: 100%` to ensure images and videos resize within their containers.
+
+### Flexbox and Grid Layouts
+
+Implement Flexbox for simple, adaptable structures and CSS Grid for more complex, responsive designs.
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 992px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+```
+
+## 5. Major Lessons Learned
+
+* **Plan for Responsiveness Early:** Always keep responsiveness in mind during the design phase to avoid complex restructuring later.
+* **Prioritize a Mobile-First Strategy:** Ensures better performance on mobile devices by loading minimal styles and adding complexity as the screen size increases.
+* **Understand Frameworks, Master Core Concepts:** Frameworks are helpful, but true mastery comes from understanding how and why the underlying code works.
+
+## Final Thoughts
+
+Mastering responsive design using core CSS is an essential step for any frontend developer who wants to build websites that provide a seamless user experience across all devices. By learning and practicing these core techniques, you'll not only enhance your projects but also strengthen your overall development skills.
+
+
+Last updated on November 14, 2024
+
+---
+title: "The Impact of AI in Formula 1"
+description: "A deep analysis of how artificial intelligence powers strategy, engineering, performance optimisation, and competitive advantage in modern Formula 1."
+last_updated: "August 27, 2024"
+source: "https://hasal.me/blog/F1"
+---
+
+# The Impact of AI in Formula 1
+
+A deep analysis of how artificial intelligence powers strategy, engineering, performance optimisation, and competitive advantage in modern Formula 1.
+
+Artificial intelligence has become one of the most decisive competitive tools in Formula 1. Every major team now relies on AI-driven modelling to refine aerodynamics, simulate thousands of race scenarios, analyse drivers’ behavioural patterns, and make engineering decisions that once depended on intuition alone.
+
+<FramedImage className="hidden [html.dark_&]:block" src="https://i.postimg.cc/BQMFkkW3/OKX-Main.jpg" alt="AI in F1 – Dark Theme" />
+
+<FramedImage className="hidden [html.light_&]:block" src="https://i.postimg.cc/BQMFkkW3/OKX-Main.jpg" alt="AI in F1 – Light Theme" />
+
+### How AI Shapes Modern F1 Engineering
+
+Teams process millions of data points every race weekend. Sensors spread across the power unit, gearbox, suspension, chassis, tyres, and even the driver’s biometrics continuously stream telemetry.\
+AI models analyse this data in real time to detect anomalies, predict failures and automatically recommend engineering responses.
+
+This shift allows teams to **prevent component breakdowns**, adjust thermal loads, and optimise fuel-energy deployment long before issues occur. Predictive maintenance alone has saved teams both performance loss and millions in potential penalties.
+
+### Race Strategy Powered by Machine Learning
+
+Strategy units now depend heavily on Monte-Carlo-based simulations—often running **hundreds of thousands of race permutations** each weekend. AI systems evaluate:
+
+* Tyre degradation curves
+* Track evolution
+* Overtaking probability
+* Pit-window modelling
+* Competitor behaviour patterns
+* Virtual safety-car and full safety-car likelihood
+* Weather volatility
+
+This modelling gives strategists near-instant clarity on undercut/overcut feasibility, optimal lap timing for pit stops, and risk-weighted decision-making.\
+This is why top teams often appear “predictive”—the machine already calculated the move.
+
+### Driver Performance Analysis
+
+AI also acts as a virtual performance engineer for drivers.\
+Telemetry from throttle maps, braking pressure, steering traces and tyre slip is compared against ideal racing lines generated by machine learning. The system identifies micro-inefficiencies invisible to the naked eye.
+
+Drivers receive targeted insights such as:
+
+* “Brake 2 meters earlier at Turn 9.”
+* “Reduce mid-corner steering correction by 3%.”
+* “Increase throttle commitment 12 meters sooner on exit.”
+
+This transforms training sessions into **data-driven optimisation loops**, giving drivers more consistent lap-time improvements.
+
+### Aerodynamic Development
+
+Wind-tunnel time is restricted by FIA regulations, making AI simulation indispensable.\
+Teams now use AI-accelerated CFD (Computational Fluid Dynamics) models to evaluate thousands of aerodynamic shapes far faster than traditional solvers.
+
+These models analyse:
+
+* Flow separation zones
+* Turbulence intensity
+* Drag vs. downforce trade-offs
+* Yaw-sensitivity
+* Dirty-air behaviour during overtakes
+
+The outcome is quicker iteration cycles and more aggressive aero concepts—crucial in the cost-cap era.
+
+### Competitive Advantage and Future Direction
+
+AI has turned Formula 1 into a hybrid battlefield of human instinct and algorithmic dominance.\
+Teams with better data pipelines, cleaner telemetry, and faster modelling infrastructure gain measurable race-winning advantages.
+
+The future trajectory includes:
+
+* Full AI-driven virtual car setups
+* Predictive-race execution systems
+* Reinforcement-learning race strategies
+* Near real-time aerodynamic shape adaptation
+* Advanced biometrics-to-strategy integration
+
+As AI matures, Formula 1 will shift even further into computational racing—where milliseconds are earned through algorithms as much as through engineering.
+
+
+Last updated on August 27, 2024

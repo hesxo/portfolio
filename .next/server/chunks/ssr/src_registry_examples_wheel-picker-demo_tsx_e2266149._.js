@@ -1,0 +1,3 @@
+module.exports=[22743,a=>{"use strict";var b=a.i(87924);a.i(16696);var c=a.i(61172);let d=(a,b=0)=>Array.from({length:a},(a,c)=>{let d=c+b;return{label:d.toString().padStart(2,"0"),value:d}}),e=d(12,1),f=d(60),g=[{label:"AM",value:"AM"},{label:"PM",value:"PM"}];function h(){return(0,b.jsx)("div",{className:"w-56",children:(0,b.jsxs)(c.WheelPickerWrapper,{children:[(0,b.jsx)(c.WheelPicker,{options:e,defaultValue:9,infinite:!0}),(0,b.jsx)(c.WheelPicker,{options:f,defaultValue:41,infinite:!0}),(0,b.jsx)(c.WheelPicker,{options:g,defaultValue:"AM"})]})})}a.s(["default",()=>h])}];
+
+//# sourceMappingURL=src_registry_examples_wheel-picker-demo_tsx_e2266149._.js.map

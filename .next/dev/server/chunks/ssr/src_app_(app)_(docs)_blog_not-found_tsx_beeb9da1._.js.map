@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/hasal/Downloads/My%20Project/portfolio-main/src/app/%28app%29/%28docs%29/blog/not-found.tsx"],"sourcesContent":["import { NotFound as PageNotFound } from \"@/components/not-found\";\n\nexport const metadata = {\n  title: \"Page Not Found\",\n};\n\nexport default function NotFound() {\n  return <PageNotFound />;\n}\n"],"names":[],"mappings":";;;;;;;AAAA;;;AAEO,MAAM,WAAW;IACtB,OAAO;AACT;AAEe,SAAS;IACtB,qBAAO,+YAAC,8IAAY;;;;;AACtB","debugId":null}}]
+}
