@@ -7,7 +7,7 @@ export const PROJECTS: Project[] = [
     period: {
       start: "07.2025",
     },
-    link: "https://sq3.io",
+    link: "https://sq3.ai",
     skills: [
       "Multi-Tenant SaaS",
       "Multi-Agent AI Architecture",
@@ -48,6 +48,65 @@ The platform unifies **website chat, Facebook Messenger, and Instagram DMs** int
 
 SQ3 is designed to **augment human agents**, not replace them—balancing automation, safety, transparency, and real-world business needs.`,
     logo: "https://i.postimg.cc/wMhVbQt4/purple.png",
+    isExpanded: true,
+  },
+  {
+    id: "imagine-entertainment",
+    title: "Imagine Entertainment – Cloud-Native Event Platform & Custom Dashboard",
+    period: {
+      start: "2024",
+    },
+    link: "https://www.imaginesl.com/",
+    skills: [
+      "Full-Stack Development",
+      "Technical Leadership",
+      "System Architecture",
+      "Custom Admin Dashboard",
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS 4",
+      "Supabase",
+      "PostgreSQL",
+      "Row-Level Security (RLS)",
+      "Cloudflare Analytics (GraphQL)",
+      "Cloudinary",
+      "GSAP",
+      "Framer Motion",
+      "Performance Optimization",
+    ],
+    description: `Imagine Entertainment Platform is a **bespoke, production-grade web system** built for Sri Lanka’s premier event production company with over **37 years of industry excellence**.
+
+I led this project end-to-end after acquiring the engagement directly from the client, taking ownership of **system architecture, full-stack development, and technical delivery**, while collaborating with **Tharuka Karunanayaka** on business coordination and creative direction.
+
+**Core Capabilities:**
+
+- Dynamic, multi-category event portfolio (Corporate, Concerts, Weddings, etc.)  
+- Automated sorting by year and event date  
+- Media-rich galleries with Cloudinary-powered image optimization  
+- Fully custom admin dashboard for managing events, media, and configurations  
+- Secure authentication with role-based access control using Supabase RLS  
+
+**Dashboard & Analytics:**
+
+- Real-time analytics dashboard built with Recharts  
+- Traffic insights, top pages, and visitor demographics  
+- Data sourced via Cloudflare’s GraphQL Analytics API  
+
+**Technical & Architectural Highlights:**
+
+- Next.js 16 App Router with React 19 (canary features)  
+- Supabase PostgreSQL backend with Row-Level Security  
+- Edge-optimized caching using SWR and stale-while-revalidate  
+- GSAP-powered parallax animations and Framer Motion transitions  
+- Mobile-first, SEO-optimized architecture with dynamic metadata  
+
+**Impact:**
+
+- Acts as the primary digital flagship for Imagine Entertainment  
+- Enables non-technical staff to manage large-scale content independently  
+- Built to scale for future growth, archival expansion, and new services`,
+    logo: "https://www.imaginesl.com/favicon.ico",
     isExpanded: true,
   },
   {
