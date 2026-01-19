@@ -7,7 +7,7 @@ export const PROJECTS: Project[] = [
     period: {
       start: "07.2025",
     },
-    link: "https://sq3.ai",
+    link: "https://sq3.io",
     skills: [
       "Multi-Tenant SaaS",
       "Multi-Agent AI Architecture",
