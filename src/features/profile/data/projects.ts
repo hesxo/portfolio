@@ -48,7 +48,7 @@ The platform unifies **website chat, Facebook Messenger, and Instagram DMs** int
 
 SQ3 is designed to **augment human agents**, not replace them—balancing automation, safety, transparency, and real-world business needs.`,
     logo: "https://i.postimg.cc/wMhVbQt4/purple.png",
-    isExpanded: true,
+    isExpanded: false,
   },
   {
     id: "imagine-entertainment",
@@ -108,7 +108,7 @@ I led this project end-to-end after acquiring the engagement directly from the c
 - Enables non-technical staff to manage large-scale content independently  
 - Built to scale for future growth, archival expansion, and new services`,
     logo: "https://www.imaginesl.com/favicon.ico",
-    isExpanded: true,
+    isExpanded: false,
   },
   {
     id: "stayza",
@@ -147,7 +147,7 @@ I led this project end-to-end after acquiring the engagement directly from the c
 - Deployed on Vercel with edge-optimized performance
 - Clean, maintainable architecture ready for scaling`,
     logo: "https://i.postimg.cc/W1DN3vg6/Screenshot-2025-11-13-at-21-12-40.png",
-    isExpanded: true,
+    isExpanded: false,
   },
   {
     id: "cutting-edge-iit",
@@ -215,7 +215,7 @@ A key vehicle for fostering innovation, entrepreneurship and real-world applicat
 - Provide accessible portal for chapter members and visitors to browse upcoming events, view past sessions, and access resources.  
 - Modular codebase enables future extension (blog, member directory, sponsorship page).`,
     logo: "https://i.postimg.cc/tJvgSdLn/the-iet-institution-of-engineering-and-technology-logo-png-seeklogo-447412.png",
-    isExpanded: true
+    isExpanded: false
   },
   {
     id: "luna-23",
@@ -250,6 +250,6 @@ LinkedIn (School): https://www.linkedin.com/school/kingswoodcollegelk/
 
 A polished, competition-ready full-stack front-end submission showcasing strong UI engineering and teamwork.`,
     logo: "https://i.postimg.cc/DZPVw26f/Kingswood-Logo.webp",
-    isExpanded: true
+    isExpanded: false
   },
 ];
