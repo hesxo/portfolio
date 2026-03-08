@@ -16,7 +16,7 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Full-time",
         icon: "education",
         description: "Computer Science undergraduate.",
-        isExpanded: true,
+        isExpanded: false,
       },
     ],
     isCurrentEmployer: true,
@@ -40,7 +40,7 @@ Activities and societies:
 - Member of Entrepreneurs Circle (2023-2024)
 - Director of ICT Society
 - Member of Media Club (2023-2024)`,
-        isExpanded: true,
+        isExpanded: false,
       }
     ],
     isCurrentEmployer: false,

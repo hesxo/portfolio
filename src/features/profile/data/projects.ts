@@ -51,6 +51,90 @@ SQ3 is designed to **augment human agents**, not replace them—balancing automa
     isExpanded: false,
   },
   {
+    id: "sequence-se",
+    title: "Sequence3 Marketing Website",
+    period: {
+      start: "07.2025",
+    },
+    link: "https://sq3.io",
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "Marketing Website",
+      "Knowledge RAG",
+      "Open LLM",
+      "Tailwind CSS",
+      "Vercel",
+    ],
+    description: `Marketing website for **Sequence3**—AI-powered Conversation Workspaces for SMEs. Built as part of **CS-22 // SDGP** at the Informatics Institute of Technology (IIT).
+
+The product features **knowledge RAG** (Retrieval-Augmented Generation) and **open LLM** integration for intelligent, context-aware conversations.
+
+**Live sites:** [sq3.io](https://sq3.io), [sequence3.se](https://sequence3.se), [sq3.one](https://sq3.one)
+
+The site showcases the Sequence3 product, value proposition, and branding. The codebase is a Next.js application with TypeScript, deployed on Vercel.`,
+    logo: "https://i.postimg.cc/wMhVbQt4/purple.png",
+    isExpanded: false,
+  },
+  {
+    id: "depfix-ai",
+    title: "depfix-ai – CLI for Dependency Audit, Env Generation & Onboarding",
+    period: {
+      start: "02.2026",
+    },
+    link: "https://www.npmjs.com/package/depfix-ai",
+    skills: [
+      "Node.js CLI",
+      "TypeScript",
+      "npm",
+      "pnpm",
+      "Security Audit",
+      "Env Generation",
+      "Commander",
+      "Vitest",
+    ],
+    description: `**depfix-ai** is a CLI for dependency audit, env file generation, and contributor onboarding. Fix deps, generate \`.env.example\`, and get projects ready in one command. Requires Node.js ≥ 18.
+
+**Commands:**
+
+- \`depfix-ai audit\` – Security audit with human-readable summary (npm/pnpm), optional \`--severity\` and \`--fail\`
+- \`depfix-ai env generate\` – Scan source for \`process.env.*\` and \`import.meta.env.*\`, output grouped \`.env.example\`
+- \`depfix-ai fix\` – Preview or apply dependency fixes (dry-run by default; \`--apply\` to write)
+- \`depfix-ai onboard\` – One-command setup: install deps, env generate, run tests (with optional stash/backup)
+
+**Usage:** \`npx depfix-ai@latest\` or \`pnpm dlx depfix-ai@latest\` for the interactive menu. Published on [npm](https://www.npmjs.com/package/depfix-ai), source on [GitHub](https://github.com/hesxo/depfix-ai). MIT.`,
+    isExpanded: false,
+  },
+  {
+    id: "forge-cli",
+    title: "Forge CLI – AI-Powered Git Release & Automation",
+    period: {
+      start: "03.2026",
+    },
+    link: "https://www.npmjs.com/package/@hesxo/forge-cli",
+    skills: [
+      "Node.js CLI",
+      "Git Automation",
+      "OpenAI",
+      "Semantic Versioning",
+      "Google Sheets",
+      "Commander",
+      "Branch Management",
+    ],
+    description: `**Forge CLI** is an AI-powered Git automation and release tool. It automates your git workflow, guides release flows with AI, simplifies branch management, and can log every release to a Google Sheet via webhook.
+
+**Key features:**
+
+- **AI-powered release flow** – Guided release workflow (build, tag, push, log) with AI-backed prompts
+- **Semantic versioning** – Structured, predictable release flows and tagging
+- **Release logging** – Optional Google Sheets webhook to record User, Branch, Type, Message, Description for each release
+- **Branch management** – Safe switch (with optional stash/restore), cleanup of local branches
+- **Stash, undo, sync** – Interactive stash, visual commit history and rollback/reset, fetch-and-pull in one command
+
+**Commands:** \`forge release\`, \`forge build\`, \`forge branch\`, \`forge stash\`, \`forge undo\`, \`forge sync\`, \`forge settings\`. Run \`npx @hesxo/forge-cli\` or install globally as \`@hesxo/forge-cli\`. Node.js 18+, Git required. [npm](https://www.npmjs.com/package/@hesxo/forge-cli). MIT.`,
+    isExpanded: false,
+  },
+  {
     id: "imagine-entertainment",
     title: "Imagine Entertainment – Cloud-Native Event Platform & Custom Dashboard",
     period: {
