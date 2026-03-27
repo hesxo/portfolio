@@ -135,6 +135,73 @@ The site showcases the Sequence3 product, value proposition, and branding. The c
     isExpanded: false,
   },
   {
+    id: "mi-config-source",
+    title: "mi-config-source - WSO2 MI Config, Newman Tests, Jenkins CI and GitOps",
+    period: {
+      start: "03.2026",
+    },
+    link: "https://github.com/hesxo/mi-config-source",
+    skills: [
+      "WSO2 Micro Integrator 4.5.0",
+      "Apache Synapse",
+      "Docker",
+      "Jenkins",
+      "Newman",
+      "Argo CD",
+      "GitOps",
+      "Kubernetes",
+      "Prometheus",
+      "Grafana",
+      "Alertmanager",
+    ],
+    description: `Source repository for **WSO2 Micro Integrator configurations**, **Newman integration tests**, and a **Jenkins CI pipeline** with a GitOps-first deployment flow.
+
+**Overview:**
+
+- Base image: wso2/wso2mi:4.5.0
+- Docker image: hesxo/mi-config (tagged with short commit SHA)
+- GitOps repo: [mi-manifests](https://github.com/hesxo/mi-manifests)
+- Sample API: HelloAPI -> GET /hello/ on port 8290 returns {"message":"hello from WSO2 MI"}
+
+**Architecture and Delivery Flow:**
+
+1. Synapse API definitions and observability config are packaged in a custom MI Docker image.
+2. Jenkins builds the image, runs Newman integration tests, then pushes to Docker Hub.
+3. Jenkins updates the image tag in the GitOps manifests repository.
+4. Argo CD syncs manifests and deploys the update to Kubernetes.
+5. Prometheus scrapes metrics and Grafana visualizes runtime health.
+
+**Repository Structure Highlights:**
+
+- Dockerfile and Jenkinsfile for build and CI orchestration
+- conf/observability.toml for metrics and Synapse handler config
+- src/synapse-config/api/HelloAPI.xml for API definition
+- integration/newman collection and environment for integration tests
+- scripts/run-newman.sh for local and CI test execution
+
+**CI Pipeline Stages (Jenkins):**
+
+- Checkout source
+- Build Docker image with SHA tag
+- Push image to Docker Hub
+- Prepare Newman environment
+- Poll readiness and run integration tests
+- Update deployment image in GitOps repo and push
+
+**Observability and Operations:**
+
+- Argo CD deployment view: [Screenshot](https://i.postimg.cc/T1KKw766/Screenshot-2026-03-14-at-8-38-28-PM.png)
+- Jenkins pipeline run: [Screenshot](https://i.postimg.cc/52SLDr9K/Screenshot-2026-03-14-at-6-36-39-PM.png)
+- Grafana dashboard: [Screenshot](https://i.postimg.cc/QxpTWz7h/Screenshot-2026-03-14-at-8-38-44-PM.png)
+- Prometheus alerts: [Screenshot](https://i.postimg.cc/7Z5rWFnd/Screenshot-2026-03-14-at-11-06-25-PM.png)
+- Slack notifications: [Screenshot](https://i.postimg.cc/MKPvR8Gs/Screenshot-2026-03-14-at-11-07-38-PM.png)
+- Email alerts: [Screenshot](https://i.postimg.cc/gJD7JsKq/Screenshot-2026-03-15-at-1-34-59-AM.png)
+
+This project demonstrates an end-to-end integration platform delivery pipeline where source changes automatically propagate through build, test, image publishing, GitOps manifest updates, and production rollout.`,
+    logo: "https://wso2.cachefly.net/wso2/sites/all/2023/images/webp/wso2-logo.webp",
+    isExpanded: false,
+  },
+  {
     id: "imagine-entertainment",
     title: "Imagine Entertainment – Cloud-Native Event Platform & Custom Dashboard",
     period: {
@@ -300,6 +367,113 @@ A key vehicle for fostering innovation, entrepreneurship and real-world applicat
 - Modular codebase enables future extension (blog, member directory, sponsorship page).`,
     logo: "https://i.postimg.cc/tJvgSdLn/the-iet-institution-of-engineering-and-technology-logo-png-seeklogo-447412.png",
     isExpanded: false
+  },
+  {
+    id: "fluxproxy",
+    title: "FluxProxy - Scalable Reverse Proxy with Centralized Logging and CI/CD",
+    period: {
+      start: "03.2026",
+    },
+    link: "https://github.com/hesxo/FluxProxy",
+    skills: [
+      "Node.js",
+      "Express",
+      "Nginx",
+      "Docker Compose",
+      "GitHub Actions",
+      "Trivy",
+      "Grafana",
+      "Loki",
+      "Promtail",
+      "CI/CD",
+      "Reverse Proxy",
+      "Centralized Logging",
+    ],
+    description: `**FluxProxy** is a scalable, containerized reverse proxy system built with Node.js and Express, orchestrated with Docker Compose. It includes centralized logging with Loki, Promtail, and Grafana, and a GitHub Actions CI workflow for build, smoke test, Trivy scan, and Docker Hub publish.
+
+**Architecture Overview:** [FluxProxy Architecture](https://i.postimg.cc/DfRP0s28/Screenshot-2026-03-22-at-3-36-32-PM.png)
+
+**Application Layers:**
+
+- Client Layer: Desktop and mobile web clients
+- Load Balancer Layer: Nginx on port 80 using least-connections with backup failover
+- Application Layer: 3 primary FluxProxy instances plus 1 backup instance
+  - FluxProxy 1: 3001:3000
+  - FluxProxy 2: 3002:3000
+  - FluxProxy 3: 3003:3000
+  - Backup Proxy: 3004:3000
+- Network Layer: Custom Docker network for internal communication with exposed ports 80 and 3001-3004
+- File System Layer: Mounted nginx.conf and nginx logs
+
+**Centralized Logging Stack:**
+
+- Promtail tails Nginx logs
+- Loki stores and indexes log streams
+- Grafana provides real-time visualization and exploration
+
+**Traffic Flow:**
+
+- Clients -> Nginx -> least-busy FluxProxy instance
+- Backup path activates only if primary instances become unavailable
+
+**Development Features:**
+
+- Docker Compose Watch for live reload and file syncing
+- Ignored paths: node_modules, logs, .git
+
+**CI/CD (GitHub Actions):**
+
+- Workflow file: .github/workflows/ci.yml
+- Triggers: push and pull request on main
+- Pipeline stages:
+  1. Checkout source
+  2. Build Docker image (fluxproxy:latest)
+  3. Compose smoke test (HTTP on port 80)
+  4. Trivy image scan (OS and library vulnerabilities)
+  5. On push to main: Docker Hub login and publish image (if secrets are configured)
+
+**Required Actions Secrets:**
+
+- DOCKERHUB_USERNAME
+- DOCKERHUB_PASSWORD (access token recommended)
+
+If these secrets are missing, CI continues without publishing.
+
+**Getting Started:**
+
+- Run app stack: docker compose up --build
+- Run logging stack: docker compose -f docker-compose.logging.yml up -d --build
+- Grafana: http://localhost:3000
+- Loki API: http://localhost:3100
+
+**Health and Security:**
+
+- Internal health endpoints for container/runtime checks
+- Automated security scanning via Trivy
+- Minimal base image strategy with regular dependency updates
+
+**Versioning:**
+
+- Node.js: 23-alpine
+- Express: 4.x
+- Nginx: latest
+- Docker Compose: v2+
+- Grafana: 10.x
+- Loki: latest
+- Promtail: latest
+
+**Grafana Dashboard and Screenshots:**
+
+- Request rate and volume: [Screenshot](https://i.postimg.cc/jjnBL121/Screenshot_2026_03_22_at_12_23_25_PM.png)
+- Overview: [Screenshot](https://i.postimg.cc/nhP6VxFy/Screenshot_2026_03_22_at_12_23_14_PM.png)
+- Summary and distribution: [Screenshot](https://i.postimg.cc/MGfgvLX8/Screenshot_2026_03_22_at_12_23_30_PM.png)
+- Top paths and clients: [Screenshot](https://i.postimg.cc/jjnBL129/Screenshot_2026_03_22_at_12_23_36_PM.png)
+- Filtered streams: [Screenshot](https://i.postimg.cc/1zVbfd4S/Screenshot_2026_03_22_at_12_24_07_PM.png)
+- Raw Nginx logs: [Screenshot](https://i.postimg.cc/wBRn7r3v/Screenshot_2026_03_22_at_12_24_11_PM.png)
+
+This project showcases production-oriented reverse proxy design with resilient traffic routing, observable operations, and an automated container CI pipeline ready for team collaboration and deployment workflows.`,
+    logo: "https://i.postimg.cc/DfRP0s28/Screenshot-2026-03-22-at-3-36-32-PM.png",
+    isExpanded: false,
   },
   {
     id: "luna-23",
