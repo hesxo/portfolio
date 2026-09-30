@@ -1,13 +1,10 @@
-import { Button } from "@/components/ui/button";
-import type { Collapsible } from "@/components/ui/collapsible";
+import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
 import {
-  CollapsibleChevronsIcon,
+  Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-  CollapsibleWithContext,
-} from "@/components/ui/collapsible";
-import { Separator } from "@/components/ui/separator";
-import { cn } from "@/lib/utils";
+} from "@/components/ui/collapsible"
 
 export function CodeCollapsibleWrapper({
   className,
@@ -15,33 +12,37 @@ export function CodeCollapsibleWrapper({
   ...props
 }: React.ComponentProps<typeof Collapsible>) {
   return (
-    <CollapsibleWithContext
-      className={cn("group/collapsible not-prose relative my-6", className)}
+    <Collapsible
+      className={cn(
+        "group/collapsible not-prose relative my-[1.25em]",
+        className
+      )}
       {...props}
     >
-      <CollapsibleTrigger asChild>
-        <div className="absolute top-2 right-10 z-10 flex items-center gap-2">
-          <Button className="size-6 rounded-md" variant="secondary" size="icon">
-            <CollapsibleChevronsIcon />
-          </Button>
-
-          <Separator
-            className="data-[orientation=vertical]:h-4"
-            orientation="vertical"
-          />
-        </div>
-      </CollapsibleTrigger>
-
+      {/* Stays visible while closed so the first lines act as a preview */}
       <CollapsibleContent
-        className="overflow-hidden data-[state=closed]:max-h-80 data-[state=closed]:rounded-b-lg [&>figure]:my-0"
-        forceMount
+        className="overflow-hidden *:data-rehype-pretty-code-figure:my-0 data-closed:max-h-80 data-closed:[contain-intrinsic-size:auto_--spacing(80)] data-closed:[content-visibility:auto]"
+        keepMounted
+        hidden={false}
       >
         {children}
       </CollapsibleContent>
 
-      <CollapsibleTrigger className="absolute inset-x-0 bottom-0 flex h-24 items-end justify-center rounded-b-lg bg-linear-to-t from-code from-25% to-transparent pb-4 text-sm font-medium text-muted-foreground group-data-[state=open]/collapsible:hidden">
-        Expand
-      </CollapsibleTrigger>
-    </CollapsibleWithContext>
-  );
+      <div className="absolute inset-x-0 bottom-0 flex h-32 items-end justify-center group-data-open/collapsible:hidden">
+        <div className="absolute inset-0 bg-linear-to-t from-background to-transparent mask-linear-[to_top,var(--background)_25%,transparent] backdrop-blur-[1px]" />
+
+        <CollapsibleTrigger
+          render={
+            <Button
+              className="z-1 shadow-none dark:border-border dark:bg-background dark:hover:bg-zinc-900"
+              variant="outline"
+              size="sm"
+            />
+          }
+        >
+          Expand
+        </CollapsibleTrigger>
+      </div>
+    </Collapsible>
+  )
 }

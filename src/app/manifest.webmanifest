@@ -1,0 +1,35 @@
+{
+  "short_name": "Hasal",
+  "name": "Hasal Dharmagunawardana",
+  "description": "Creating with code. Small details matter.",
+  "icons": [
+    {
+      "src": "/icons/icon-vector.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "id": "/?utm_source=pwa",
+  "start_url": "/?utm_source=pwa",
+  "display": "standalone",
+  "scope": "/"
+}

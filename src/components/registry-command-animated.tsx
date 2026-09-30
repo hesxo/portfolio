@@ -1,23 +1,31 @@
-"use client";
+"use client"
 
-import { motion } from "motion/react";
-import { useRef } from "react";
+import { useRef } from "react"
+import { motion } from "motion/react"
 
-import type { PackageManager } from "@/hooks/use-config";
-import { useConfig } from "@/hooks/use-config";
-import { FlipSentences } from "@/registry/flip-sentences";
-import { components } from "@/registry/registry-components";
+import { registryConfig } from "@/config/registry"
+import type { PackageManager } from "@/hooks/use-package-manager"
+import { usePackageManager } from "@/hooks/use-package-manager"
+import {
+  Tabs,
+  TabsContent,
+  TabsIndicator,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs"
+import { components } from "@/registry/components/_registry"
+import { IconSwap, IconSwapItem } from "@/registry/components/icon-swap"
+import { TextFlip } from "@/registry/components/text-flip"
 
-import { CopyButton } from "./copy-button";
-import { getIconForPackageManager } from "./icons";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { CopyButton } from "./copy-button"
+import { getIconForPackageManager } from "./icons"
 
 const pmCommands = {
-  pnpm: "pnpm dlx shadcn add @ncdai/",
-  yarn: "npx shadcn add @ncdai/",
-  npm: "npx shadcn add @ncdai/",
-  bun: "bunx --bun shadcn add @ncdai/",
-};
+  pnpm: "pnpm dlx",
+  yarn: "yarn",
+  npm: "npx",
+  bun: "bunx --bun",
+}
 
 const registryItemNames = components
   .map((component) => component.name)
@@ -25,14 +33,12 @@ const registryItemNames = components
     a.localeCompare(b, "en", {
       sensitivity: "base",
     })
-  );
+  )
 
 export function RegistryCommandAnimated() {
-  const [config, setConfig] = useConfig();
+  const [packageManager, setPackageManager] = usePackageManager()
 
-  const packageManager = config.packageManager || "pnpm";
-
-  const currentItemRef = useRef("");
+  const currentItemRef = useRef(registryItemNames[0])
 
   return (
     <div className="relative overflow-hidden">
@@ -40,66 +46,78 @@ export function RegistryCommandAnimated() {
         className="gap-0"
         value={packageManager}
         onValueChange={(value) => {
-          setConfig((prev) => ({
-            ...prev,
-            packageManager: value as PackageManager,
-          }));
+          setPackageManager(value as PackageManager)
         }}
       >
-        <div className="px-4 shadow-[inset_0_-1px_0_0] shadow-edge">
-          <TabsList className="h-auto gap-4 rounded-none bg-transparent p-0 dark:bg-transparent [&_svg]:size-4 [&_svg]:text-muted-foreground">
-            {getIconForPackageManager(packageManager)}
+        <div className="px-4 shadow-[inset_0_-1px_0_0] shadow-line">
+          <TabsList className="h-10 rounded-none bg-transparent p-0 inset-ring-0 dark:bg-transparent [&_svg]:size-4 [&_svg]:text-muted-foreground">
+            <IconSwap>
+              <IconSwapItem className="mr-2" key={packageManager}>
+                {getIconForPackageManager(packageManager)}
+              </IconSwapItem>
+            </IconSwap>
 
             {Object.entries(pmCommands).map(([key]) => {
               return (
                 <TabsTrigger
                   key={key}
-                  className="h-10 rounded-none border-b border-transparent p-0 font-mono data-[state=active]:border-foreground data-[state=active]:bg-transparent data-[state=active]:shadow-none dark:data-[state=active]:bg-transparent"
+                  className="h-7 rounded-lg p-0 px-2 font-mono"
                   value={key}
                 >
                   {key}
                 </TabsTrigger>
-              );
+              )
             })}
+
+            <TabsIndicator className="h-0.5 translate-y-0 rounded-none bg-foreground ring-0 dark:bg-foreground" />
           </TabsList>
         </div>
 
         <pre className="-translate-y-px p-4">
-          <code data-language="bash" className="block font-mono text-sm">
-            {Object.entries(pmCommands).map(([key, value]) => {
+          <code
+            data-language="bash"
+            className="block font-mono text-sm text-muted-foreground max-sm:leading-6"
+          >
+            {Object.entries(pmCommands).map(([key, command]) => {
               return (
-                <TabsContent key={key} value={key} asChild>
-                  <span className="inline-block text-muted-foreground">
-                    {value}
+                <TabsContent
+                  key={key}
+                  value={key}
+                  render={<span className="block sm:inline-block" />}
+                >
+                  {command} shadcn add{" "}
+                  <span className="select-none sm:hidden" aria-hidden="true">
+                    \
                   </span>
                 </TabsContent>
-              );
+              )
             })}
 
-            <FlipSentences
+            <span>{registryConfig.namespace}/</span>
+
+            <TextFlip
+              className="text-foreground"
               as={motion.span}
-              variants={{
-                initial: { y: -12, opacity: 0 },
-                animate: { y: 0, opacity: 1 },
-                exit: { y: 12, opacity: 0 },
-              }}
               onIndexChange={(index: number) => {
-                currentItemRef.current = registryItemNames[index];
+                currentItemRef.current = registryItemNames[index]
               }}
             >
               {registryItemNames}
-            </FlipSentences>
+            </TextFlip>
           </code>
         </pre>
       </Tabs>
 
       <CopyButton
-        className="absolute top-1.5 right-1.5 size-7"
-        getValue={() => {
-          const baseCommand = pmCommands[packageManager] || pmCommands["pnpm"];
-          return `${baseCommand}${currentItemRef.current}`;
+        className="absolute top-1.5 right-1.5 z-10 size-7 border-none text-muted-foreground"
+        variant="ghost"
+        size="icon-sm"
+        text={() => {
+          const baseCommand = pmCommands[packageManager] || pmCommands["pnpm"]
+          return `${baseCommand} shadcn@latest add ${registryConfig.namespace}/${currentItemRef.current}`
         }}
+        event="copy_npm_command"
       />
     </div>
-  );
+  )
 }
