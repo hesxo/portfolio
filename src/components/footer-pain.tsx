@@ -22,20 +22,20 @@ const LINES: {
     romaji: "Itami o kangaero.",
     english: "Contemplate pain.",
     start: 3.3,
-    end: 8.8,
+    end: 9.2,
   },
   {
     romaji: "Itami o uketore.",
     english: "Accept pain.",
-    start: 9.1,
-    end: 10.7,
+    start: 9.5,
+    end: 11.1,
   },
-  { romaji: "Itami o shire.", english: "Know pain.", start: 11.0, end: 12.0 },
+  { romaji: "Itami o shire.", english: "Know pain.", start: 11.4, end: 12.3 },
   {
     romaji: "Itami o shiranu mono ni, hontō no heiwa wa wakaran!",
     english:
       "One who does not know pain cannot possibly understand true peace.",
-    start: 12.2,
+    start: 12.5,
     end: 15.3,
   },
   {
