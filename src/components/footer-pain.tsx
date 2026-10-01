@@ -30,30 +30,24 @@ const LINES: {
     start: 9.5,
     end: 11.1,
   },
-  { romaji: "Itami o shire.", english: "Know pain.", start: 11.4, end: 12.3 },
+  { romaji: "Itami o shire.", english: "Know pain.", start: 11.8, end: 12.8 },
   {
     romaji: "Itami o shiranu mono ni, hontō no heiwa wa wakaran!",
     english:
       "One who does not know pain cannot possibly understand true peace.",
-    start: 14.1,
-    end: 15.4,
-  },
-  {
-    romaji: "Ore wa Yahiko no itami o wasurenai.",
-    english: "I will never forget Yahiko's pain.",
-    start: 15.5,
-    end: 19.1,
+    start: 15.2,
+    end: 19.0,
   },
   {
     romaji: "Koko yori, sekai ni itami o...",
     english: "And now, this world shall know pain.",
     start: 20.1,
-    end: 23.1,
+    end: 22.5,
   },
   {
     romaji: "Shinra Tensei!",
     english: "Shinra Tensei!",
-    start: 23.3,
+    start: 22.6,
     end: 25.1,
   },
 ]
