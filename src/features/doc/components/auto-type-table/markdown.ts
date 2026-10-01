@@ -40,13 +40,15 @@ export function markdownRenderer(options?: ShikiOptions): MarkdownRenderer {
 
   return {
     async renderTypeToHast(type) {
+      // fumadocs bundles its own copy of shiki's types; the shapes match but
+      // the duplicate packages make TypeScript treat them as different types.
       const nodes = await highlightHast(type, {
         lang: "ts",
         structure: "inline",
         themes: CODE_THEMES,
         defaultColor: false,
         ...options,
-      })
+      } as unknown as Parameters<typeof highlightHast>[1])
 
       return {
         type: "element",
