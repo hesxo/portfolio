@@ -1,43 +1,81 @@
-import Link from "next/link";
+import dynamic from "next/dynamic"
+import Link from "next/link"
 
-import { DesktopNav } from "@/components/desktop-nav";
-import { NavItemGitHub } from "@/components/nav-item-github";
-import { MAIN_NAV } from "@/config/site";
-import { getAllPosts } from "@/features/blog/data/posts";
-import { cn } from "@/lib/utils";
+import { MAIN_NAV } from "@/config/site"
+import { Separator } from "@/components/ui/separator"
+import { BrandMark } from "@/components/brand-mark"
+import { NavDesktop } from "@/components/nav-desktop"
+import { NavItemGitHub } from "@/components/nav-item-github"
+import { ThemeToggle } from "@/components/theme-toggle"
+import blocks from "@/registry/__blocks__.json"
+import { BOOKMARKS } from "@/features/bookmark/data"
+import { sortBookmarksNewestFirst } from "@/features/bookmark/lib/sort"
+import type { BookmarkPreview } from "@/features/bookmark/types"
+import { getAllDocs } from "@/features/doc/data/documents"
+import type { DocPreview } from "@/features/doc/types/document"
 
-import { HeaderActions } from "./header-actions";
-import { SiteHeaderMark } from "./site-header-mark";
-import { SiteHeaderWrapper } from "./site-header-wrapper";
+const BrandContextMenu = dynamic(
+  () => import("@/components/brand-context-menu")
+)
+
+const CommandMenu = dynamic(() => import("@/components/command-menu"))
 
 export function SiteHeader() {
-  const posts = getAllPosts();
+  const docs = getAllDocs()
+
+  // Minimize data serialized to client component - only send necessary fields
+  const docPreviews: DocPreview[] = docs.map((doc) => ({
+    slug: doc.slug,
+    title: doc.metadata.title,
+    category: doc.metadata.category,
+  }))
+
+  const bookmarkPreviews: BookmarkPreview[] = sortBookmarksNewestFirst(
+    BOOKMARKS
+  ).map((bookmark) => ({
+    title: bookmark.title,
+    url: bookmark.url,
+  }))
 
   return (
-    <SiteHeaderWrapper
-      className={cn(
-        "sticky top-0 z-50 max-w-screen overflow-x-hidden bg-background px-2 pt-2",
-        "data-[affix=true]:shadow-[0_0_16px_0_black]/8 dark:data-[affix=true]:shadow-[0_0_16px_0_black]",
-        "not-dark:data-[affix=true]:**:data-header-container:after:bg-border",
-        "transition-shadow duration-300"
-      )}
-    >
-      <div
-        className="screen-line-before screen-line-after mx-auto flex h-12 items-center justify-between gap-2 border-x border-edge px-2 after:z-1 after:transition-[background-color] sm:gap-4 md:max-w-3xl"
-        data-header-container
-      >
-        <Link href="/" aria-label="Home" className="[&_svg]:h-8">
-          <SiteHeaderMark />
-        </Link>
+    <header className="sticky top-0 z-50 max-w-screen overflow-x-clip bg-background px-2">
+      <div className="screen-line-top screen-line-bottom mx-auto flex h-(--header-height) items-center gap-2 border-x screen-line-bottom-border screen-line-top-border pr-2 pl-4 group-has-data-[slot=layout-wide]/layout:container after:z-1 sm:gap-4 md:max-w-3xl">
+        <BrandContextMenu>
+          <Link href="/" aria-label="Home">
+            <BrandMark className="h-6 shrink-0" />
+          </Link>
+        </BrandContextMenu>
 
         <div className="flex-1" />
 
-        <DesktopNav items={MAIN_NAV} />
+        <NavDesktop items={MAIN_NAV} />
 
-        <HeaderActions posts={posts} navItems={MAIN_NAV}>
+        <div className="flex items-center max-sm:*:data-[slot=command-menu-trigger]:hidden">
+          <Separator
+            orientation="vertical"
+            className="mr-2 max-sm:hidden data-vertical:h-5 data-vertical:self-center"
+          />
+          <CommandMenu
+            docs={docPreviews}
+            blocks={blocks}
+            bookmarks={bookmarkPreviews}
+            enabledHotkeys
+          />
+          <Separator
+            orientation="vertical"
+            className="mx-2 max-sm:hidden data-vertical:h-5 data-vertical:self-center"
+          />
           <NavItemGitHub />
-        </HeaderActions>
+          <Separator
+            orientation="vertical"
+            className="mx-2 data-vertical:h-5 data-vertical:self-center"
+          />
+          <ThemeToggle />
+        </div>
+
+        {/* <div className="absolute top-[-3.5px] left-[-4.5px] z-2 flex size-2 border border-line bg-background" /> */}
+        {/* <div className="absolute top-[-3.5px] right-[-4.5px] z-2 flex size-2 border border-line bg-background" /> */}
       </div>
-    </SiteHeaderWrapper>
-  );
+    </header>
+  )
 }

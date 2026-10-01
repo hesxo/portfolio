@@ -1,16 +1,12 @@
-"use client";
+"use client"
 
-import { AppProgressProvider } from "@bprogress/next";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Provider as JotaiProvider } from "jotai";
-import dynamic from "next/dynamic";
-import { ThemeProvider } from "next-themes";
+import { ProgressProvider } from "@bprogress/next/app"
+import { Provider as JotaiProvider } from "jotai"
+import { ThemeProvider } from "next-themes"
 
-const Toaster = dynamic(
-  () => import("@/components/ui/sonner").then((mod) => mod.Toaster),
-  { ssr: false }
-);
+import { Toaster } from "@/components/ui/toast"
+import { TooltipProvider } from "@/components/ui/tooltip"
+import { KeyboardShortcuts } from "@/components/keyboard-shortcuts"
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -23,19 +19,19 @@ export function Providers({ children }: { children: React.ReactNode }) {
         defaultTheme="system"
         attribute="class"
       >
-        <AppProgressProvider
+        <ProgressProvider
           color="var(--foreground)"
           height="2px"
           delay={500}
           options={{ showSpinner: false }}
         >
-          {children}
-        </AppProgressProvider>
+          <TooltipProvider>{children}</TooltipProvider>
+
+          <KeyboardShortcuts />
+        </ProgressProvider>
 
         <Toaster />
-        <Analytics />
-        <SpeedInsights />
       </ThemeProvider>
     </JotaiProvider>
-  );
+  )
 }

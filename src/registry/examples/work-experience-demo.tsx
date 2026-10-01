@@ -1,18 +1,27 @@
-import type { ExperienceItemType } from "@/registry/work-experience";
-import { WorkExperience } from "@/registry/work-experience";
+import { CodeXmlIcon, LightbulbIcon } from "lucide-react"
+
+import type { ExperienceItemType } from "@/registry/components/work-experience"
+import { WorkExperience } from "@/registry/components/work-experience"
+
+export default function WorkExperienceDemo() {
+  return <WorkExperience className="w-full" experiences={WORK_EXPERIENCE} />
+}
 
 const WORK_EXPERIENCE: ExperienceItemType[] = [
   {
     id: "quaric",
-    companyName: "Quaric Co., Ltd.",
+    companyName: "Quaric",
     companyLogo: "https://assets.chanhdai.com/images/companies/quaric.svg",
+    companyWebsite: "https://quaric.com",
     positions: [
       {
-        id: "30d3a9fb-021d-452a-9d27-83655369b4b9",
-        title: "Software Engineer",
-        employmentPeriod: "03.2024 — present",
+        id: "2",
+        title: "Design Engineer",
+        employmentPeriod: {
+          start: "03.2024",
+        },
         employmentType: "Part-time",
-        icon: "code",
+        icon: <CodeXmlIcon />,
         description: `- Integrated VNPAY-QR for secure transactions.
 - Registered the e-commerce site with [online.gov.vn](https://online.gov.vn) for compliance.
 - Developed online ordering to streamline purchases.
@@ -34,43 +43,16 @@ const WORK_EXPERIENCE: ExperienceItemType[] = [
         isExpanded: true,
       },
       {
-        id: "7586afb2-40e8-49c4-8983-2254c9446540",
-        title: "Product Designer",
-        employmentPeriod: "03.2024 — present",
+        id: "1",
+        title: "Founder",
+        employmentPeriod: {
+          start: "03.2024",
+        },
         employmentType: "Part-time",
-        icon: "design",
-        description: `- Design UI/UX for Quaric Website with a seamless experience.
-- Develop a Design System for consistency and efficiency.
-- Create Quaric's brand identity, including logo and guidelines.`,
-        skills: [
-          "UI/UX Design",
-          "UX Writing",
-          "Design System",
-          "Brand Design",
-          "Figma",
-        ],
-      },
-      {
-        id: "991692c4-7d02-4666-8d31-933c4831768d",
-        title: "Founder & Director",
-        employmentPeriod: "03.2024 — present",
-        employmentType: "Part-time",
-        icon: "business",
-        description: `- Lead and manage the company's strategy.
-- Oversee technical teams and product development.
-- Manage relationships with customers and partners.`,
+        icon: <LightbulbIcon />,
         skills: ["Business Ownership", "Business Law", "Business Tax"],
       },
     ],
     isCurrentEmployer: true,
   },
-];
-
-export default function WorkExperienceDemo() {
-  return (
-    <WorkExperience
-      className="w-full rounded-lg border"
-      experiences={WORK_EXPERIENCE}
-    />
-  );
-}
+]

@@ -1,8 +1,9 @@
-import { defineConfig, globalIgnores } from "eslint/config";
-import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTs from "eslint-config-next/typescript";
-import prettier from "eslint-config-prettier/flat";
-import simpleImportSort from "eslint-plugin-simple-import-sort";
+import { plugin as shadcn } from "@shadcn/lint"
+import nextVitals from "eslint-config-next/core-web-vitals"
+import nextTs from "eslint-config-next/typescript"
+import prettier from "eslint-config-prettier/flat"
+import betterTailwindcss from "eslint-plugin-better-tailwindcss"
+import { defineConfig, globalIgnores } from "eslint/config"
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -17,12 +18,17 @@ const eslintConfig = defineConfig([
     },
   },
   {
-    plugins: {
-      "simple-import-sort": simpleImportSort,
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    plugins: { shadcn },
+  },
+  {
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    plugins: { "better-tailwindcss": betterTailwindcss },
+    settings: {
+      "better-tailwindcss": { entryPoint: "src/styles/globals.css" },
     },
     rules: {
-      "simple-import-sort/imports": "error",
-      "simple-import-sort/exports": "error",
+      "better-tailwindcss/enforce-canonical-classes": "warn",
     },
   },
   // Override default ignores of eslint-config-next.
@@ -32,8 +38,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    "packages/ncdai/dist/**",
+    ".ncdai/**",
   ]),
-]);
+])
 
-export default eslintConfig;
+export default eslintConfig

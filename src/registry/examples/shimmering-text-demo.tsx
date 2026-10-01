@@ -1,7 +1,7 @@
-import { ShimmeringText } from "@/registry/shimmering-text";
+import { ShimmeringText } from "@/registry/components/shimmering-text"
 
 export default function ShimmeringTextDemo() {
   return (
     <ShimmeringText className="text-2xl font-medium" text="Shimmering Text" />
-  );
+  )
 }

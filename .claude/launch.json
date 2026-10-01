@@ -1,1 +1,14 @@
-{"version":"0.0.1","configurations":[{"name":"portfolio","runtimeExecutable":"pnpm","runtimeArgs":["dev"],"port":1408}]}
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["dev", "-p", "1408"],
+      "env": { "npm_config_manage_package_manager_versions": "false",
+        "NEXT_PUBLIC_GITHUB_CONTRIBUTIONS_API_URL": "https://github-contributions-api.jogruber.de/v4"
+      },
+      "port": 1408
+    }
+  ]
+}
