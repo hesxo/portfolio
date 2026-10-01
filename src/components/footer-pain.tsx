@@ -22,7 +22,7 @@ const LINES: {
     romaji: "Itami o kangaero.",
     english: "Contemplate pain.",
     start: 3.3,
-    end: 9.2,
+    end: 5.0,
   },
   {
     romaji: "Itami o uketore.",
