@@ -1,12 +1,9 @@
 "use client"
 
 import React, { useCallback, useEffect, useMemo, useState } from "react"
-import { copyToClipboardWithEvent } from "@/utils/copy"
 import { useRouter } from "@bprogress/next/app"
-import { useTiks } from "@rexa-developer/tiks/react"
 import {
   AwardIcon,
-  BookmarkIcon,
   BoxIcon,
   BriefcaseBusinessIcon,
   CornerDownLeftIcon,
@@ -19,7 +16,6 @@ import {
   RssIcon,
   SunMediumIcon,
   TextInitialIcon,
-  TypeIcon,
 } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useHotkeys } from "react-hotkeys-hook"
@@ -36,18 +32,13 @@ import {
   CommandList,
   CommandShortcut,
 } from "@/components/ui/command"
-import { toast } from "@/components/ui/toast"
-import { trackBookmarkClick } from "@/features/bookmark/lib/analytics"
-import { getBookmarkExternalHref } from "@/features/bookmark/lib/bookmark-link"
 import type { BookmarkPreview } from "@/features/bookmark/types"
-import { ComponentIcon } from "@/features/doc/components/component-icon"
 import type { DocPreview } from "@/features/doc/types/document"
 import { SOCIAL_ICONS } from "@/features/portfolio/components/social-link-icons"
 import { SOCIAL_LINKS } from "@/features/portfolio/data/social-links"
 
-import { BrandMark, getMarkSVG } from "./brand-mark"
-import { getWordmarkSVG } from "./brand-wordmark"
-import { GridViewIcon, NewsIcon, SearchIcon } from "./icons"
+import { BrandMark } from "./brand-mark"
+import { NewsIcon, SearchIcon } from "./icons"
 import { Button } from "./ui/button"
 import { Kbd, KbdGroup } from "./ui/kbd"
 
@@ -137,6 +128,13 @@ const SOCIAL_LINK_ITEMS: CommandLinkItem[] = SOCIAL_LINKS.map((item) => ({
 
 const OTHER_LINK_ITEMS: CommandLinkItem[] = [
   {
+    title: "Download CV",
+    href: "/hasal-dharmagunawardana-cv.pdf",
+    kind: "link",
+    icon: <DownloadIcon />,
+    openInNewTab: true,
+  },
+  {
     title: "Download vCard",
     href: "/vcard",
     kind: "command",
@@ -160,8 +158,6 @@ const OTHER_LINK_ITEMS: CommandLinkItem[] = [
 
 export function CommandMenu({
   docs,
-  blocks,
-  bookmarks,
   enabledHotkeys = false,
 }: {
   docs: DocPreview[]
@@ -179,8 +175,6 @@ export function CommandMenu({
     useState<CommandKind | null>(null)
 
   const [click] = useClickSound()
-
-  const { success: tiksSuccess } = useTiks()
 
   useHotkeys(
     "mod+k, slash",
@@ -225,22 +219,6 @@ export function CommandMenu({
     [router]
   )
 
-  const handleCopyText = useCallback(
-    (text: string, message: string) => {
-      setOpen(false)
-      copyToClipboardWithEvent(text, {
-        name: "command_menu_action",
-        properties: {
-          action: "copy",
-          text: text,
-        },
-      })
-      toast.add({ type: "success", title: message })
-      tiksSuccess()
-    },
-    [tiksSuccess]
-  )
-
   const createThemeHandler = useCallback(
     (theme: "light" | "dark" | "system") => () => {
       click()
@@ -259,77 +237,6 @@ export function CommandMenu({
     [click, setTheme]
   )
 
-  const components = useMemo(
-    () =>
-      docs
-        .filter((doc) => doc.category === "components")
-        .sort((a, b) =>
-          a.title.localeCompare(b.title, "en", {
-            sensitivity: "base",
-          })
-        ),
-    [docs]
-  )
-
-  const componentsGroup = useMemo(() => {
-    if (!components || components.length === 0) {
-      return null
-    }
-
-    return (
-      <CommandGroup heading="Components">
-        {components.map((component) => {
-          return (
-            <CommandMenuItem
-              key={component.slug}
-              keywords={["component"]}
-              onHighlight={() => {
-                setSelectedCommandKind("component")
-              }}
-              onSelect={() => {
-                handleOpenLink(`/components/${component.slug}`)
-              }}
-            >
-              <ComponentIcon slug={component.slug} />
-              <p className="line-clamp-1">{component.title}</p>
-            </CommandMenuItem>
-          )
-        })}
-      </CommandGroup>
-    )
-  }, [components, handleOpenLink])
-
-  const blocksGroup = useMemo(() => {
-    if (!blocks || blocks.length === 0) {
-      return null
-    }
-
-    return (
-      <CommandGroup heading="Blocks">
-        {blocks.map((block) => {
-          return (
-            <CommandMenuItem
-              key={block.name}
-              keywords={["block"]}
-              onHighlight={() => {
-                setSelectedCommandKind("block")
-              }}
-              onSelect={() => {
-                handleOpenLink(`/blocks/${block.categories[0]}/${block.name}`)
-              }}
-            >
-              <GridViewIcon />
-              <p className="line-clamp-1">{block.description}</p>
-              <span className="ml-auto font-mono text-xs font-normal text-muted-foreground tabular-nums max-sm:hidden">
-                {block.name}
-              </span>
-            </CommandMenuItem>
-          )
-        })}
-      </CommandGroup>
-    )
-  }, [blocks, handleOpenLink])
-
   const blogLinks = useMemo(
     () =>
       docs
@@ -342,39 +249,6 @@ export function CommandMenu({
         })),
     [docs]
   )
-
-  const bookmarksGroup = useMemo(() => {
-    if (!bookmarks || bookmarks.length === 0) {
-      return null
-    }
-
-    return (
-      <CommandGroup heading="Bookmarks">
-        {bookmarks.map((bookmark) => {
-          return (
-            <CommandMenuItem
-              key={bookmark.url}
-              keywords={["bookmark"]}
-              onHighlight={() => {
-                setSelectedCommandKind("bookmark")
-              }}
-              onSelect={() => {
-                trackBookmarkClick({
-                  url: bookmark.url,
-                  surface: "palette",
-                })
-
-                handleOpenLink(getBookmarkExternalHref(bookmark.url), true)
-              }}
-            >
-              <BookmarkIcon />
-              <p className="line-clamp-1">{bookmark.title}</p>
-            </CommandMenuItem>
-          )
-        })}
-      </CommandGroup>
-    )
-  }, [bookmarks, handleOpenLink])
 
   const handleLinkHighlight = useCallback((link: CommandLinkItem) => {
     setSelectedCommandKind(link.kind)
@@ -419,9 +293,12 @@ export function CommandMenu({
               onLinkSelect={handleOpenLink}
             />
 
-            {componentsGroup}
-
-            {blocksGroup}
+            <CommandLinkGroup
+              heading="Other"
+              links={OTHER_LINK_ITEMS}
+              onLinkHighlight={handleLinkHighlight}
+              onLinkSelect={handleOpenLink}
+            />
 
             <CommandLinkGroup
               heading="Blog"
@@ -431,36 +308,12 @@ export function CommandMenu({
               onLinkSelect={handleOpenLink}
             />
 
-            {bookmarksGroup}
-
             <CommandLinkGroup
               heading="Social Links"
               links={SOCIAL_LINK_ITEMS}
               onLinkHighlight={handleLinkHighlight}
               onLinkSelect={handleOpenLink}
             />
-
-            <CommandGroup heading="Brand Assets">
-              <CommandMenuItem
-                onHighlight={handleCommandHighlight}
-                onSelect={() => {
-                  handleCopyText(getMarkSVG(), "Mark as SVG copied")
-                }}
-              >
-                <BrandMark />
-                Copy Mark as SVG
-              </CommandMenuItem>
-
-              <CommandMenuItem
-                onHighlight={handleCommandHighlight}
-                onSelect={() => {
-                  handleCopyText(getWordmarkSVG(), "Logotype as SVG copied")
-                }}
-              >
-                <TypeIcon />
-                Copy Logotype as SVG
-              </CommandMenuItem>
-            </CommandGroup>
 
             <CommandGroup heading="Theme">
               <CommandMenuItem
@@ -488,13 +341,6 @@ export function CommandMenu({
                 System
               </CommandMenuItem>
             </CommandGroup>
-
-            <CommandLinkGroup
-              heading="Other"
-              links={OTHER_LINK_ITEMS}
-              onLinkHighlight={handleLinkHighlight}
-              onLinkSelect={handleOpenLink}
-            />
           </CommandList>
         </div>
 
