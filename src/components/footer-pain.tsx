@@ -35,7 +35,7 @@ const LINES: {
     romaji: "Itami o shiranu mono ni, hontō no heiwa wa wakaran!",
     english:
       "One who does not know pain cannot possibly understand true peace.",
-    start: 12.5,
+    start: 12.9,
     end: 15.3,
   },
   {
