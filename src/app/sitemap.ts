@@ -31,18 +31,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
   )
 
-  const routes = [
-    "",
-    "/blog",
-    "/components",
-    "/components/showcase",
-    "/blocks",
-    "/craft",
-    "/bookmarks",
-    "/insights",
-    "/sponsors",
-    "/testimonials",
-  ].map((route) => ({
+  const routes = ["", "/blog"].map((route) => ({
     url: `${SITE_INFO.url}${route}`,
     lastModified: new Date().toISOString(),
   }))

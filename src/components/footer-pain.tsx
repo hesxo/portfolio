@@ -70,6 +70,14 @@ const SMOKE_PUFFS = [
   { x: 80, y: 92, rx: 6, ry: 8 },
 ]
 
+/**
+ * Maps a y position (percent of the 2:1 artwork) into the box. On wide screens
+ * the box is 3:1 and shows the middle two thirds of the art (anchored at 55%,
+ * keeping a strip of the mountain), so positions shift by --crop-off and
+ * stretch by --crop-k.
+ */
+const cropY = (y: number) => `calc((${y}% - var(--crop-off)) * var(--crop-k))`
+
 /** A copy of the artwork run through `filter` and shown only through `mask`. */
 function WindLayer({ filter, mask }: { filter: string; mask: string }) {
   return (
@@ -81,12 +89,12 @@ function WindLayer({ filter, mask }: { filter: string; mask: string }) {
       <img
         src="/images/pain-bw.webp"
         alt=""
-        className="size-full object-cover dark:hidden"
+        className="size-full object-cover object-[50%_75%] dark:hidden"
       />
       <img
         src="/images/pain-color.webp"
         alt=""
-        className="hidden size-full object-cover dark:block"
+        className="hidden size-full object-cover object-[50%_75%] dark:block"
       />
     </div>
   )
@@ -121,7 +129,7 @@ export function FooterPain() {
 
       {/* Artwork with a slow camera drift and falling rain */}
       <div
-        className="relative aspect-2/1 cursor-pointer overflow-hidden"
+        className="relative aspect-2/1 cursor-pointer overflow-hidden [--crop-k:1] [--crop-off:0%] md:aspect-11/4 md:[--crop-k:1.375] md:[--crop-off:20.5%]"
         onPointerEnter={(event) => {
           if (event.pointerType === "mouse") voice.play()
         }}
@@ -130,31 +138,17 @@ export function FooterPain() {
         }}
         onClick={voice.toggle}
       >
-        <motion.div
-          className="absolute inset-0"
-          initial={{ scale: 1.04 }}
-          animate={
-            animate
-              ? { scale: [1.04, 1.14], x: ["0%", "-2%"], y: ["0%", "-1.5%"] }
-              : undefined
-          }
-          transition={{
-            duration: 22,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatType: "mirror",
-          }}
-        >
+        <motion.div className="absolute inset-0">
           <img
             src="/images/pain-bw.webp"
             alt=""
-            className="size-full object-cover dark:hidden"
+            className="size-full object-cover object-[50%_75%] dark:hidden"
             loading="lazy"
           />
           <img
             src="/images/pain-color.webp"
             alt=""
-            className="hidden size-full object-cover dark:block"
+            className="hidden size-full object-cover object-[50%_75%] dark:block"
             loading="lazy"
           />
 
@@ -198,7 +192,7 @@ export function FooterPain() {
                 filter={`url(#${filterId}-smoke)`}
                 mask={SMOKE_PUFFS.map(
                   (puff) =>
-                    `radial-gradient(ellipse ${puff.rx}% ${puff.ry}% at ${puff.x}% ${puff.y}%, #000 45%, transparent 100%)`
+                    `radial-gradient(ellipse ${puff.rx}% calc(${puff.ry}% * var(--crop-k)) at ${puff.x}% ${cropY(puff.y)}, #000 45%, transparent 100%)`
                 ).join(", ")}
               />
               {/* Soft puffs drifting up from each smoke plume */}
@@ -208,7 +202,7 @@ export function FooterPain() {
                   className="pointer-events-none absolute rounded-full bg-white/70 mix-blend-screen blur-md dark:bg-zinc-100/60"
                   style={{
                     left: `${puff.x}%`,
-                    top: `${puff.y}%`,
+                    top: cropY(puff.y),
                     width: `${puff.rx * 1.2}%`,
                     aspectRatio: "1",
                     translate: "-50% -50%",

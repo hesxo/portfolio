@@ -9,7 +9,6 @@ export const EDUCATION: Education[] = [
     fieldOfStudy: "Computer Science",
     period: {
       start: "01.2025",
-      end: "11.2027",
     },
     description: `- Pursuing a Bachelor's degree in Computer Science at the Informatics Institute of Technology (IIT), affiliated with the University of Westminster.
 - Building production-grade full-stack, DevOps, and AI projects alongside coursework, including SQ3, FluxProxy, and a GitOps WSO2 Micro Integrator platform.`,

@@ -37,7 +37,7 @@ export function ProjectItem({
       {/* Only the title is the trigger (accordion pattern); its overlay keeps
           the whole row clickable, while the project link sits above it. */}
       <div className="group/project relative flex items-center hover:bg-accent-muted">
-        <IconTile className="mx-4 grayscale transition-[filter] duration-300 group-hover/project:grayscale-0">{project.icon ?? <BoxIcon />}</IconTile>
+        <IconTile className="mx-4 grayscale transition-[filter] duration-300 group-hover/project:grayscale-0 dark:grayscale-0">{project.icon ?? <BoxIcon />}</IconTile>
 
         <div className="flex flex-1 items-center gap-2 border-l border-dashed border-line p-4">
           <div className="flex-1">

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { GraduationCapIcon, InfinityIcon } from "lucide-react"
+import { GraduationCapIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import {
@@ -73,7 +73,21 @@ export function EducationItem({ item }: { item: Education }) {
               </IconTile>
             )}
 
-            <h3 className="flex-1 font-medium text-balance">{item.school}</h3>
+            <h3 className="flex flex-1 items-center gap-2 font-medium text-balance">
+              {item.school}
+              {isOngoing && (
+                <>
+                  <span className="sr-only">(currently studying)</span>
+                  <span
+                    className="relative flex size-2.5 shrink-0 translate-px items-center justify-center"
+                    aria-hidden
+                  >
+                    <span className="absolute inline-flex size-2.5 animate-ping rounded-full bg-info opacity-50" />
+                    <span className="relative inline-flex size-1.5 rounded-full bg-info" />
+                  </span>
+                </>
+              )}
+            </h3>
 
             <div className="shrink-0 text-muted-foreground group-data-disabled:hidden [&_svg]:h-lh [&_svg]:w-4">
               <CollapsibleChevronsUpDownIcon duration={0.15} />
@@ -90,15 +104,7 @@ export function EducationItem({ item }: { item: Education }) {
                     <span className="font-mono">—</span>
                   </>
                 )}
-                {isOngoing ? (
-                  <InfinityIcon
-                    className="size-4.5 translate-y-[0.5px]"
-                    aria-label="Present"
-                    strokeWidth={1.5}
-                  />
-                ) : (
-                  <span>{end}</span>
-                )}
+                {isOngoing ? <span>Present</span> : <span>{end}</span>}
               </dd>
             </div>
 

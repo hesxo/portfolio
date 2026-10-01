@@ -3,8 +3,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react"
 import { copyToClipboardWithEvent } from "@/utils/copy"
 import { useRouter } from "@bprogress/next/app"
-import { PenTool03Icon } from "@hugeicons/core-free-icons"
-import { HugeiconsIcon } from "@hugeicons/react"
 import { useTiks } from "@rexa-developer/tiks/react"
 import {
   AwardIcon,
@@ -16,10 +14,8 @@ import {
   FileTextIcon,
   GraduationCapIcon,
   LayersIcon,
-  LineChartIcon,
   MonitorIcon,
   MoonStarIcon,
-  QuoteIcon,
   RssIcon,
   SunMediumIcon,
   TextInitialIcon,
@@ -51,23 +47,12 @@ import { SOCIAL_LINKS } from "@/features/portfolio/data/social-links"
 
 import { BrandMark, getMarkSVG } from "./brand-mark"
 import { getWordmarkSVG } from "./brand-wordmark"
-import {
-  FavouriteIcon,
-  GridViewIcon,
-  NewsIcon,
-  ReactIcon,
-  SearchIcon,
-} from "./icons"
+import { GridViewIcon, NewsIcon, SearchIcon } from "./icons"
 import { Button } from "./ui/button"
 import { Kbd, KbdGroup } from "./ui/kbd"
 
 type CommandKind =
-  | "command"
-  | "page"
-  | "link"
-  | "component"
-  | "block"
-  | "bookmark"
+  "command" | "page" | "link" | "component" | "block" | "bookmark"
 
 type CommandLinkItem = {
   title: string
@@ -95,60 +80,11 @@ const MENU_LINKS: CommandLinkItem[] = [
     shortcut: "GH",
   },
   {
-    title: "Components",
-    href: "/components",
-    kind: "page",
-    icon: <ReactIcon />,
-    shortcut: "GC",
-  },
-  {
-    title: "Blocks",
-    href: "/blocks",
-    kind: "page",
-    icon: <GridViewIcon />,
-    shortcut: "GB",
-  },
-  {
-    title: "Craft",
-    href: "/craft",
-    kind: "page",
-    icon: <HugeiconsIcon icon={PenTool03Icon} aria-hidden />,
-    shortcut: "GR",
-  },
-  {
     title: "Blog",
     href: "/blog",
     kind: "page",
     icon: <NewsIcon />,
     shortcut: "GL",
-  },
-  {
-    title: "Sponsors",
-    href: "/sponsors",
-    kind: "page",
-    icon: <FavouriteIcon />,
-    shortcut: "GS",
-  },
-  {
-    title: "Bookmarks",
-    href: "/bookmarks",
-    kind: "page",
-    icon: <BookmarkIcon />,
-    shortcut: "GM",
-  },
-  {
-    title: "Insights",
-    href: "/insights",
-    kind: "page",
-    icon: <LineChartIcon />,
-    shortcut: "GI",
-  },
-  {
-    title: "Testimonials",
-    href: "/testimonials",
-    kind: "page",
-    icon: <QuoteIcon strokeWidth={1.5} />,
-    shortcut: "GT",
   },
 ]
 
@@ -524,7 +460,6 @@ export function CommandMenu({
                 <TypeIcon />
                 Copy Logotype as SVG
               </CommandMenuItem>
-
             </CommandGroup>
 
             <CommandGroup heading="Theme">

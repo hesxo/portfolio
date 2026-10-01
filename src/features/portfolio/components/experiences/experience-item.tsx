@@ -21,7 +21,7 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
               width={24}
               height={24}
               quality={100}
-              className="rounded-full grayscale transition-[filter] duration-300 ease-[cubic-bezier(0.42,0,0.58,1)] group-hover/experience:grayscale-0"
+              className="rounded-full grayscale transition-[filter] duration-300 ease-[cubic-bezier(0.42,0,0.58,1)] group-hover/experience:grayscale-0 dark:grayscale-0"
               unoptimized
               aria-hidden
             />
